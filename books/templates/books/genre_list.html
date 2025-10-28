@@ -61,6 +61,41 @@
         {% endfor %}
     </div>
 
+            <!-- Pagination -->
+            {% if genres.has_other_pages %}
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    {% if genres.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ genres.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                    {% for i in genres.paginator.page_range %}
+                        {% if genres.number == i %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ i }}</span>
+                        </li>
+                        {% elif i > genres.number|add:'-3' and i < genres.number|add:'3' %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ i }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if genres.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ genres.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+
     <!-- Genre Statistics -->
     <div class="row mt-5">
         <div class="col-12">
@@ -70,7 +105,7 @@
                     <div class="row text-center">
                         <div class="col-md-3 mb-3">
                             <div class="stat-item">
-                                <div class="stat-number text-primary fw-bold">{{ genres|length }}</div>
+                                <div class="stat-number text-primary fw-bold">{{ total_genres }}</div>
                                 <div class="stat-label text-muted">Total Genres</div>
                             </div>
                         </div>

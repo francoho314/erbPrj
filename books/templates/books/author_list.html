@@ -13,7 +13,7 @@
             </nav>
             <div class="d-flex justify-content-between align-items-center">
                 <h1 class="section-title">Our Authors</h1>
-                <span class="badge bg-primary fs-6">{{ authors|length }} authors</span>
+                <span class="badge bg-primary fs-6">{{ total_authors }} authors</span>
             </div>
             <p class="text-muted">Discover the brilliant minds behind your favorite books</p>
         </div>
@@ -60,6 +60,43 @@
         </div>
         {% endfor %}
     </div>
+
+            <!-- Pagination -->
+            {% if authors.has_other_pages %}
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    {% if authors.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ authors.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                    {% for i in authors.paginator.page_range %}
+                        {% if authors.number == i %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ i }}</span>
+                        </li>
+                        {% elif i > authors.number|add:'-3' and i < authors.number|add:'3' %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ i }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if authors.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ authors.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+
+
 
     <!-- Alphabetical Navigation -->
     <div class="alphabet-filter">

@@ -8,6 +8,7 @@ from .models import Book, Author, Genre, Order, OrderItem, Review, Customer
 from .forms import BookSearchForm, ReviewForm, CustomerProfileForm, UserProfileForm
 from django.core.mail import send_mail
 from .utils import send_order_confirmation_email, send_order_status_update_email
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 
 def home(request):
@@ -38,8 +39,12 @@ def book_list(request):
         if author:
             books = books.filter(AuthorID=author)
     
+    paginator=Paginator(books,9)
+    page=request.GET.get('page')
+    pbooks=paginator.get_page(page) 
+
     return render(request, 'books/book_list.html', {
-        'books': books,
+        'books': pbooks,
         'form': form
     })
 
@@ -95,13 +100,20 @@ def author_list(request):
             'count': count,
             'has_authors': count > 0
         })
-    
+
+    total_authors = authors.count()
+    paginator=Paginator(authors,12)
+    page=request.GET.get('page')
+    pauthors=paginator.get_page(page) 
+
+
     return render(request, 'books/author_list.html', {
-        'authors': authors,
+        'allauthors': authors,
+        'authors': pauthors,
         'letter_data': letter_data,
         'current_letter': letter_filter,
         'search_query': search_query,
-        'total_authors': authors.count()
+        'total_authors': total_authors
     })
 def author_detail(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
@@ -114,9 +126,16 @@ def author_detail(request, author_id):
 def genre_list(request):
     genres = Genre.objects.all()
     total_books = Book.objects.count()
+    total_genres = Genre.objects.count()
+
+    paginator=Paginator(genres,12)
+    page=request.GET.get('page')
+    pgenres=paginator.get_page(page) 
+
     return render(request, 'books/genre_list.html', {
-        'genres': genres,
-        'total_books': total_books
+        'genres': pgenres,
+        'total_books': total_books,
+        'total_genres': total_genres
     })
 
 def genre_books(request, genre_id):
@@ -331,12 +350,13 @@ def cancel_order(request, order_id):
 @login_required
 def order_history(request):
     orders = Order.objects.filter(CustomerID=request.user.customer).exclude(OrderStatus='pending').order_by('-OrderDate')
-    
+    total_spent = 0
     # Annotate each order with item count for display
     for order in orders:
         order.item_count = order.orderitems.count()
+        total_spent += order.TotalAmount
     
-    return render(request, 'books/order_history.html', {'orders': orders})
+    return render(request, 'books/order_history.html', {'orders': orders, 'total_spent': total_spent})
 
 @login_required
 def order_detail(request, order_id):

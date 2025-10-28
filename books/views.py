@@ -38,12 +38,14 @@ def book_list(request):
             books = books.filter(GenreID=genre)
         if author:
             books = books.filter(AuthorID=author)
-    
+
+    total_books = books.count()    
     paginator=Paginator(books,9)
     page=request.GET.get('page')
     pbooks=paginator.get_page(page) 
 
     return render(request, 'books/book_list.html', {
+        'total_books': total_books,
         'books': pbooks,
         'form': form
     })
@@ -113,14 +115,21 @@ def author_list(request):
         'letter_data': letter_data,
         'current_letter': letter_filter,
         'search_query': search_query,
-        'total_authors': total_authors
+        'total_authors': total_authors,
     })
 def author_detail(request, author_id):
     author = get_object_or_404(Author, pk=author_id)
     books = Book.objects.filter(AuthorID=author, Stock__gt=0)
+
+    total_books = books.count()    
+    paginator=Paginator(books,10)
+    page=request.GET.get('page')
+    pbooks=paginator.get_page(page) 
+
     return render(request, 'books/author_detail.html', {
         'author': author,
-        'books': books
+        'total_books': total_books,
+        'books': pbooks
     })
 
 def genre_list(request):
@@ -141,7 +150,9 @@ def genre_list(request):
 def genre_books(request, genre_id):
     genre = get_object_or_404(Genre, pk=genre_id)
     books = Book.objects.filter(GenreID=genre, Stock__gt=0)
-    
+    total_genres = Genre.objects.count()
+    total_books = books.count()
+
     # Calculate average price for the genre
     try:
         avg_price_result = books.aggregate(avg_price=Avg('Price'))
@@ -153,9 +164,20 @@ def genre_books(request, genre_id):
     except:
         avg_price = 12.50
     
+    # paginator=Paginator(genres,12)
+    # page=request.GET.get('page')
+    # pgenres=paginator.get_page(page) 
+
+    paginator=Paginator(books,9)
+    page=request.GET.get('page')
+    pbooks=paginator.get_page(page) 
+
     return render(request, 'books/genre_books.html', {
         'genre': genre,
-        'books': books,
+        'books': pbooks,
+        'total_books': total_books,
+        'total_genres': total_genres,
+        'avg_rating': "3.9",
         'avg_price': avg_price
     })
 

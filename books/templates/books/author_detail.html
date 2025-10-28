@@ -41,7 +41,7 @@
                     <div class="author-stats mb-4">
                         <div class="row text-center">
                             <div class="col-6">
-                                <div class="stat-number text-primary fw-bold">{{ books|length }}</div>
+                                <div class="stat-number text-primary fw-bold">{{ total_books }}</div>
                                 <div class="stat-label text-muted small">Books</div>
                             </div>
                             <div class="col-6">
@@ -124,6 +124,43 @@
                     </div>
                     {% endif %}
                 </div>
+
+            <!-- Pagination -->
+            {% if books.has_other_pages %}
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    {% if books.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ books.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                    {% for i in books.paginator.page_range %}
+                        {% if books.number == i %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ i }}</span>
+                        </li>
+                        {% elif i > books.number|add:'-3' and i < books.number|add:'3' %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ i }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if books.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ books.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+
+
             </div>
         </div>
     </div>

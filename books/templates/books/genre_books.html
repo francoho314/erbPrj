@@ -14,7 +14,7 @@
             </nav>
             <div class="d-flex justify-content-between align-items-center">
                 <h1 class="section-title">{{ genre.GenreName }} Books</h1>
-                <span class="badge bg-primary fs-6">{{ books|length }} books</span>
+                <span class="badge bg-primary fs-6">{{ total_books }} books</span>
             </div>
             <p class="text-muted">Discover our collection of {{ genre.GenreName|lower }} books</p>
         </div>
@@ -32,7 +32,7 @@
                     </div>
                     <h4 class="card-title">{{ genre.GenreName }}</h4>
                     <p class="text-muted small">
-                        {{ books|length }} book{{ books|length|pluralize }} available
+                        {{ total_books }} book{{ total_books|pluralize }} available
                     </p>
                     
                     <div class="genre-stats mb-4">
@@ -42,7 +42,7 @@
                                 <small class="text-muted">Avg Price</small>
                             </div>
                             <div class="col-6">
-                                <div class="fw-bold text-primary">4.3★</div>
+                                <div class="fw-bold text-primary">{{ avg_rating|default:"4.6" }}*</div>
                                 <small class="text-muted">Avg Rating</small>
                             </div>
                         </div>
@@ -135,6 +135,42 @@
             </div>
             {% endif %}
         </div>
+
+            <!-- Pagination -->
+            {% if books.has_other_pages %}
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    {% if books.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ books.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                    {% for i in books.paginator.page_range %}
+                        {% if books.number == i %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ i }}</span>
+                        </li>
+                        {% elif i > books.number|add:'-3' and i < books.number|add:'3' %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ i }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if books.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ books.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+
     </div>
 </div>
 

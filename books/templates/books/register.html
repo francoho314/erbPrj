@@ -1,177 +1,112 @@
-{% extends 'base.html' %}
 
-{% block title %}Register - BookHub{% endblock %}
+{% extends 'new_base.html' %}
+
+{% block title %}Register - BookStore{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-7">
-            <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb" class="mb-4">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                    <li class="breadcrumb-item active">Register</li>
-                </ol>
-            </nav>
-
-            <div class="card border-0 shadow-sm">
-                <div class="card-body p-4">
-                    <div class="text-center mb-4">
-                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                            <i class="fas fa-user-plus fa-2x text-white"></i>
+<section class="pt-5 pb-5">
+    <div class="container-fluid d-flex flex-column">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                <h3>Register New Account</h3>
+                <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                
+                <form method="post" class="form-validate mt-5">
+                    {% csrf_token %}
+                    
+                    <div class="h5 mb-4">Account details</div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" name="username" placeholder="Enter username" required
+                                   maxlength="150" pattern="[a-zA-Z0-9_]+" 
+                                   title="150 characters or fewer. Letters, digits and @/./+/-/_ only.">
+                            <div class="form-text">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</div>
                         </div>
-                        <h2 class="section-title mb-2">Join BookHub</h2>
-                        <p class="text-muted">Create your account and start your reading journey</p>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                        </div>
                     </div>
-
-                    <form method="post">
-                        {% csrf_token %}
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h5 class="mb-3 text-primary">
-                                    <i class="fas fa-user-circle me-2"></i>Account Information
-                                </h5>
-                                
-                                <div class="mb-3">
-                                    <label for="username" class="form-label fw-semibold">Username *</label>
-                                    <input type="text" name="username" class="form-control" id="username" required 
-                                           maxlength="150" pattern="[a-zA-Z0-9_]+" 
-                                           title="150 characters or fewer. Letters, digits and @/./+/-/_ only.">
-                                    <div class="form-text">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</div>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="email" class="form-label fw-semibold">Email Address *</label>
-                                    <input type="email" name="email" class="form-control" id="email" required>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="password1" class="form-label fw-semibold">Password *</label>
-                                    <input type="password" name="password1" class="form-control" id="password1" required>
-                                    <div class="form-text">
-                                        <ul class="small">
-                                            <li>Your password can't be too similar to your other personal information.</li>
-                                            <li>Your password must contain at least 8 characters.</li>
-                                            <li>Your password can't be a commonly used password.</li>
-                                            <li>Your password can't be entirely numeric.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="password2" class="form-label fw-semibold">Confirm Password *</label>
-                                    <input type="password" name="password2" class="form-control" id="password2" required>
-                                </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="password1">Password</label>
+                            <div class="input-group show-hide-password">
+                                <input class="form-control" name="password1" placeholder="Enter password" type="password" required>
+                                <span class="input-group-text"><i class="icon-eye-off" aria-hidden="true" style="cursor: pointer;"></i></span>
                             </div>
-                            
-                            <div class="col-md-6">
-                                <h5 class="mb-3 text-primary">
-                                    <i class="fas fa-address-card me-2"></i>Personal Information
-                                </h5>
-                                
-                                <div class="mb-3">
-                                    <label for="first_name" class="form-label fw-semibold">First Name *</label>
-                                    <input type="text" name="first_name" class="form-control" id="first_name" required>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="last_name" class="form-label fw-semibold">Last Name *</label>
-                                    <input type="text" name="last_name" class="form-control" id="last_name" required>
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label fw-semibold">Phone Number</label>
-                                    <input type="tel" name="phone" class="form-control" id="phone">
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="address" class="form-label fw-semibold">Address *</label>
-                                    <textarea name="address" class="form-control" id="address" rows="3" required></textarea>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <label for="city" class="form-label fw-semibold">City *</label>
-                                            <input type="text" name="city" class="form-control" id="city" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="mb-3">
-                                            <label for="state" class="form-label fw-semibold">State *</label>
-                                            <input type="text" name="state" class="form-control" id="state" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="mb-3">
-                                            <label for="zip_code" class="form-label fw-semibold">Zip Code *</label>
-                                            <input type="text" name="zip_code" class="form-control" id="zip_code" required>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="form-text">
+                                <ul class="mb-0 mt-1">
+                                    <li>Your password can't be too similar to your other personal information.</li>
+                                    <li>Your password must contain at least 8 characters.</li>
+                                    <li>Your password can't be a commonly used password.</li>
+                                    <li>Your password can't be entirely numeric.</li>
+                                </ul>
                             </div>
                         </div>
-                        
-                        <div class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" id="terms" required>
-                            <label class="form-check-label small" for="terms">
-                                I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
-                            </label>
+                        <div class="form-group col-md-6">
+                            <label for="password2">Confirm Password</label>
+                            <div class="input-group show-hide-password">
+                                <input class="form-control" name="password2" placeholder="Confirm password" type="password" required>
+                                <span class="input-group-text"><i class="icon-eye-off" aria-hidden="true" style="cursor: pointer;"></i></span>
+                            </div>
                         </div>
-                        
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary-custom btn-lg">
-                                <i class="fas fa-user-plus me-2"></i>Create Account
-                            </button>
+                    </div>
+                    
+                    <div class="h5 mb-4 mt-4">Personal Information</div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="first_name">First Name</label>
+                            <input type="text" class="form-control" name="first_name" placeholder="Enter your First Name" required>
                         </div>
-                        
-                        <div class="text-center mt-3">
-                            <p class="text-muted">Already have an account? 
-                                <a href="{% url 'login' %}" class="text-decoration-none fw-semibold">Sign In</a>
-                            </p>
+                        <div class="form-group col-md-6">
+                            <label for="last_name">Last Name</label>
+                            <input type="text" class="form-control" name="last_name" placeholder="Enter your Last Name" required>
                         </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Benefits -->
-            <div class="row mt-4">
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-shipping-fast fa-2x text-primary mb-2"></i>
-                    <h6>Free Shipping</h6>
-                    <p class="small text-muted">Free delivery on orders over $25</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-award fa-2x text-primary mb-2"></i>
-                    <h6>Member Rewards</h6>
-                    <p class="small text-muted">Earn points with every purchase</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <i class="fas fa-book-open fa-2x text-primary mb-2"></i>
-                    <h6>Book Recommendations</h6>
-                    <p class="small text-muted">Personalized reading suggestions</p>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Telephone</label>
+                            <input class="form-control" type="tel" name="phone" placeholder="Enter your Telephone number">
+                        </div>
+                    </div>
+                    
+                    <div class="h5 mb-4 mt-4">Mailing Address</div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label for="address">Address</label>
+                            <textarea class="form-control" name="address" placeholder="Enter your Street Address" rows="3" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" name="city" placeholder="Enter your City" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" name="state" placeholder="Enter State" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="zip_code">Zip Code</label>
+                            <input type="text" class="form-control" name="zip_code" placeholder="Enter Zip Code" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-check mt-4">
+                        <input type="checkbox" name="terms_conditions" id="terms_conditions" class="form-check-input" value="1" required>
+                        <label class="form-check-label" for="terms_conditions">By checking this option, you agree to accept the <a href="#">Terms and Conditions</a>.</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg mt-4 w-100">Create Account</button>
+                </form>
+                
+                <div class="mt-4 text-center">
+                    <small>Already have an account?</small> 
+                    <a href="{% url 'login' %}" class="small fw-bold">Sign in</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const password1 = document.getElementById('password1');
-    const password2 = document.getElementById('password2');
-    
-    function validatePassword() {
-        if (password1.value !== password2.value) {
-            password2.setCustomValidity("Passwords don't match");
-        } else {
-            password2.setCustomValidity('');
-        }
-    }
-    
-    password1.addEventListener('change', validatePassword);
-    password2.addEventListener('keyup', validatePassword);
-});
-</script>
+</section>
 {% endblock %}

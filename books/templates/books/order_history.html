@@ -1,162 +1,137 @@
-{% extends 'base.html' %}
+{% extends 'new_base.html' %}
 
-{% block title %}Order History - BookHub{% endblock %}
+{% block title %}Order History - BookStore{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="mb-4">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-            <li class="breadcrumb-item active">Order History</li>
-        </ol>
-    </nav>
-
-    <div class="row">
-        <div class="col-12">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h1 class="section-title mb-0">Order History</h1>
-                <span class="badge bg-primary fs-6">{{ orders|length }} orders</span>
+        <!-- Page title -->
+        <section id="page-title">
+            <div class="container">
+                <div class="page-title">
+                    <h1>Order History</h1>
+                    <span>View your past orders and their details</span>
+                </div>
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="active"><a href="#">Order History</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <p class="text-muted">Track and manage your past orders</p>
-        </div>
-    </div>
+        </section>
+        <!-- end: Page title -->
 
-    {% if orders %}
-    <div class="row">
-        <div class="col-12">
-            <div class="card border-0 shadow-sm">
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead class="table-light">
+        <!-- ORDER HISTORY -->
+        <section id="shop-cart">
+            <div class="container">
+                <div class="shop-cart">
+                    {% if orders %}
+                    <div class="table table-sm table-striped table-responsive">
+                        <table class="table">
+                            <thead>
                                 <tr>
-                                    <th scope="col">Order #</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Items</th>
-                                    <th scope="col">Total Amount</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Actions</th>
+                                    <th class="cart-product-thumbnail">Order ID</th>
+                                    <th class="cart-product-name">Date</th>
+                                    <th class="cart-product-price">Items</th>
+                                    <th class="cart-product-quantity">Total Amount</th>
+                                    <th class="cart-product-subtotal">Status</th>
+                                    <th class="cart-product-remove">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {% for order in orders %}
                                 <tr>
-                                    <td>
+                                    <td class="cart-product-thumbnail">
                                         <strong>#{{ order.OrderID }}</strong>
                                     </td>
-                                    <td>
-                                        <div class="d-flex flex-column">
-                                            <span class="fw-semibold">{{ order.OrderDate|date:"M d, Y" }}</span>
-                                            <small class="text-muted">{{ order.OrderDate|date:"h:i A" }}</small>
-                                        </div>
+                                    <td class="cart-product-name">
+                                        <span>{{ order.OrderDate|date:"M d, Y H:i" }}</span>
                                     </td>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="badge bg-light text-dark me-2">{{ order.orderitems.count }}</span>
-                                            <span class="small text-muted">item{{ order.orderitems.count|pluralize }}</span>
-                                        </div>
+                                    <td class="cart-product-price">
+                                        <span class="amount">{{ order.orderitems.count }} item{{ order.orderitems.count|pluralize }}</span>
                                     </td>
-                                    <td>
-                                        <span class="fw-bold text-primary">${{ order.TotalAmount }}</span>
+                                    <td class="cart-product-quantity">
+                                        <span class="amount">${{ order.TotalAmount }}</span>
                                     </td>
-                                    <td>
+                                    <td class="cart-product-subtotal">
                                         <span class="badge 
                                             {% if order.OrderStatus == 'delivered' %}bg-success
                                             {% elif order.OrderStatus == 'processing' %}bg-primary
                                             {% elif order.OrderStatus == 'shipped' %}bg-info
                                             {% elif order.OrderStatus == 'cancelled' %}bg-danger
                                             {% else %}bg-warning{% endif %}">
-                                            <i class="fas 
-                                                {% if order.OrderStatus == 'delivered' %}fa-check-circle
-                                                {% elif order.OrderStatus == 'processing' %}fa-cog
-                                                {% elif order.OrderStatus == 'shipped' %}fa-shipping-fast
-                                                {% elif order.OrderStatus == 'cancelled' %}fa-times-circle
-                                                {% else %}fa-clock{% endif %} me-1">
-                                            </i>
                                             {{ order.OrderStatus|title }}
                                         </span>
                                     </td>
-                                    <td>
-                                        <div class="btn-group" role="group">
-                                            <a href="{% url 'order_detail' order.OrderID %}" class="btn btn-outline-primary btn-sm">
-                                                <i class="fas fa-eye me-1"></i>View
-                                            </a>
-                                            <button type="button" class="btn btn-outline-secondary btn-sm">
-                                                <i class="fas fa-print"></i>
-                                            </button>
-                                        </div>
+                                    <td class="cart-product-remove">
+                                        <a href="{% url 'order_detail' order.OrderID %}" 
+                                           class="btn btn-primary btn-sm">
+                                            View Details
+                                        </a>
                                     </td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
                     </div>
+                    
+                    {% if orders|length > 10 %}
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p class="text-muted">
+                                Showing {{ orders|length }} order{{ orders|length|pluralize }}
+                            </p>
+                        </div>
+                    </div>
+                    {% endif %}
+                    
+                    {% else %}
+                    <div class="p-t-10 m-b-20 text-center">
+                        <div class="heading-text heading-line text-center">
+                            <h4>No Orders Yet</h4>
+                        </div>
+                        <p>You haven't placed any orders yet. Start shopping to see your order history here!</p>
+                        <a class="btn icon-left" href="{% url 'book_list' %}"><span>Start Shopping</span></a>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
+        </section>
+        <!-- end: ORDER HISTORY -->
 
-            <!-- Order Statistics -->
-            <div class="row mt-4">
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center">
-                        <div class="card-body">
-                            <div class="text-primary fs-2 fw-bold">{{ orders|length }}</div>
-                            <div class="text-muted">Total Orders</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center">
-                        <div class="card-body">
-                            <div class="text-success fs-2 fw-bold">
-                                {{ orders|length }}
+        <!-- DELIVERY INFO -->
+        <section class="background-grey p-t-40 p-b-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="icon-box effect small clean">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <div class="text-muted">Completed</div>
+                            <h3>Free shipping on orders $60+</h3>
+                            <p>Order more than 60$ and you will get free shipping Worldwide.</p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center">
-                        <div class="card-body">
-                            <div class="text-warning fs-2 fw-bold">0</div>
-                            <div class="text-muted">Pending</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 shadow-sm text-center">
-                        <div class="card-body">
-                            <div class="text-info fs-2 fw-bold">
-                                ${{ total_spent|default:0 }}
+                    <div class="col-lg-4">
+                        <div class="icon-box effect small clean">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <div class="text-muted">Total Spent</div>
+                            <h3>Worldwide delivery</h3>
+                            <p>We deliver to all major countries worldwide with fast shipping.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box effect small clean">
+                            <div class="icon">
+                                <a href="#"><i class="fa fa-history"></i></a>
+                            </div>
+                            <h3>30 days return policy</h3>
+                            <p>Not satisfied with your order? Return it within 30 days for a full refund!</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    {% else %}
-    <!-- Empty Orders -->
-    <div class="row">
-        <div class="col-12">
-            <div class="card border-0 shadow-sm">
-                <div class="card-body text-center py-5">
-                    <i class="fas fa-history fa-4x text-muted mb-4"></i>
-                    <h3 class="text-muted">No Orders Yet</h3>
-                    <p class="text-muted mb-4">You haven't placed any orders yet. Start shopping to see your order history here!</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <a href="{% url 'book_list' %}" class="btn btn-primary-custom btn-lg me-md-2">
-                            <i class="fas fa-shopping-bag me-2"></i>Start Shopping
-                        </a>
-                        <a href="{% url 'home' %}" class="btn btn-outline-primary btn-lg">
-                            <i class="fas fa-home me-2"></i>Return Home
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %}
-</div>
+        </section>
 {% endblock %}

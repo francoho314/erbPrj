@@ -20,7 +20,13 @@ def home(request):
     })
 
 def about(request):
-    return render(request, 'books/about.html')
+    return render(request, 'pages/about.html')
+
+def privacy(request):
+    return render(request, 'pages/privacy.html')
+
+def terms_of_use(request):
+    return render(request, 'pages/terms_of_use.html')
 
 def book_list(request):
     form = BookSearchForm(request.GET or None)

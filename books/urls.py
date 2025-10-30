@@ -20,4 +20,7 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('profile/', views.profile_view, name='profile_view'),
     path('profile/edit/', views.profile_edit, name='profile_edit'),
+    path('privacy/', views.privacy, name='privacy'),
+    path('terms_of_use/', views.terms_of_use, name='terms_of_use'),
+
 ]

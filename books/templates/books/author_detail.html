@@ -1,186 +1,209 @@
-{% extends 'base.html' %}
+{% extends 'new_base.html' %}
+
+{% block title %}{{ author.full_name }} - BookStore{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" class="mb-4">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'author_list' %}">Authors</a></li>
-            <li class="breadcrumb-item active">{{ author.full_name }}</li>
-        </ol>
-    </nav>
-
-    <div class="row">
-        <!-- Author Profile -->
-        <div class="col-lg-4 mb-4">
-            <div class="card border-0 shadow-sm sticky-top" style="top: 100px;">
-                <div class="card-body text-center">
-                    <div class="author-avatar mb-4">
-                        <div class="bg-primary rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
-                            <i class="fas fa-user fa-3x text-white"></i>
-                        </div>
-                    </div>
-                    <h2 class="h4 brand-font">{{ author.full_name }}</h2>
-                    
-                    {% if author.DateOfBirth %}
-                    <div class="author-info mb-3">
-                        <p class="mb-1">
-                            <i class="fas fa-birthday-cake me-2 text-muted"></i>
-                            <strong>Born:</strong> {{ author.DateOfBirth|date:"F d, Y" }}
-                        </p>
-                        {% if author.DateOfDeath %}
-                        <p class="mb-0">
-                            <i class="fas fa-cross me-2 text-muted"></i>
-                            <strong>Died:</strong> {{ author.DateOfDeath|date:"F d, Y" }}
-                        </p>
-                        {% endif %}
-                    </div>
-                    {% endif %}
-
-                    <div class="author-stats mb-4">
-                        <div class="row text-center">
-                            <div class="col-6">
-                                <div class="stat-number text-primary fw-bold">{{ total_books }}</div>
-                                <div class="stat-label text-muted small">Books</div>
-                            </div>
-                            <div class="col-6">
-                                <div class="stat-number text-primary fw-bold">{{ author.book_set.count }}</div>
-                                <div class="stat-label text-muted small">Total Works</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-grid">
-                        <a href="#books" class="btn btn-primary-custom">
-                            <i class="fas fa-book me-1"></i>View All Books
-                        </a>
-                    </div>
+        <!-- Page title -->
+        <section id="page-title">
+            <div class="container">
+                <div class="page-title">
+                    <h1>{{ author.full_name }}</h1>
+                    <span>{{ books|length }} books available</span>
+                </div>
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li><a href="{% url 'book_list' %}">Books</a>
+                        </li>
+                        <li class="active"><a href="#">{{ author.full_name }}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-
-        <!-- Author Details and Books -->
-        <div class="col-lg-8">
-            <!-- Biography -->
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-body">
-                    <h3 class="card-title h5 mb-3">
-                        <i class="fas fa-user-circle me-2 text-primary"></i>Biography
-                    </h3>
-                    <p class="card-text">
-                        {{ author.Bio|default:"No biography available for this author. Check back later for updates." }}
-                    </p>
-                </div>
-            </div>
-
-            <!-- Author's Books -->
-            <div class="card border-0 shadow-sm" id="books">
-                <div class="card-header bg-white">
-                    <h3 class="card-title h5 mb-0">
-                        <i class="fas fa-books me-2 text-primary"></i>Books by {{ author.first_name }}
-                    </h3>
-                </div>
-                <div class="card-body">
-                    {% if books %}
-                    <div class="row">
-                        {% for book in books %}
-                        <div class="col-md-6 mb-4">
-                            <div class="book-card h-100">
-                                <div class="row g-0">
-                                    <div class="col-4">
-                                        <img src="{{ book.photo_url }}" class="img-fluid rounded-start h-100" alt="{{ book.Title }}" style="object-fit: cover; min-height: 150px;">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body d-flex flex-column h-100">
-                                            <h6 class="card-title">{{ book.Title|truncatewords:6 }}</h6>
-                                            <div class="mb-2">
-                                                <span class="badge bg-light text-dark border small">{{ book.GenreID.GenreName }}</span>
+        </section>
+        <!-- end: Page title -->
+        <!-- Shop products -->
+        <section id="page-content" class="sidebar-left">
+            <div class="container">
+                <div class="row">
+                    <!-- Content-->
+                    <div class="content col-lg-9">
+                        <div class="row m-b-20">
+                            <div class="col-lg-6 p-t-10 m-b-20">
+                                <h3 class="m-b-20">Books by {{ author.full_name }}</h3>
+                                <p>Discover the complete collection of works by this talented author.</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="order-select">
+                                    <h6>Sort by</h6>
+                                    <p>Showing {{ books|length }} results</p>
+                                    <form method="get">
+                                        <select class="form-select">
+                                            <option selected="selected" value="order">Default sorting</option>
+                                            <option value="popularity">Sort by popularity</option>
+                                            <option value="rating">Sort by average rating</option>
+                                            <option value="date">Sort by newness</option>
+                                            <option value="price">Sort by price: low to high</option>
+                                            <option value="price-desc">Sort by price: high to low</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="order-select">
+                                    <h6>Filter by Price</h6>
+                                    <p>All price ranges</p>
+                                    <form method="get">
+                                        <select class="form-select">
+                                            <option selected="selected" value="">All Prices</option>
+                                            <option value="">0$ - 20$</option>
+                                            <option value="">21$ - 40$</option>
+                                            <option value="">41$ - 60$</option>
+                                            <option value="">61$+</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Product list-->
+                        <div class="shop">
+                            <div class="grid-layout grid-3-columns" data-item="grid-item">
+                                {% for book in books %}
+                                <div class="grid-item">
+                                    <div class="product">
+                                        <div class="product-image">
+                                            <a href="{% url 'book_detail' book.BookID %}">
+                                                <img alt="{{ book.Title }}" src="{{ book.photo_url }}">
+                                            </a>
+                                            {% if forloop.counter <= 2 %}
+                                            <span class="product-new">NEW</span>
+                                            {% endif %}
+                                            <span class="product-wishlist">
+                                                <a href="#"><i class="fa fa-heart"></i></a>
+                                            </span>
+                                            <div class="product-overlay">
+                                                <a href="{% url 'book_detail' book.BookID %}">Quick View</a>
                                             </div>
-                                            <div class="rating-stars small mb-2">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <div class="product-description">
+                                            <div class="product-category">{{ book.GenreID.GenreName }}</div>
+                                            <div class="product-title">
+                                                <h3><a href="{% url 'book_detail' book.BookID %}">{{ book.Title }}</a></h3>
                                             </div>
-                                            <div class="mt-auto">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <span class="price-tag small">${{ book.Price }}</span>
-                                                    <a href="{% url 'book_detail' book.BookID %}" class="btn btn-outline-primary btn-sm">View</a>
+                                            <div class="product-price"><ins>${{ book.Price }}</ins></div>
+                                            <div class="product-rate">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star-half-o"></i>
+                                            </div>
+                                            <div class="product-reviews"><a href="#">128 customer reviews</a></div>
+                                            <div class="product-actions mt-2">
+                                                {% if book.is_available %}
+                                                    <span class="badge bg-success">In Stock</span>
+                                                {% else %}
+                                                    <span class="badge bg-secondary">Out of Stock</span>
+                                                {% endif %}
+                                                <div class="mt-2">
+                                                    <a href="{% url 'book_detail' book.BookID %}" class="btn btn-outline-primary btn-sm">View Details</a>
+                                                    {% if book.is_available and user.is_authenticated %}
+                                                        <a href="{% url 'add_to_cart' book.BookID %}" class="btn btn-primary btn-sm mt-1">
+                                                            <i class="fa fa-cart-plus"></i> Add to Cart
+                                                        </a>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                {% empty %}
+                                <div class="col-12 text-center py-5">
+                                    <i class="fa fa-book fa-3x text-muted mb-3"></i>
+                                    <h4 class="text-muted">No Books Available</h4>
+                                    <p class="text-muted">No books found by {{ author.full_name }}.</p>
+                                    <a href="{% url 'book_list' %}" class="btn btn-primary">Browse All Books</a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <hr class="space">
+                            <!-- Pagination -->
+                            {% if books.has_other_pages %}
+                            <ul class="pagination">
+                                {% if books.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ books.previous_page_number }}">
+                                        <i class="fa fa-angle-left"></i>
+                                    </a>
+                                </li>
+                                {% endif %}
+                                
+                                {% for i in books.paginator.page_range %}
+                                <li class="page-item {% if books.number == i %}active{% endif %}">
+                                    <a class="page-link" href="?page={{ i }}">{{ i }}</a>
+                                </li>
+                                {% endfor %}
+                                
+                                {% if books.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="?page={{ books.next_page_number }}">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                            {% endif %}
+                            <!-- end: Pagination -->
+                        </div>
+                        <!--End: Product list-->
+                    </div>
+                    <!-- end: Content-->
+                    <!-- Sidebar-->
+                    <div class="sidebar col-lg-3">
+                        <!-- Author Information -->
+                        <div class="widget clearfix widget-archive">
+                            <h4 class="widget-title">About the Author</h4>
+                            <div class="author-info">
+                                <div class="text-center mb-3">
+                                    <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                                        <i class="fa fa-user fa-3x"></i>
+                                    </div>
+                                </div>
+                                <h5 class="text-center">{{ author.full_name }}</h5>
+                                
+                                {% if author.DateOfBirth %}
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Born:</span>
+                                    <strong>{{ author.DateOfBirth|date:"F d, Y" }}</strong>
+                                </div>
+                                {% endif %}
+                                
+                                {% if author.DateOfDeath %}
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-muted">Died:</span>
+                                    <strong>{{ author.DateOfDeath|date:"F d, Y" }}</strong>
+                                </div>
+                                {% endif %}
+                                
+                                {% if author.Bio %}
+                                <div class="mt-3">
+                                    <h6>Biography</h6>
+                                    <p class="small">{{ author.Bio|truncatewords:50 }}</p>
+                                </div>
+                                {% endif %}
+                                
+                                <div class="d-flex justify-content-between mt-3">
+                                    <span class="text-muted">Total Books:</span>
+                                    <strong>{{ books|length }}</strong>
+                                </div>
                             </div>
                         </div>
-                        {% endfor %}
+                        </div>
                     </div>
-                    {% else %}
-                    <div class="text-center py-4">
-                        <i class="fas fa-book-open fa-2x text-muted mb-3"></i>
-                        <p class="text-muted">No books available by this author at the moment.</p>
-                    </div>
-                    {% endif %}
+                    <!-- end: Sidebar-->
                 </div>
-
-            <!-- Pagination -->
-            {% if books.has_other_pages %}
-            <nav aria-label="Page navigation" class="mt-5">
-                <ul class="pagination justify-content-center">
-                    {% if books.has_previous %}
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ books.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
-                            <i class="fas fa-chevron-left"></i>
-                        </a>
-                    </li>
-                    {% endif %}
-                    
-                    {% for i in books.paginator.page_range %}
-                        {% if books.number == i %}
-                        <li class="page-item active">
-                            <span class="page-link">{{ i }}</span>
-                        </li>
-                        {% elif i > books.number|add:'-3' and i < books.number|add:'3' %}
-                        <li class="page-item">
-                            <a class="page-link" href="?page={{ i }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ i }}</a>
-                        </li>
-                        {% endif %}
-                    {% endfor %}
-                    
-                    {% if books.has_next %}
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ books.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </nav>
-            {% endif %}
-
-
             </div>
-        </div>
-    </div>
-</div>
-
-<style>
-.author-info p {
-    margin-bottom: 0.5rem;
-}
-
-.stat-number {
-    font-size: 1.5rem;
-}
-
-.stat-label {
-    font-size: 0.8rem;
-}
-
-.sticky-top {
-    z-index: 1020;
-}
-</style>
+        </section>
+        <!-- end: Shop products -->
 {% endblock %}

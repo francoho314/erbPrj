@@ -263,7 +263,7 @@
                         {% if related_book.BookID != book.BookID %}
                         <div class="col-lg-4">
                             <div class="widget-shop">
-                                <div class="product">
+                                <div class="product mt-4">
                                     <div class="product-image">
                                         <a href="{% url 'book_detail' related_book.BookID %}">
                                             <img src="{{ related_book.photo_url }}" alt="{{ related_book.Title }}">
@@ -282,8 +282,9 @@
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star-half-o"></i>
                                         </div>
+                                        <br>
                                         {% if related_book.is_available %}
-                                            <a href="{% url 'book_detail' related_book.BookID %}" class="btn btn-outline-primary btn-sm mt-2">View Details</a>
+                                            <a href="{% url 'book_detail' related_book.BookID %}" class="btn btn btn-outline btn-rounded btn-sm mt-2">View Details</a>
                                         {% endif %}
                                     </div>
                                 </div>

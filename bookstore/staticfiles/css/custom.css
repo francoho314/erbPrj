@@ -6,3 +6,19 @@
  <link href="css/custom.css" rel="stylesheet">
 
 */
+
+#mainMenu nav > ul > li > a {
+    font-size: 16px !important
+}
+
+p {
+    font-size: 1.2rem !important;
+}
+
+.row>* {
+    font-size: 16px !important;
+}
+
+#footer .widget .widget-title, #footer .widget h4 {
+    font-size: 16px !important;
+}

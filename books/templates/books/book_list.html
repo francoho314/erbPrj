@@ -110,28 +110,40 @@
                             </div>
                             <hr class="space">
                             
-                            <!-- Pagination -->
-                            {% if books.has_other_pages %}
-                            <ul class="pagination">
-                                {% if books.has_previous %}
-                                <li class="page-item">
-                                    <a class="page-link" href="?page={{ books.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"><i class="fa fa-angle-left"></i></a>
-                                </li>
-                                {% endif %}
-                                
-                                {% for i in books.paginator.page_range %}
-                                <li class="page-item {% if books.number == i %}active{% endif %}">
-                                    <a class="page-link" href="?page={{ i }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ i }}</a>
-                                </li>
-                                {% endfor %}
-                                
-                                {% if books.has_next %}
-                                <li class="page-item">
-                                    <a class="page-link" href="?page={{ books.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"><i class="fa fa-angle-right"></i></a>
-                                </li>
-                                {% endif %}
-                            </ul>
-                            {% endif %}
+            <!-- Pagination -->
+            {% if books.has_other_pages %}
+            <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    {% if books.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ books.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                    {% for i in books.paginator.page_range %}
+                        {% if books.number == i %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ i }}</span>
+                        </li>
+                        {% elif i > books.number|add:'-3' and i < books.number|add:'3' %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ i }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">{{ i }}</a>
+                        </li>
+                        {% endif %}
+                    {% endfor %}
+                    
+                    {% if books.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ books.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
                             <!-- end: Pagination -->
                         </div>
                         <!--End: Product list-->
@@ -258,6 +270,8 @@
                             <p>Not satisfied with your book? Return it within 30 days for a full refund!</p>
                         </div>
                     </div>
+
+                
                 </div>
             </div>
         </section>

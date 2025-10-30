@@ -19,6 +19,9 @@ def home(request):
         'genres': genres
     })
 
+def about(request):
+    return render(request, 'books/about.html')
+
 def book_list(request):
     form = BookSearchForm(request.GET or None)
     books = Book.objects.filter(Stock__gt=0)

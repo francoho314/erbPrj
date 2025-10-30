@@ -1,0 +1,1253 @@
+GenreID,GenreName
+2,19Th Century
+3,20Th Century
+4,21St Century
+5,A+
+6,Abuse
+7,Accounting
+8,Acting & Auditioning
+9,Action & Adventure
+10,Activities
+11,Activity Books
+12,Adaptations
+14,Adolescence
+15,Adolescence & Coming Of Age
+16,Adolescent
+17,Adoption & Fostering
+18,Adult
+19,Adult & Continuing Education
+20,Adult Children Of Substance Abusers
+21,Adventure
+22,Adventure & Adventurers
+24,Aeronautics
+25,Aesthetics
+26,Affirmations
+27,Africa
+28,African
+29,African American
+30,African American Studies
+31,Aging
+32,Agriculture
+33,Air Sports
+34,Alcohol
+35,Alcoholic
+36,Alligators & Crocodiles
+37,Alphabet
+38,Alternative & Complementary Medicine
+39,Alternative Family
+40,Alternative History
+41,Alternative Therapies
+42,American
+43,American Government
+44,Americas (North
+45,Amish
+46,Amphibians & Terrariums
+47,Anatomy & Physiology
+48,Ancient
+49,Ancient & Classical
+50,Ancient Civilizations
+51,Ancient Mysteries & Controversial Knowledge
+52,Anecdotes & Quotations
+53,Angels & Spirit Guides
+54,Anger Management
+55,Animals
+56,Annuals
+57,Anthologies
+59,Anthropology
+60,Antiques & Collectibles
+61,Apes
+62,Apologetics
+63,Appetizers
+64,Applied Psychology
+65,Applied Sciences
+66,Applique
+67,Appreciation
+68,Archaeology
+69,Architects
+70,Architecture
+71,Arms Control
+72,Aromatherapy
+73,Art
+74,Art & Architecture
+75,Arthurian
+76,Artists
+77,Asia
+79,Asian American
+80,Asian American Studies
+81,Astrology
+82,Astronautics & Space Science
+83,Astronomy
+84,Astrophysics
+85,Atlases
+87,Australia & Oceania
+88,Authorship
+89,Automotive
+90,Aviation
+91,Baby Names
+92,Baking
+93,Baltic States
+94,Banks & Banking
+95,Baptist
+96,Barbecue & Grilling
+97,Baseball
+98,Baseball & Softball
+99,Basketball
+100,Bears
+101,Beauty & Grooming
+103,Beer
+104,Beginner
+105,Benelux Countries (Belgium
+106,Bereavement
+107,Beverages
+108,Bible Stories
+109,Bibles
+110,Biblical Biography
+111,Biblical Commentary
+113,Biblical Meditations
+114,Biblical Reference
+115,Biblical Studies
+116,Bibliographies & Indexes
+117,Biochemistry
+118,Biographical
+119,Biography & Autobiography
+120,Biology
+121,Biostatistics
+122,Biotechnology
+123,Bipolar Disorder
+124,Birds
+125,Birds & Birdwatching
+126,Birdwatching Guides
+127,Birthdays
+128,Blended Families
+129,Board Games
+131,Boating
+132,Boats
+133,Body
+134,Bodybuilding & Weight Training
+135,Book Notes
+136,Books
+137,Books & Reading
+138,Boxing
+139,Boys & Men
+306,Dating & Relationships
+308,Death
+309,Death & Dying
+310,Decorating
+311,Decorating & Furnishings
+312,Democracy
+313,Depression
+320,Developmental
+351,Early Childhood (Incl. Preschool & Kindergarten)
+483,Gender Studies
+575,Individual Architects & Firms
+639,Language Arts & Disciplines
+660,Library & Information Science
+796,New Testament & Portions
+813,Oceans & Seas
+165,California Style
+166,Calligraphy
+167,Campaigns & Elections
+168,Camping
+169,Canada
+170,Canadian
+171,Cancer
+173,Card Games
+174,Career Development
+175,Careers
+176,Caretaking & Organizing
+177,Caribbean & West Indies
+178,Carpentry
+179,Cars & Trucks
+180,Casseroles
+181,Catalogs
+182,Catholic
+183,Cats
+184,Central
+185,Central America
+187,Channeling & Mediumship
+188,Chaotic Behavior In Systems
+189,Chapter Books
+190,Chemistry
+191,Chemotherapy
+192,Chess
+193,Child
+194,Child & Adolescent
+195,Children
+196,Children & Youth
+197,Children With Special Needs
+198,Children'S Music
+199,Children'S Studies
+200,China
+201,Chinese
+202,Chocolate
+203,Christian
+205,Christian Life
+206,Christian Living
+207,Christian Ministry
+208,Christian Rituals & Practice
+209,Christian Theology
+210,Christianity
+211,Christmas & Advent
+213,Circus
+214,City & Town Life
+215,City Planning & Urban Development
+216,Civics & Citizenship
+217,Civil
+218,Civil Law
+219,Civil Procedure
+220,Civil Rights
+221,Civil War Period (1850-1877)
+222,Civilization
+223,Classic & Allegory
+224,Classical
+225,Classical & Ballet
+226,Classical & Medieval
+227,Classics
+228,Classroom Management
+229,Cleaning
+230,Cleaning & Caretaking
+231,Clergy
+232,Clinical Psychology
+234,Coaching
+235,Coffee & Tea
+236,Cognitive Neuroscience & Cognitive Neuropsychology
+237,Cognitive Psychology & Cognition
+238,Collections
+239,Collections & Anthologies
+240,Colonial & Revolutionary Periods
+241,Colonial Period (1600-1775)
+242,Colors
+243,Comic Strips & Cartoons
+245,Coming Of Age
+246,Commerce
+247,Commercial & Industrial
+248,Communication Studies
+249,Communism
+250,Comparative
+251,Comparative Religion
+252,Composers & Musicians
+253,Composition & Creative Writing
+254,Compulsive Behavior
+255,Computer Graphics
+256,Computer Science
+257,Computers
+258,Concepts
+259,Condiments
+260,Conflict Resolution
+262,Conservatism & Liberalism
+263,Constitutional
+264,Constitutions
+265,Consulting
+266,Consumer Behavior
+267,Consumer Guides
+268,Container
+269,Contemporary
+270,Contemporary Women
+271,Cookery For One
+272,Cookies
+273,Cooking
+275,Corporate & Business History
+276,Cosmology
+277,Counseling
+278,Counseling & Recovery
+279,Counting & Numbers
+280,Country & Bluegrass
+281,Country & Ethnic
+282,Courses & Dishes
+283,Courts
+284,Crafts & Hobbies
+285,Crafts For Children
+286,Creativity
+287,Crime
+289,Criminals & Outlaws
+290,Criminology
+291,Criticism
+292,Cults
+293,Cultural
+294,Cultural & Social
+295,Cultural Heritage
+296,Curiosities & Wonders
+297,Customer Relations
+299,Cycling
+300,De
+301,Dance
+302,Darkroom
+303,Database Management
+304,Databases
+305,Date & Time
+929,Production & Operations Management
+966,Reggae
+967,Regional
+968,Regional & Ethnic
+969,Regional Studies
+970,Reiki
+971,Relationships
+972,Relativity
+973,Religion
+974,Religion & Science
+975,Religious
+976,Remodeling & Renovation
+987,Revolutionary Period (1775-1800)
+1003,Russia & The Former Soviet Union
+1021,Science Fiction & Fantasy
+1037,Semiotics & Theory
+324,Diabetic & Sugar-Free
+325,Diagnosis
+326,Dictionaries
+327,Diet & Nutrition
+328,Diet Therapy
+329,Diets
+330,Digital
+332,Dinosaurs & Prehistoric Creatures
+333,Diplomacy
+334,Direction & Production
+335,Disabilities & Special Needs
+336,Discrete Mathematics
+337,Discrimination & Race Relations
+338,Diseases
+339,Divorce & Separation
+340,Do-It-Yourself
+341,Dogs
+342,Dolls
+344,Dough
+345,Drama
+346,Drawing
+347,Dreams
+348,Ducks
+349,E-Commerce
+350,Esp (Clairvoyance
+352,Earth Sciences
+353,East North Central (Il
+354,East South Central (Al
+355,Easter & Lent
+356,Eastern
+357,Eating Disorders
+358,Eating Disorders & Body Image
+359,Ecology
+360,Economic Development
+361,Economic History
+362,Economic Policy
+363,Economics
+364,Ecosystems & Habitats
+365,Editing & Proofreading
+366,Editors
+367,Education
+368,Educational Policy & Reform
+369,Educational Psychology
+370,Educators
+371,Eldercare
+372,Elections
+373,Electronic Commerce
+374,Electronic Publishing
+375,Electronics
+376,Elementary
+377,Elephants
+378,Embryology
+380,Emotions
+381,Emotions & Feelings
+382,Encyclopedias
+383,Energy (Qigong
+384,Engineering (General)
+385,English
+386,Enterprise Applications
+387,Entertaining
+389,Entrepreneurship
+390,Environment
+391,Environmental
+392,Environmental Conservation & Protection
+393,Environmental Science
+394,Environmental Science & Ecosystems
+395,Epic
+396,Episcopalian
+397,Epistemology
+398,Equestrian
+399,Equipment
+400,Erotica
+401,Eschatology
+402,Espionage
+403,Essays
+404,Essays & Narratives
+405,Essays & Travelogues
+406,Essays & Writings
+407,Estates & Trusts
+408,Ethics
+410,Ethnic & Regional
+411,Ethnic & Tribal
+412,Ethnic Studies
+413,Etiquette
+414,Etymology
+415,Europe
+416,European
+417,Evangelism
+418,Evolution
+419,Executive Branch
+420,Exercise
+421,Exhibitions
+423,Experiments & Projects
+424,Exploration & Discovery
+425,Extended Family
+426,Fl
+427,Fables
+428,Fairy Tales
+429,Fairy Tales & Folklore
+430,Faith
+431,Family
+432,Family & Relationships
+433,Family Life
+434,Fantasy
+435,Fantasy & Magic
+436,Farm & Ranch Life
+437,Farm Animals
+438,Fashion
+440,Fatherhood
+441,Feminism & Feminist Theory
+442,Feminist
+443,Feng Shui
+444,Fiction
+445,Film
+446,Film & Video
+447,Finance
+448,Financial
+449,Fish
+450,Fish & Aquariums
+451,Fishing
+452,Flowers
+453,Folk Tales
+454,Folkcrafts
+456,Food
+457,Food Content Guides
+458,Football
+459,Foreign Language Study
+460,Form
+461,Fossils
+1049,Short Stories (Single Author)
+1067,Social Topics
+1141,Tests (Other)
+1171,Ut
+1173,United States
+1177,Valentine'S Day
+1178,Values & Virtues
+1188,Visionary & Metaphysical
+1195,Wi)
+1196,Wv)
+1197,Wy)
+1198,War & Military
+1213,Western
+1231,Women'S Issues
+1232,Women'S Studies
+1233,Wood Toys
+1242,Writing
+1245,Yearbooks & Annuals
+486,Genetics & Genomics
+487,Genres & Styles
+488,Geography
+489,German
+490,Germany
+491,Gerontology
+492,Ghost
+494,Glass & Glassware
+495,Globalization
+496,Golf
+497,Gothic
+498,Gourmet
+499,Government
+500,Grammar & Punctuation
+501,Grandparenting
+502,Graphic Arts
+503,Great Britain
+504,Greece
+505,Greek
+507,Grief
+508,Guides & Reviews
+509,Guinea Pigs
+510,Gynecology & Obstetrics
+511,Hi
+512,Html
+513,Halloween
+514,Hamsters
+515,Hand Tools
+516,Happiness
+518,Hard-Boiled
+519,Hardware
+520,Healing
+521,Health & Daily Living
+522,Health & Fitness
+523,Health & Healing
+524,Health Care Delivery
+525,Health Care Issues
+526,Healthy Living
+527,Heart
+528,Herbal Medications
+529,Herbs
+530,High Tech
+531,Higher
+532,Hiking
+533,Hinduism
+535,Historical
+536,Historiography
+537,History
+538,History & Criticism
+539,History & Culture
+540,History & Philosophy
+541,History & Surveys
+542,History & Theory
+543,Hockey
+544,Holiday
+545,Holidays
+547,Holism
+548,Holistic Medicine
+549,Holocaust
+550,Home Schooling
+551,Homelessness & Poverty
+552,Homeopathy
+553,Horror
+554,Horror & Ghost Stories
+555,Horse Racing
+556,Horses
+557,Hospitality
+558,House & Home
+560,Human Anatomy & Physiology
+561,Human Resources & Personnel Management
+562,Human Sexuality
+563,Humanistic
+564,Humor
+565,Humorous
+566,Humorous Stories
+567,I Ching
+568,Id
+569,In
+570,Illnesses & Injuries
+571,Imagination & Play
+572,Immune & Autoimmune
+573,Immunology
+574,India & South Asia
+576,Individual Artists
+577,Individual Photographers
+578,Industrial & Organizational Psychology
+579,Industrial Management
+580,Industries
+581,Infants & Toddlers
+582,Infectious Diseases
+583,Information Technology
+584,Insects
+585,Inspiration & Personal Growth
+586,Inspirational
+587,Inspirational & Religious
+588,Instruction & Study
+589,Intelligence & Espionage
+590,Interactive & Multimedia
+592,Interior Design
+593,Intermediate
+594,International
+595,International Relations
+596,International Security
+597,Internet
+598,Internet Marketing
+599,Interpersonal Relations
+600,Intranets & Extranets
+601,Investing
+602,Investments & Securities
+603,Ireland
+604,Irish
+605,Islam
+606,Islamic Studies
+607,Israel & Palestine
+608,Italian
+609,Italy
+611,Japanese
+612,Japanese Gardens
+613,Java
+614,Javascript
+615,Jazz
+616,Jewelry
+617,Jewish
+618,Job Hunting
+620,Journalism
+621,Journalists
+622,Judaism
+650,Learning Disabilities
+651,Legal
+652,Legal History
+653,Legal Profession
+654,Legends
+655,Legends & Mythology
+656,Legislative Branch
+657,Leopards
+658,Lesbian
+659,Letters
+661,Life Sciences
+662,Life Stages
+663,Lifespan Development
+664,Lifestyles
+665,Linguistics
+666,Lions
+667,Literary
+668,Literary Collections
+669,Literary Criticism
+670,Literary Criticism & Collections
+671,Literary Figures
+672,Literature & The Arts
+673,Lodging & Transportation
+674,Logic
+675,Logic & Brain Teasers
+676,Love & Erotica
+677,Love & Marriage
+678,Love & Romance
+679,Low Fat
+680,Luxembourg)
+681,Md
+682,Mi
+683,Ms
+684,Mt
+686,Magical Realism
+687,Maintenance & Repair
+688,Mammals
+689,Management
+690,Management Science
+691,Manga
+692,Manners & Etiquette
+693,Maps & Road Atlases
+694,Marine Life
+695,Marketing
+697,Marriage & Divorce
+698,Marriage & Family
+699,Marriage & Long-Term Relationships
+700,Martial Arts & Self-Defense
+701,Massage & Reflexotherapy
+702,Maternity
+704,Mathematics
+705,Maturing
+706,Meat
+707,Media Studies
+708,Media Tie-In
+709,Medical
+710,Medical & Surgical
+711,Medical (Incl. Patients)
+712,Medieval
+713,Meditations
+714,Mediterranean
+715,Meetings & Presentations
+716,Memory Improvement
+717,Men
+718,Men'S Health
+719,Men'S Studies
+720,Mental Health
+721,Metal Work
+722,Metaphysics
+723,Methods
+725,Mexico
+726,Mice
+727,Microbiology
+728,Microwave
+729,Middle Atlantic (Nj
+730,Middle East
+731,Middle Eastern
+732,Midwest
+733,Military
+735,Military Science
+736,Mind & Spirit
+737,Mindfulness & Meditation
+738,Mineralogy
+739,Minority Studies
+740,Missions
+741,Modern
+743,Molecular Biology
+744,Money & Monetary Policy
+745,Money Management
+746,Monkeys
+747,Monsters
+748,Mood Disorders
+749,Motherhood
+750,Motivational
+751,Motivational & Inspirational
+752,Motor Sports
+753,Mountain (Az
+754,Mountaineering
+755,Movements
+756,Multigenerational
+757,Multilevel
+758,Multiple Translations
+759,Murder
+760,Museums
+761,Music
+762,Musicals
+764,Mystery & Detective
+765,Mysticism
+766,Myths
+767,Nc
+768,Nm
+769,Non-Classifiable
+770,Nv
+771,Ny
+772,National
+773,Native American
+774,Native American & Aboriginal
+775,Native American Studies
+776,Natural Disasters
+777,Natural Foods
+778,Nature
+780,Naturopathy
+781,Naval
+782,Navigation
+783,Needlepoint
+784,Needlework
+785,Netherlands
+814,Old Testament
+815,Oncology
+816,Online Safety & Privacy
+817,Online Services
+818,Opera
+819,Operating Systems
+820,Orchids
+821,Organic
+822,Organizational Behavior
+824,Organized Crime
+825,Origami
+826,Ornamental Plants
+827,Orphans & Foster Homes
+828,Orthodox
+829,Orthopedics
+830,Other
+831,Other English Translations
+832,Other Translations
+833,Outdoor
+834,Outdoor & Recreational Areas
+835,Pa)
+836,Pcs
+837,Pacific (Ak
+838,Pain Medicine
+839,Painting
+841,Papercrafts
+842,Paranormal
+843,Parapsychology
+844,Parent & Adult Child
+845,Parent Participation
+846,Parenting
+847,Parents
+848,Parodies
+849,Pasta
+850,Peace
+851,Pediatrics
+852,Peer Pressure
+854,Penology
+855,Pentecostal & Charismatic
+856,People & Places
+857,People With Disabilities
+858,Perennials
+859,Performing Arts
+860,Perinatal
+861,Personal & Practical Guides
+862,Personal Computers
+863,Personal Finance
+864,Personal Growth
+865,Personal Memoirs
+867,Personality
+868,Personality Disorders
+869,Petroleum
+870,Pets
+871,Philosophers
+872,Philosophy
+873,Philosophy & Social Aspects
+874,Photoessays & Documentaries
+875,Photographers
+876,Photography
+877,Photojournalism
+878,Physical
+880,Physics
+881,Physiological Psychology
+882,Pictorial
+883,Pictorials
+884,Pies
+885,Pigs
+886,Pizza
+887,Plants
+888,Plants & Animals
+889,Playwriting
+890,Poetry
+891,Points Of Interest
+892,Poker
+893,Polar Regions
+894,Polarity)
+896,Political
+897,Political Economy
+898,Political Freedom
+899,Political Freedom & Security
+900,Political Ideologies
+901,Political Parties
+902,Political Process
+903,Political Science
+904,Politics
+905,Politics & State
+906,Pop Vocal
+907,Popular
+909,Portraits & Selfies
+910,Post-Communism & Socialism
+911,Potpourri
+912,Pottery & Ceramics
+913,Poultry
+914,Poverty & Homelessness
+915,Power Tools
+916,Prayer
+917,Prayer & Spiritual
+918,Prayerbooks
+919,Preaching
+921,Pregnancy & Childbirth
+922,Prehistory
+923,Prejudice & Racism
+924,Preschool & Kindergarten
+925,Presidents & Heads Of State
+926,Primates
+927,Printed Music
+928,Probability & Statistics
+930,Professional
+931,Programming
+932,Programming Languages
+933,Prophecy
+934,Psychiatry
+935,Psychoanalysis
+936,Psychological
+937,Psychology
+938,Psychology Of Religion
+939,Psychopathology
+940,Psychotherapy
+941,Public
+942,Public Affairs & Administration
+943,Public Policy
+944,Public Relations
+945,Public Speaking & Speech Writing
+946,Publishers
+947,Publishing
+948,Puppets
+949,Puzzles
+951,Quantum Theory
+977,Renaissance
+978,Repair
+979,Reptiles
+980,Reptiles & Amphibians
+981,Research
+982,Research & Methodology
+983,Residential
+984,Restaurants
+985,Resumes
+986,Retirement Planning
+988,Rhetoric
+989,Rheumatology
+990,Rice & Grains
+991,Rich & Famous
+992,Rivers
+993,Rock
+994,Rocks & Minerals
+995,Romance
+996,Romantic Comedy
+997,Roses
+998,Royalty
+999,Rugby
+1000,Runaways
+1001,Running & Jogging
+1002,Rural
+1004,Russian & Former Soviet Union
+1005,Sat
+1006,Sc
+1007,Sacred Writings
+1008,Safety
+1009,Sagas
+1010,Sailing
+1011,Salads
+1012,Sales & Selling
+1013,Satire
+1014,Schizophrenia
+1015,School & Education
+1016,School Age
+1017,Science
+1018,Science & Nature
+1019,Science & Technology
+1020,Science Fiction
+1022,Scientology
+1023,Scottish
+1024,Scottish & Welsh
+1025,Screenwriting
+1026,Seafood
+1027,Seasonal
+1028,Seasons
+1029,Secondary
+1030,Security
+1031,Security (National & International)
+1032,Self-Esteem
+1033,Self-Esteem & Self-Reliance
+1034,Self-Hypnosis
+1035,Self-Management
+1036,Self-Help
+1038,Senses & Sensation
+1039,Service
+1040,Sewing
+1041,Sexual Abuse
+1042,Sexual Instruction
+1043,Sexuality
+1044,Shakespeare
+1045,Shamanism
+1046,Ships & Shipbuilding
+1047,Ships & Underwater Craft
+1048,Short Stories
+1050,Siblings
+1051,Sign Language
+1052,Size & Shape
+1053,Skateboarding
+1054,Skiing
+1055,Skills
+1056,Sleep & Sleep Disorders
+1057,Small Business
+1058,Soccer
+1059,Social Classes & Economic Disparity
+1060,Social Issues
+1061,Social Policy
+1062,Social Psychology
+1063,Social Science
+1064,Social Services & Welfare
+1065,Social Themes
+1066,Social Theory
+1068,Social Work
+1069,Sociology
+1070,Software Development & Engineering
+1071,Songbooks
+1072,Songwriting
+1073,Soups & Stews
+1074,South
+1075,South Atlantic (Dc
+1076,Southeast
+1077,Southern States
+1078,Southwestern States
+1079,Space Opera
+1081,Spanish
+1082,Spanish & Portuguese
+1083,Special Appliances
+1084,Special Education
+1085,Special Interest
+1086,Special Needs
+1087,Specific Ingredients
+1088,Speech
+1089,Spelling & Vocabulary
+1090,Spices
+1091,Spiders
+1092,Spiritual
+1094,Spiritualism
+1095,Spirituality
+1096,Sports
+1097,Sports & Recreation
+1098,Sports Psychology
+1099,Squirrels
+1100,State
+1101,State & Local
+1102,Stepparenting
+1103,Stories In Verse
+1104,Strategic Planning
+1105,Strategy
+1107,Structural Adjustment
+1108,Student Life & Student Affairs
+1109,Students & Student Life
+1110,Study & Teaching
+1111,Study Aids
+1112,Study Guides
+1113,Stuffed Animals
+1,17Th Century
+13,Administration
+23,Advertising & Promotion
+58,Anthologies (Multiple Authors)
+78,Asian
+86,Australia & New Zealand
+102,Bedtime & Dreams
+112,Biblical Criticism & Interpretation
+130,Boarding School & Prep School
+140,Bread
+141,Breakfast
+142,Breastfeeding
+143,Breeds
+144,Buddhism
+145,Budgeting
+146,Buildings
+147,Bulbs
+148,Bullying
+149,Business
+150,Business & Economics
+151,Business & Financial
+152,Business & Professional
+153,Business Aspects
+154,Business Communication
+155,Business Development
+1142,Thanksgiving
+1143,The Message
+1144,Theater
+1145,Theory & Social Aspects
+1146,Thesauri
+1147,Thrillers
+1148,Tigers
+1149,Time
+1150,Time Management
+1151,Time Travel
+1152,Toilet Training
+1153,Topiary
+1154,Topic
+1156,Tours
+1157,Toys
+1158,Track & Field
+1159,Traditional
+1160,Traditional British
+1161,Training
+1162,Transportation
+1163,Travel
+1164,Travel & Tourism
+1165,Trees
+1166,Trees & Forests
+1167,Trial Practice
+1168,Trivia
+1169,True Crime
+1170,Unix
+1174,Urban
+1175,User Interfaces
+1176,Va
+1179,Vegan
+1180,Vegetables
+1181,Vegetarian
+1182,Vegetarian & Vegan
+1183,Video & Electronic
+1184,Vietnam War
+1185,Vietnamese
+1186,Violence In Society
+1189,Vitamins
+1190,Vocabulary
+1191,Vocabulary & Spelling
+1192,Voice
+1193,Volunteer Work
+1194,Wa)
+1200,Water Sports
+1201,Watercolor Painting
+1202,Waves & Wave Mechanics
+1203,Weapons
+1204,Weather
+1205,Web
+1206,Weddings
+1207,Weight Control
+1208,Weight Loss
+1209,Welsh
+1210,West
+1211,West Indies)
+1212,West South Central (Ar
+1214,Western States
+1215,Westerns
+1217,Wildlife
+1218,Wills
+1219,Windows Desktop
+1220,Windows Workstation
+1221,Wine
+1222,Wine & Spirits
+1223,Winter Sports
+1224,Wizards & Witches
+1225,Wok
+1226,Women
+1228,Women Authors
+1229,Women Sleuths
+1230,Women'S Health
+1234,Woodwork
+1235,Word Games
+1236,Word Lists
+1237,Word Processing
+1238,Words
+1239,World
+1240,World War I
+1241,World War Ii
+1244,Xml
+1246,Yoga
+1247,Young Adult Fiction
+1248,Young Adult Nonfiction
+1249,Zen
+1250,Zoology
+1251,Zoos
+1252,Etc.
+156,Business Ethics
+157,Business Etiquette
+158,C
+159,C++
+160,Ca
+161,Co
+162,Cajun & Creole
+163,Cakes
+164,Calculus
+172,Canning & Preserving
+186,Certification Guides
+204,Christian Education
+212,Cinematography & Videography
+233,Clothing & Dress
+244,Comics & Graphic Novels
+261,Confucianism
+274,Cooking & Food
+288,Criminal Law
+298,Customs & Traditions
+307,Dating & Sex
+314,Design
+315,Design & Construction
+316,Desktop Applications
+317,Desktop Publishing
+318,Desserts
+319,Development
+321,Devotional
+322,Devotional & Prayer
+323,Diabetes
+331,Digital Media
+343,Dolls & Puppets
+379,Emigration & Immigration
+388,Entertainment & Performing Arts
+409,Ethics & Moral Philosophy
+422,Experimental Methods
+439,Fashion & Accessories
+455,Folklore & Mythology
+462,Foxes
+463,France
+464,Free Will & Determinism
+465,French
+466,Friendship
+467,Frogs & Toads
+468,Fruit
+469,Fundamentalism
+470,Furniture
+471,Furniture & Cabinetry
+472,Future Studies
+473,Ga
+474,Gambling
+475,Games
+476,Games & Activities
+477,Garden Design
+478,Garden Furnishings
+479,Gardening
+480,Gay
+481,Gay Studies
+482,Geese
+484,Genealogy & Heraldry
+485,General
+493,Girls & Women
+506,Greek & Roman
+517,Hard Science Fiction
+534,Hispanic & Latino
+546,Holidays & Celebrations
+559,House Plants & Indoor
+591,Interactive Adventures
+610,Japan
+619,Jokes & Riddles
+623,Judicial Branch
+624,Juices & Smoothies
+625,Juvenile Fiction
+626,Juvenile Nonfiction
+627,Ky
+628,Kabbalah & Mysticism
+629,Knitting
+630,Koran & Sacred Writings
+631,Korean
+632,Korean War
+633,La
+634,Lgbt
+635,Lgbt Studies
+636,Labor
+637,Landscape
+638,Language Arts
+640,Language Study
+641,Later Years
+642,Latin
+643,Latin America
+644,Law
+645,Law & Crime
+646,Law Enforcement
+647,Lawyers & Judges
+648,Leadership
+649,Leadership & Mentoring
+685,Macroeconomics
+696,Marriage
+703,Mathematical & Computational
+724,Mexican
+734,Military & Wars
+742,Modern (Late 19Th Century To 1945)
+763,Mysteries & Detective Stories
+779,Nature & The Natural World
+786,Network Protocols
+787,Networking
+788,Neurology
+789,Neuropsychology
+790,New Baby
+791,New Business Enterprises
+792,New England
+793,New Experience
+794,New International Version
+795,New Testament
+797,New Thought
+798,Non-Formal Education
+799,Nonfiction (Incl. Memoirs)
+800,Nonprofit Organizations & Charities
+801,Northeast
+802,Nursery Rhymes
+803,Nursing
+804,Nutrition
+805,Oh
+806,Ok
+807,Or
+808,Object Oriented
+809,Occult & Supernatural
+810,Occultism
+811,Occupations
+812,Oceanography
+823,Organizational Development
+840,Paleontology
+853,Pencil Drawing
+866,Personal Success
+879,Physical & Emotional Abuse
+895,Police Procedural
+908,Popular Culture
+920,Precognition
+950,Quality Control
+952,Questions & Answers
+953,Quick & Easy
+954,Quilts & Quilting
+955,Quizzes
+956,Quotations
+957,Rabbits
+958,Radio
+959,Railroads & Trains
+960,Readers
+961,Reading & Phonics
+962,Reading Skills
+963,Real Estate
+964,Reference
+965,Regency
+1080,Spain & Portugal
+1093,Spiritual Growth
+1106,Stress Management
+1114,Subjects & Themes
+1115,Substance Abuse & Addictions
+1116,Success
+1117,Suicide
+1118,Survival
+1119,Suspense
+1120,System Theory
+1121,Systems Architecture
+1122,Tn)
+1123,Tx)
+1124,Table
+1125,Taoist
+1126,Taxation
+1127,Teaching Methods & Materials
+1128,Techniques
+1129,Technological
+1130,Technology
+1131,Technology & Engineering
+1132,Teddy Bears
+1133,Teenagers
+1134,Telecommunications
+1135,Telepathy)
+1136,Television
+1137,Television & Video
+1138,Tennis
+1139,Terrorism
+1140,Testing & Measurement
+1155,Total Quality Management
+1172,Unexplained Phenomena
+1187,Viruses & Malware
+1199,Wars & Conflicts (Other)
+1216,White Collar Crime
+1227,Women & Relationships
+1243,Writing Skills

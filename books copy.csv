@@ -1,5 +1,6 @@
 BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 1,The Mummies of Urumchi,1,1063,0393045218,W W Norton & Co Inc,1900-01-01,8.79,4,http://images.amazon.com/images/P/0393045218.01.LZZZZZZZ.jpg
+2,The Kitchen God's Wife,201193,444,0399135782,Vintage,1900-01-01,4.99,4,http://images.amazon.com/images/P/0399135782.01.LZZZZZZZ.jpg
 3,What If?: The World's Foremost Military Historians Imagine What Might Have Been,111217,537,0425176428,Berkley,1900-01-01,5.29,10,http://images.amazon.com/images/P/0425176428.01.LZZZZZZZ.jpg
 4,The Testament,200921,444,0440234743,Forge Books,1900-01-01,4.99,12,http://images.amazon.com/images/P/0440234743.01.LZZZZZZZ.jpg
 5,Our Dumb Century: The Onion Presents 100 Years of Headlines from America's Finest News Source,101477,564,0609804618,Three Rivers Press,1900-01-01,10.99,12,http://images.amazon.com/images/P/0609804618.01.LZZZZZZZ.jpg
@@ -7,6 +8,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 7,Timeline,1,444,0345417623,Ballantine Books,1900-01-01,4.99,6,http://images.amazon.com/images/P/0345417623.01.LZZZZZZZ.jpg
 8,Lying Awake,110308,444,0375406328,Alfred A. Knopf,1900-01-01,4.99,6,http://images.amazon.com/images/P/0375406328.01.LZZZZZZZ.jpg
 9,Seabiscuit: An American Legend,1,1097,0449005615,Ballantine Books,1900-01-01,4.99,8,http://images.amazon.com/images/P/0449005615.01.LZZZZZZZ.jpg
+10,Pigs in Heaven,201190,444,0060168013,HarpPeren,1900-01-01,5.29,16,http://images.amazon.com/images/P/0060168013.01.LZZZZZZZ.jpg
 11,Downtown,203174,444,0061099686,HarperCollins,1900-01-01,4.99,0,http://images.amazon.com/images/P/0061099686.01.LZZZZZZZ.jpg
 12,Icebound,207869,444,0553582909,Bantam,1900-01-01,5.29,3,http://images.amazon.com/images/P/0553582909.01.LZZZZZZZ.jpg
 13,I'll Be Seeing You,197537,444,0671888587,Simon & Schuster,1900-01-01,4.99,7,http://images.amazon.com/images/P/0671888587.01.LZZZZZZZ.jpg
@@ -14,8 +16,10 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 15,Proxies,1,444,0812523873,Tor Books,1900-01-01,4.99,0,http://images.amazon.com/images/P/0812523873.01.LZZZZZZZ.jpg
 16,Left Behind: A Novel of the Earth's Last Days (Left Behind #1),1,444,0842342702,Living Books,1900-01-01,5.19,0,http://images.amazon.com/images/P/0842342702.01.LZZZZZZZ.jpg
 17,The Street Lawyer,1,444,0440225701,Dell,1900-01-01,5.29,17,http://images.amazon.com/images/P/0440225701.01.LZZZZZZZ.jpg
+18,All the King's Men,201634,444,0156047624,Harcourt Brace,1900-01-01,4.99,19,http://images.amazon.com/images/P/0156047624.01.LZZZZZZZ.jpg
 19,Breathing Lessons,201545,444,042511774X,"Alfred A. Knopf, Inc.",1900-01-01,4.99,12,http://images.amazon.com/images/P/042511774X.01.LZZZZZZZ.jpg
 20,Tess of the D'Urbervilles (Wordsworth Classics),201238,444,1853260053,Wordsworth Editions Ltd,1900-01-01,5.29,14,http://images.amazon.com/images/P/1853260053.01.LZZZZZZZ.jpg
+21,The Prince,1,537,0451625889,Penguin USA (P),1900-01-01,5.29,11,http://images.amazon.com/images/P/0451625889.01.LZZZZZZZ.jpg
 22,Anil's Ghost,1,444,0375410538,Knopf,1900-01-01,4.99,10,http://images.amazon.com/images/P/0375410538.01.LZZZZZZZ.jpg
 23,Team Bush : Leadership Lessons from the Bush White House,1,903,0071416331,McGraw-Hill,1900-01-01,5.29,13,http://images.amazon.com/images/P/0071416331.01.LZZZZZZZ.jpg
 24,The Catcher in the Rye,200917,669,0316769487,Spark Publishing,1900-01-01,5.29,16,http://images.amazon.com/images/P/0316769487.01.LZZZZZZZ.jpg
@@ -78,6 +82,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 81,Babyhood,143541,564,0380728729,William Morrow,1900-01-01,5.29,20,http://images.amazon.com/images/P/0380728729.01.LZZZZZZZ.jpg
 82,Dave Barry in Cyberspace,202423,564,0449912302,Ballantine Books,1900-01-01,5.29,17,http://images.amazon.com/images/P/0449912302.01.LZZZZZZZ.jpg
 83,Waiting,52006,444,0812541642,Pantheon Books,1900-01-01,4.99,1,http://images.amazon.com/images/P/0812541642.01.LZZZZZZZ.jpg
+84,The Hunt for Red October,201515,444,0425120279,Berkley,1900-01-01,4.99,16,http://images.amazon.com/images/P/0425120279.01.LZZZZZZZ.jpg
 85,The Music Box,102261,444,067153484X,Pocket,1900-01-01,4.99,15,http://images.amazon.com/images/P/067153484X.01.LZZZZZZZ.jpg
 86,Trying to Save Piggy Sneed,201547,444,1559703237,Ballantine Books,1900-01-01,4.99,6,http://images.amazon.com/images/P/1559703237.01.LZZZZZZZ.jpg
 87,Bel Canto,202154,444,0060188731,Harper Perennial,1900-01-01,4.99,16,http://images.amazon.com/images/P/0060188731.01.LZZZZZZZ.jpg
@@ -92,6 +97,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 96,Jonathan Livingston Seagull,203042,444,0380012863,Avon Books,1900-01-01,7.29,5,http://images.amazon.com/images/P/0380012863.01.LZZZZZZZ.jpg
 97,Moonlight Becomes You,197537,444,0671867113,Simon & Schuster,1900-01-01,4.99,7,http://images.amazon.com/images/P/0671867113.01.LZZZZZZZ.jpg
 98,The Florence King Reader,119281,444,0312143370,St. Martin's Griffin,1900-01-01,5.29,4,http://images.amazon.com/images/P/0312143370.01.LZZZZZZZ.jpg
+99,Impossible Vacation,103712,444,039456894X,Vintage,1900-01-01,5.29,12,http://images.amazon.com/images/P/039456894X.01.LZZZZZZZ.jpg
 100,Hannibal,200868,444,0440224675,Dell,1900-01-01,5.29,11,http://images.amazon.com/images/P/0440224675.01.LZZZZZZZ.jpg
 101,Cavedweller,203435,444,0452279690,Dutton Adult,1900-01-01,5.64,0,http://images.amazon.com/images/P/0452279690.01.LZZZZZZZ.jpg
 102,The Robber Bride,201237,444,0553569058,Bantam,1900-01-01,5.29,13,http://images.amazon.com/images/P/0553569058.01.LZZZZZZZ.jpg
@@ -137,6 +143,8 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 142,The Teacher from the Black Lagoon,107446,625,0590419625,Cartwheel Books,1900-01-01,4.99,12,http://images.amazon.com/images/P/0590419625.01.LZZZZZZZ.jpg
 143,Chosen Prey,201918,444,0425182878,G. P. Putnam's Sons,1900-01-01,6.29,14,http://images.amazon.com/images/P/0425182878.01.LZZZZZZZ.jpg
 144,The Canopy,205013,444,0849943450,Thomas Nelson,1900-01-01,4.99,4,http://images.amazon.com/images/P/0849943450.01.LZZZZZZZ.jpg
+145,Last Battle,1,625,0590406019,HarperCollins,1900-01-01,4.99,12,http://images.amazon.com/images/P/0590406019.01.LZZZZZZZ.jpg
+146,Prince Caspian,1,625,0020442408,HarperCollins,1900-01-01,5.29,14,http://images.amazon.com/images/P/0020442408.01.LZZZZZZZ.jpg
 147,Robert's Rules of Order,1,903,0553225987,William Morrow & Co,1900-01-01,4.99,16,http://images.amazon.com/images/P/0553225987.01.LZZZZZZZ.jpg
 148,Abduction,205346,444,042517736X,G.P. Putnam's Sons,1900-01-01,4.99,11,http://images.amazon.com/images/P/042517736X.01.LZZZZZZZ.jpg
 149,"The Vampire Lestat (Vampire Chronicles, Book II)",1,444,0345313860,Ballantine Books,1900-01-01,4.99,6,http://images.amazon.com/images/P/0345313860.01.LZZZZZZZ.jpg
@@ -144,8 +152,10 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 151,Vanished,201779,444,0385306032,Delacorte Press,1900-01-01,4.99,2,http://images.amazon.com/images/P/0385306032.01.LZZZZZZZ.jpg
 152,We Are Our Mothers' Daughters,207050,1063,0688169678,Harper,1900-01-01,4.99,0,http://images.amazon.com/images/P/0688169678.01.LZZZZZZZ.jpg
 153,101 Dalmatians,1,625,0307001164,Golden/Disney,1900-01-01,4.99,15,http://images.amazon.com/images/P/0307001164.01.LZZZZZZZ.jpg
+154,Ralph S. Mouse,201774,625,0590687301,HarperCollins,1900-01-01,5.29,12,http://images.amazon.com/images/P/0590687301.01.LZZZZZZZ.jpg
 155,Sacred Ground,205729,444,0812519655,St. Martin's Press,1900-01-01,5.47,1,http://images.amazon.com/images/P/0812519655.01.LZZZZZZZ.jpg
 156,MoveOn's 50 Ways to Love Your Country: How to Find Your Political Voice and Become a Catalyst for Change,1,903,193072229X,New World Library,1900-01-01,4.99,11,http://images.amazon.com/images/P/193072229X.01.LZZZZZZZ.jpg
+157,Children of the Night,205729,444,0812521129,G.P Putnam's Sons,1900-01-01,5.99,15,http://images.amazon.com/images/P/0812521129.01.LZZZZZZZ.jpg
 158,Daisy Fay and the Miracle Man,202090,444,0446394521,Warner,1900-01-01,4.99,15,http://images.amazon.com/images/P/0446394521.01.LZZZZZZZ.jpg
 159,Angela's Ashes: A Memoir,200988,119,068484267X,Scribner,1900-01-01,4.99,6,http://images.amazon.com/images/P/068484267X.01.LZZZZZZZ.jpg
 160,"If Ever I Return, Pretty Peggy-O",110776,444,0345369068,Fawcett,1900-01-01,5.29,16,http://images.amazon.com/images/P/0345369068.01.LZZZZZZZ.jpg
@@ -156,6 +166,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 165,Someone to Watch Over Me : A Novel,201833,444,0671525832,Atria,1900-01-01,4.99,13,http://images.amazon.com/images/P/0671525832.01.LZZZZZZZ.jpg
 166,Dark Lady,209157,444,0679450432,Knopf,1900-01-01,5.76,7,http://images.amazon.com/images/P/0679450432.01.LZZZZZZZ.jpg
 167,Final Appeal,201173,444,0061042943,HarperTorch,1900-01-01,5.29,5,http://images.amazon.com/images/P/0061042943.01.LZZZZZZZ.jpg
+168,Atonement,201905,444,0965404560,Anchor,1900-01-01,4.89,13,http://images.amazon.com/images/P/0965404560.01.LZZZZZZZ.jpg
 169,"My Father, Dancing (Harvest Book)",163342,444,0156013967,Harper Perennial,1900-01-01,5.29,13,http://images.amazon.com/images/P/0156013967.01.LZZZZZZZ.jpg
 170,Women on the Case,202363,444,0385314019,Delacorte Press,1900-01-01,4.99,0,http://images.amazon.com/images/P/0385314019.01.LZZZZZZZ.jpg
 171,The Future of Leadership: Today's Top Leadership Thinkers Speak to Tomorrow's Leaders,1,150,0787955671,Jossey-Bass,1900-01-01,5.64,7,http://images.amazon.com/images/P/0787955671.01.LZZZZZZZ.jpg
@@ -189,6 +200,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 199,You Cannot Be Serious,153917,1097,0399148582,G. P. Putnam's Sons,1900-01-01,4.99,10,http://images.amazon.com/images/P/0399148582.01.LZZZZZZZ.jpg
 200,Out of the Blue,186960,444,0345428900,Ballantine Books,1900-01-01,10.99,18,http://images.amazon.com/images/P/0345428900.01.LZZZZZZZ.jpg
 201,The Proud and the Free,104615,444,0446602086,Little Brown & Co (T),1900-01-01,5.29,9,http://images.amazon.com/images/P/0446602086.01.LZZZZZZZ.jpg
+202,Shoah,159945,859,0394551427,Pantheon,1900-01-01,16.21,16,http://images.amazon.com/images/P/0394551427.01.LZZZZZZZ.jpg
 203,Therapy,208411,444,0140253580,Ballantine Books,1900-01-01,4.99,17,http://images.amazon.com/images/P/0140253580.01.LZZZZZZZ.jpg
 204,The Sorcerer's Companion: A Guide to the Magical World of Harry Potter,1,1063,0767908473,Broadway,1900-01-01,4.99,3,http://images.amazon.com/images/P/0767908473.01.LZZZZZZZ.jpg
 205,Me Talk Pretty One Day,201423,564,0316776963,Back Bay Books,1900-01-01,4.99,12,http://images.amazon.com/images/P/0316776963.01.LZZZZZZZ.jpg
@@ -199,6 +211,8 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 210,A Density of Souls,202413,444,0786886463,Miramax,1900-01-01,5.29,16,http://images.amazon.com/images/P/0786886463.01.LZZZZZZZ.jpg
 211,Saving Grace,1,444,0345403339,Ballantine Books,1900-01-01,5.29,10,http://images.amazon.com/images/P/0345403339.01.LZZZZZZZ.jpg
 212,About a Boy (Movie Tie-In),200900,444,1573229571,Riverhead Books,1900-01-01,5.29,3,http://images.amazon.com/images/P/1573229571.01.LZZZZZZZ.jpg
+213,Rumpole on Trial,208052,444,0670844594,Viking Adult,1900-01-01,4.99,5,http://images.amazon.com/images/P/0670844594.01.LZZZZZZZ.jpg
+214,Billy Bathgate,1,444,039457513X,Random House,1900-01-01,4.99,4,http://images.amazon.com/images/P/039457513X.01.LZZZZZZZ.jpg
 215,Sunwing (Aladdin Fantasy),205421,625,0689832877,Aladdin,1900-01-01,5.29,11,http://images.amazon.com/images/P/0689832877.01.LZZZZZZZ.jpg
 216,So You Want to Be a Wizard: The First Book in the Young Wizards Series,202754,1247,015216250X,HMH Books for Young Readers,1900-01-01,5.29,10,http://images.amazon.com/images/P/015216250X.01.LZZZZZZZ.jpg
 217,Going for Great (Ag Fiction (American Girl)),1,625,1562477528,Amer Girl Pub,1900-01-01,5.29,4,http://images.amazon.com/images/P/1562477528.01.LZZZZZZZ.jpg
@@ -209,6 +223,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 222,The Cat Who Tailed a Thief,199048,444,0515122408,Putnam,1900-01-01,4.99,15,http://images.amazon.com/images/P/0515122408.01.LZZZZZZZ.jpg
 223,On Secret Service,203767,444,0451204050,Signet,1900-01-01,6.29,1,http://images.amazon.com/images/P/0451204050.01.LZZZZZZZ.jpg
 224,Charming Billy,198745,444,038533334X,"Farrar, Straus and Giroux",1900-01-01,4.89,9,http://images.amazon.com/images/P/038533334X.01.LZZZZZZZ.jpg
+225,The Dinner Party,204418,444,0440120470,Dell,1900-01-01,4.99,20,http://images.amazon.com/images/P/0440120470.01.LZZZZZZZ.jpg
 226,No Safe Place,1,444,0345404777,Knopf,1900-01-01,4.99,9,http://images.amazon.com/images/P/0345404777.01.LZZZZZZZ.jpg
 227,Granny Dan,1,444,0440224829,Delacorte Press,1900-01-01,4.99,6,http://images.amazon.com/images/P/0440224829.01.LZZZZZZZ.jpg
 228,Border Bride,22651,444,0671779338,POCKET,1900-01-01,5.29,13,http://images.amazon.com/images/P/0671779338.01.LZZZZZZZ.jpg
@@ -228,6 +243,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 242,The Phantom Tollbooth,201628,1247,0394820371,Bullseye Books,1900-01-01,4.99,10,http://images.amazon.com/images/P/0394820371.01.LZZZZZZZ.jpg
 243,Black Hawk Down: A Story of Modern War,201642,537,0871137380,Penguin Books,1900-01-01,4.99,5,http://images.amazon.com/images/P/0871137380.01.LZZZZZZZ.jpg
 244,Degree of Guilt,209157,444,034538184X,Ballantine Books,1900-01-01,5.29,20,http://images.amazon.com/images/P/034538184X.01.LZZZZZZZ.jpg
+245,A Little Princess,1,625,0874067391,HarperCollins,1900-01-01,5.29,9,http://images.amazon.com/images/P/0874067391.01.LZZZZZZZ.jpg
 246,The Survivors Club,1,444,0553584510,Bantam,1900-01-01,4.99,0,http://images.amazon.com/images/P/0553584510.01.LZZZZZZZ.jpg
 247,While I Was Gone,203440,444,0345443284,Knopf,1900-01-01,5.35,14,http://images.amazon.com/images/P/0345443284.01.LZZZZZZZ.jpg
 248,This Boy's Life: A Memoir,206915,119,0060972777,Grove Press,1900-01-01,4.99,12,http://images.amazon.com/images/P/0060972777.01.LZZZZZZZ.jpg
@@ -235,6 +251,7 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 250,Breaking Clean,1,119,0375401318,Vintage,1900-01-01,5.29,4,http://images.amazon.com/images/P/0375401318.01.LZZZZZZZ.jpg
 251,Felicia's Journey,207413,444,0140253602,Viking Adult,1900-01-01,5.29,1,http://images.amazon.com/images/P/0140253602.01.LZZZZZZZ.jpg
 252,Possessing the Secret of Joy,200855,444,0671789422,Harcourt Brace Jovanovich,1900-01-01,4.99,5,http://images.amazon.com/images/P/0671789422.01.LZZZZZZZ.jpg
+253,Glorious Country: Food Crafts Decorating,1,284,1859671500,Lorenz Books,1900-01-01,7.72,8,http://images.amazon.com/images/P/1859671500.01.LZZZZZZZ.jpg
 254,Loving,1,890,0810935627,Harry N. Abrams,1900-01-01,10.99,12,http://images.amazon.com/images/P/0810935627.01.LZZZZZZZ.jpg
 255,White Teeth,201471,444,0375501851,Penguin Uk,1900-01-01,5.29,18,http://images.amazon.com/images/P/0375501851.01.LZZZZZZZ.jpg
 256,Swimming in the Volcano: A Novel,150089,444,0140236589,Scribner,1900-01-01,6.16,8,http://images.amazon.com/images/P/0140236589.01.LZZZZZZZ.jpg
@@ -257,12 +274,14 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 273,Rachel's Tears: The Spiritual Journey of Columbine Martyr Rachel Scott,8380,119,0785268480,Thomas Nelson Publishers,1900-01-01,4.99,5,http://images.amazon.com/images/P/0785268480.01.LZZZZZZZ.jpg
 274,Once,102842,890,0330376136,Harvest,1900-01-01,5.29,11,http://images.amazon.com/images/P/0330376136.01.LZZZZZZZ.jpg
 275,Choke,1,444,0385720920,Anchor,1900-01-01,4.99,4,http://images.amazon.com/images/P/0385720920.01.LZZZZZZZ.jpg
+276,Lake Wobegon Days,103406,444,0140099832,Penguin Books,1900-01-01,5.19,17,http://images.amazon.com/images/P/0140099832.01.LZZZZZZZ.jpg
 277,Rush Limbaugh Is a Big Fat Idiot: And Other Observations,209035,564,0385314744,Dell,1900-01-01,5.29,13,http://images.amazon.com/images/P/0385314744.01.LZZZZZZZ.jpg
 278,The Thief Lord,201332,625,0439404371,Chicken House,1900-01-01,4.99,2,http://images.amazon.com/images/P/0439404371.01.LZZZZZZZ.jpg
 279,"Sex, Art, and American Culture: Essays",136578,1063,0679741011,Vintage,1900-01-01,4.99,5,http://images.amazon.com/images/P/0679741011.01.LZZZZZZZ.jpg
 280,The Color of Water: A Black Man's Tribute to His White Mother,205875,1063,1573225789,Riverhead Trade,1900-01-01,4.89,13,http://images.amazon.com/images/P/1573225789.01.LZZZZZZZ.jpg
 281,Dragonsdawn,198224,444,0345331605,Del Rey,1900-01-01,13.98,2,http://images.amazon.com/images/P/0345331605.01.LZZZZZZZ.jpg
 282,The Family Orchard,134755,444,0375724575,Knopf,1900-01-01,5.58,17,http://images.amazon.com/images/P/0375724575.01.LZZZZZZZ.jpg
+283,The Cider House Rules,201547,444,0553258001,Ballantine Books,1900-01-01,10.98,8,http://images.amazon.com/images/P/0553258001.01.LZZZZZZZ.jpg
 284,Uncle Tungsten: Memories of a Chemical Boyhood,1,119,0375704043,Knopf,1900-01-01,4.99,11,http://images.amazon.com/images/P/0375704043.01.LZZZZZZZ.jpg
 285,Gingerbread,201333,1247,068986020X,Simon & Schuster Books for Young Readers,1900-01-01,5.29,15,http://images.amazon.com/images/P/068986020X.01.LZZZZZZZ.jpg
 286,Summer Light,207994,444,0553582658,Bantam,1900-01-01,5.53,20,http://images.amazon.com/images/P/0553582658.01.LZZZZZZZ.jpg
@@ -272,12 +291,14 @@ BookID,Title,AuthorID,GenreID,ISBN,Publisher,PublicationDate,Price,Stock,Photo
 290,The Museum Guard,111970,444,0374216495,Farrar Straus Giroux,1900-01-01,5.29,5,http://images.amazon.com/images/P/0374216495.01.LZZZZZZZ.jpg
 291,Evening News: A Novel,1,444,0316825336,Little Brown & Co,1900-01-01,5.29,17,http://images.amazon.com/images/P/0316825336.01.LZZZZZZZ.jpg
 292,Having Everything,197831,444,0871137631,Grove Press,1900-01-01,5.29,17,http://images.amazon.com/images/P/0871137631.01.LZZZZZZZ.jpg
+293,Nothin' but Good Times Ahead,106028,564,0679419152,Random House,1900-01-01,4.99,16,http://images.amazon.com/images/P/0679419152.01.LZZZZZZZ.jpg
 294,The Island of the Day Before,200918,444,0140259198,Penguin Books,1900-01-01,5.41,8,http://images.amazon.com/images/P/0140259198.01.LZZZZZZZ.jpg
 295,Darwin's Radio,202745,444,0345435249,Del Rey,1900-01-01,4.99,20,http://images.amazon.com/images/P/0345435249.01.LZZZZZZZ.jpg
 296,Praying for Sleep,197620,444,0451181468,G.P. Putnam's Sons,1900-01-01,4.99,20,http://images.amazon.com/images/P/0451181468.01.LZZZZZZZ.jpg
 297,Red Square,207574,444,0345384733,Random House,1900-01-01,4.99,5,http://images.amazon.com/images/P/0345384733.01.LZZZZZZZ.jpg
 298,Shock,205346,444,0399146008,Putnam Adult,1900-01-01,4.99,2,http://images.amazon.com/images/P/0399146008.01.LZZZZZZZ.jpg
 299,Bronze Mirror,46627,444,044990671X,Ballantine Books,1900-01-01,4.99,9,http://images.amazon.com/images/P/044990671X.01.LZZZZZZZ.jpg
+300,"My Father, His Son",1,444,155970117X,Arcade Pub,1900-01-01,5.29,10,http://images.amazon.com/images/P/155970117X.01.LZZZZZZZ.jpg
 301,Jewel,103728,444,0671038184,Pocket Books,1900-01-01,4.99,10,http://images.amazon.com/images/P/0671038184.01.LZZZZZZZ.jpg
 302,The Satanic Verses,202688,444,0963270702,The Viking Press,1900-01-01,10.99,2,http://images.amazon.com/images/P/0963270702.01.LZZZZZZZ.jpg
 303,Shadowmancer,1,1247,0399242562,G.P. Putnam's Sons Books for Young Readers,1900-01-01,5.29,11,http://images.amazon.com/images/P/0399242562.01.LZZZZZZZ.jpg

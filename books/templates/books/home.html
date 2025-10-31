@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="slide-captions text-center text-light">
                         <!-- Captions -->
-                        <h2 class="text-lg brand-font">發現你的下一本最愛書籍</h2>
+                        <h2 class="text-lg brand-font ">發現你的下一本最愛書籍</h2>
                         <p class="lead mb-4">探索數千本跨越所有類別的書籍。從暢銷書到隱藏的寶石，找到您正在尋找的內容。</p>
                         <div class="search-box mx-auto" style="max-width: 500px;">
                             <form action="{% url 'book_list' %}" method="get" class="d-flex">
@@ -134,7 +134,7 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>購滿$300，即享免運遞送</h3>
+                            <h3>購滿$60，即享免運遞送</h3>
                             <p>當您的訂單金額超過 $60，我們將為您獻上全球免運的禮遇。</p>
                         </div>
                     </div>
@@ -197,7 +197,7 @@
                         <p class="mb-4">訂閱我們的時事通訊，第一時間了解新書發佈和獨家優惠。</p>
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="輸入您的電子郵件">
-                            <button class="btn btn-primary" type="button">訂閱</button>
+                            <button class="btn btn-primary" type="button" onclick="subscribe()">訂閱</button>
                         </div>
                     </div>
                 </div>
@@ -213,5 +213,14 @@
             }
         }
     </style>
+
+<script>
+function subscribe() {
+  const email = 'your-email@example.com';
+  const subject = '訂閱請求';
+  const body = '我想訂閱您的電子報/內容';
+  window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+</script>
 
 {% endblock %}

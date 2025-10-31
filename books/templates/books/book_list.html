@@ -228,7 +228,7 @@
                                 <div class="input-group">
                                     <input type="email" placeholder="Enter your Email" class="form-control required email" name="email" aria-required="true">
                                     <span class="input-group-btn">
-                                        <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i></button>
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" onclick="subscribe()"></i></button>
                                     </span>
                                 </div>
                             </form>
@@ -258,7 +258,7 @@
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
                             <h3>Worldwide delivery</h3>
-                            <p>We deliver to all major countries worldwide with fast shipping.</p>
+                            <p>We support delivery to the following countries and regions: Mainland China, Taiwan, and Malaysia.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -275,4 +275,14 @@
                 </div>
             </div>
         </section>
+
+<script>
+function subscribe() {
+  const email = 'your-email@example.com';
+  const subject = '訂閱請求';
+  const body = '我想訂閱您的電子報/內容';
+  window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+</script>
+
 {% endblock %}

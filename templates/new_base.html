@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Document title -->
-    <title> 一木書室 | 城巿中的獨立書屋</title>
+    <title> 一木書屋 | 城巿中的獨立書室</title>
     <!-- Stylesheets & Fonts -->
     <link href={% static "css/plugins.css" %} rel="stylesheet">
     <link href={% static "css/style.css" %} rel="stylesheet">
@@ -33,6 +33,7 @@
                             <li><a href="{% url 'about' %}">About</a></li>
                             <li><a href="{% url 'privacy' %}">Privacy</a></li>
                             <li><a href="{% url 'terms_of_use' %}">Terms</a></li>
+                            <li class="social-facebook"><a href="#"><i class="fas fa-globe-europe"></i> 繁體</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 d-none d-sm-block">
@@ -97,7 +98,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="{% url 'order_history' %}"><i class="fas fa-history me-2"></i>Order History</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="{% url 'profile_view' %}"><i class="fas fa-user me-2"></i>Profile</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>
                                     <form method="post" action="{% url 'logout' %}" class="d-inline">
@@ -165,14 +166,10 @@
                             <div class="row">
                                 <div class="col-lg-3">
                                     <div class="widget">
-                                        <div class="widget-title">Discover</div>
+                                        <div class="widget-title">About</div>
                                         <ul class="list">
-                                            <li><a href="#">Features</a></li>
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Corporate</a></li>
-                                            <li><a href="#">Updates</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                            <li><a href="#">Customers</a></li>
+                                            <li><a href="{% url 'home' %}">Home</a></li>
+                                            <li><a href="{% url 'about' %}">About</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -181,21 +178,18 @@
                                     <div class="widget">
                                         <div class="widget-title">Features</div>
                                         <ul class="list">
-                                            <li><a href="#">Layouts</a></li>
-                                            <li><a href="#">Headers</a></li>
-                                            <li><a href="#">Widgets</a></li>
-                                            <li><a href="#">Footers</a></li>
+                                            <li><a href="{% url 'book_list' %}">Books</a></li>
+                                            <li><a href="{% url 'author_list' %}">Author</a></li>
+                                            <li><a href="{% url 'genre_list' %}">GenreList</a></li>
                                         </ul>
                                     </div>
                                 </div>
-
                                 <div class="col-lg-3">
                                     <div class="widget">
                                         <div class="widget-title">Pages</div>
                                         <ul class="list">
-                                            <li><a href="#">Portfolio</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Shop</a></li>
+                                            <li><a href="{% url 'author_list' %}">Our Authors</a></li>
+                                            <li><a href="{% url 'genre_list' %}">Genres</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -203,9 +197,9 @@
                                     <div class="widget">
                                         <div class="widget-title">Support</div>
                                         <ul class="list">
-                                            <li><a href="#">Help Desk</a></li>
-                                            <li><a href="#">Documentation</a></li>
-                                            <li><a href="#">Contact Us</a></li>
+                                            <li><a href="{% url 'terms_of_use' %}">Terns of Use</a></li>
+                                            <li><a href="{% url 'privacy' %}">Privacy</a></li>
+                                            <li><a href="{% url 'about' %}">Contact Us</a></li>
                                         </ul>
                                     </div>
                                 </div>

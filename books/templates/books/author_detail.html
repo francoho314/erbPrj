@@ -1,6 +1,6 @@
 {% extends 'new_base.html' %}
-
-{% block title %}{{ author.full_name }} - BookStore{% endblock %}
+{% load i18n %}
+{% block title %}{{ author.full_name }} - {% trans 'BookHub' %}{% endblock %}
 
 {% block content %}
         <!-- Page title -->
@@ -8,13 +8,13 @@
             <div class="container">
                 <div class="page-title">
                     <h1>{{ author.full_name }}</h1>
-                    <span>{{ books|length }} books available</span>
+                    <span>{{ books|length }} {%trans 'books available'%}</span>
                 </div>
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="{% url 'home' %}">Home</a>
+                        <li><a href="{% url 'home' %}">{%trans 'Home'%}</a>
                         </li>
-                        <li><a href="{% url 'book_list' %}">Books</a>
+                        <li><a href="{% url 'book_list' %}">{%trans 'Books'%}</a>
                         </li>
                         <li class="active"><a href="#">{{ author.full_name }}</a>
                         </li>
@@ -31,32 +31,32 @@
                     <div class="content col-lg-9">
                         <div class="row m-b-20">
                             <div class="col-lg-6 p-t-10 m-b-20">
-                                <h3 class="m-b-20">Books by {{ author.full_name }}</h3>
-                                <p>Discover the complete collection of works by this talented author.</p>
+                                <h3 class="m-b-20">{%trans 'Books by'%} {{ author.full_name }}</h3>
+                                <p>{%trans 'Discover the complete collection of works by this talented author.'%}</p>
                             </div>
                             <div class="col-lg-3">
                                 <div class="order-select">
-                                    <h6>Sort by</h6>
-                                    <p>Showing {{ books|length }} results</p>
+                                    <h6>{%trans 'Sort by'%}</h6>
+                                    <p>{%trans 'Showing'%} {{ books|length }} {%trans 'results'%}</p>
                                     <form method="get">
                                         <select class="form-select">
-                                            <option selected="selected" value="order">Default sorting</option>
-                                            <option value="popularity">Sort by popularity</option>
-                                            <option value="rating">Sort by average rating</option>
-                                            <option value="date">Sort by newness</option>
-                                            <option value="price">Sort by price: low to high</option>
-                                            <option value="price-desc">Sort by price: high to low</option>
+                                            <option selected="selected" value="order">{%trans "Default sorting"%}</option>
+                                            <option value="popularity">{%trans "Sort by popularity"%}</option>
+                                            <option value="rating">{%trans "Sort by average rating"%}</option>
+                                            <option value="date">{%trans "Sort by newness"%}</option>
+                                            <option value="price">{%trans "Sort by price: low to high"%}</option>
+                                            <option value="price-desc">{%trans "Sort by price: high to low"%}</option>
                                         </select>
                                     </form>
                                 </div>
                             </div>
                             <div class="col-lg-3">
                                 <div class="order-select">
-                                    <h6>Filter by Price</h6>
-                                    <p>All price ranges</p>
+                                    <h6>{%trans "Filter by Price"%}</h6>
+                                    <p>{%trans "All price ranges"%}</p>
                                     <form method="get">
                                         <select class="form-select">
-                                            <option selected="selected" value="">All Prices</option>
+                                            <option selected="selected" value="">{%trans "All Prices"%}</option>
                                             <option value="">0$ - 20$</option>
                                             <option value="">21$ - 40$</option>
                                             <option value="">41$ - 60$</option>
@@ -77,13 +77,13 @@
                                                 <img alt="{{ book.Title }}" src="{{ book.photo_url }}">
                                             </a>
                                             {% if forloop.counter <= 2 %}
-                                            <span class="product-new">NEW</span>
+                                            <span class="product-new">{%trans "NEW"%}</span>
                                             {% endif %}
                                             <span class="product-wishlist">
                                                 <a href="#"><i class="fa fa-heart"></i></a>
                                             </span>
                                             <div class="product-overlay">
-                                                <a href="{% url 'book_detail' book.BookID %}">Quick View</a>
+                                                <a href="{% url 'book_detail' book.BookID %}">{%trans "Quick View"%}</a>
                                             </div>
                                         </div>
                                         <div class="product-description">
@@ -99,18 +99,18 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star-half-o"></i>
                                             </div>
-                                            <div class="product-reviews"><a href="#">128 customer reviews</a></div>
+                                            <div class="product-reviews"><a href="#">128 {%trans "customer reviews"%}</a></div>
                                             <div class="product-actions mt-2">
                                                 {% if book.is_available %}
-                                                    <span class="badge bg-success">In Stock</span>
+                                                    <span class="badge bg-success">{%trans "In Stock"%}</span>
                                                 {% else %}
-                                                    <span class="badge bg-secondary">Out of Stock</span>
+                                                    <span class="badge bg-secondary">{%trans "Out of Stock"%}</span>
                                                 {% endif %}
                                                 <div class="mt-2">
-                                                    <a href="{% url 'book_detail' book.BookID %}" class="btn btn-outline-primary btn-sm">View Details</a>
+                                                    <a href="{% url 'book_detail' book.BookID %}" class="btn btn-outline-primary btn-sm">{%trans "View Details"%}</a>
                                                     {% if book.is_available and user.is_authenticated %}
                                                         <a href="{% url 'add_to_cart' book.BookID %}" class="btn btn-primary btn-sm mt-1">
-                                                            <i class="fa fa-cart-plus"></i> Add to Cart
+                                                            <i class="fa fa-cart-plus"></i> {%trans "Add to Cart"%}
                                                         </a>
                                                     {% endif %}
                                                 </div>
@@ -121,9 +121,9 @@
                                 {% empty %}
                                 <div class="col-12 text-center py-5">
                                     <i class="fa fa-book fa-3x text-muted mb-3"></i>
-                                    <h4 class="text-muted">No Books Available</h4>
-                                    <p class="text-muted">No books found by {{ author.full_name }}.</p>
-                                    <a href="{% url 'book_list' %}" class="btn btn-primary">Browse All Books</a>
+                                    <h4 class="text-muted">{%trans "No Books Available"%}</h4>
+                                    <p class="text-muted">{%trans "No books found by"%} {{ author.full_name }}.</p>
+                                    <a href="{% url 'book_list' %}" class="btn btn-primary">{%trans "Browse All Books"%}</a>
                                 </div>
                                 {% endfor %}
                             </div>
@@ -163,7 +163,7 @@
                     <div class="sidebar col-lg-3">
                         <!-- Author Information -->
                         <div class="widget clearfix widget-archive">
-                            <h4 class="widget-title">About the Author</h4>
+                            <h4 class="widget-title">{%trans "About the Author"%}</h4>
                             <div class="author-info">
                                 <div class="text-center mb-3">
                                     <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
@@ -174,27 +174,27 @@
                                 
                                 {% if author.DateOfBirth %}
                                 <div class="d-flex justify-content-between mb-2">
-                                    <span class="text-muted">Born:</span>
+                                    <span class="text-muted">{%trans "Born"%}:</span>
                                     <strong>{{ author.DateOfBirth|date:"F d, Y" }}</strong>
                                 </div>
                                 {% endif %}
                                 
                                 {% if author.DateOfDeath %}
                                 <div class="d-flex justify-content-between mb-2">
-                                    <span class="text-muted">Died:</span>
+                                    <span class="text-muted">{%trans "Died"%}:</span>
                                     <strong>{{ author.DateOfDeath|date:"F d, Y" }}</strong>
                                 </div>
                                 {% endif %}
                                 
                                 {% if author.Bio %}
                                 <div class="mt-3">
-                                    <h6>Biography</h6>
+                                    <h6>{%trans "Biography"%}</h6>
                                     <p class="small">{{ author.Bio|truncatewords:50 }}</p>
                                 </div>
                                 {% endif %}
                                 
                                 <div class="d-flex justify-content-between mt-3">
-                                    <span class="text-muted">Total Books:</span>
+                                    <span class="text-muted">{%trans "Total Books"%}:</span>
                                     <strong>{{ books|length }}</strong>
                                 </div>
                             </div>

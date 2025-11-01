@@ -142,7 +142,8 @@ def author_detail(request, author_id):
     })
 
 def genre_list(request):
-    genres = Genre.objects.all()
+    #genres = Genre.objects.all()
+    genres = Genre.objects.annotate(book_count=Count('book')).filter(book_count__gt=0)
     total_books = Book.objects.count()
     total_genres = Genre.objects.count()
 

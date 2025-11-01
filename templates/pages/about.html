@@ -1,5 +1,6 @@
 {% extends 'new_base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 
         <!-- Inspiro Slider -->
@@ -10,8 +11,8 @@
                 <div class="container">
                     <div class="slide-captions text-center text-light">
                         <!-- Captions -->
-                        <span class="strong">關於我們</span>
-                        <h1>一木書屋</h1>
+                        <span class="strong">{%trans "About Us" %}</span>
+                        <h1>{%trans "BookHub"%}</h1>
                         <!-- end: Captions -->
                     </div>
                 </div>
@@ -28,17 +29,16 @@
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="heading-text heading-section fw-bold">
-                            <h2>一木書屋</h2>
+                            <h2>{%trans "BookHub"%}</h2>
 
                         </div>
                     </div>
                     <div class="col-lg-9">
                         <div class="row">
-                            <div class="col-lg-6">一木書屋，藏於城巿喧囂中的一處溫柔角落。我們不只賣書，更經營一方讓人與靈感相遇的空間——這裡是獨立思想的棲息地，也是溫馨藝術的發生場。<br><br>走進書室，藝術的氣息便自然而然地融入你的閱讀體驗。這裡不僅是知識的殿堂，更是本地藝術家的創作展場──牆上懸掛的畫作、書架間點綴的雕塑、轉角處不經意的藝術裝置，都在無聲地訴說著美的語言。翻動書頁的間隙，一次抬眼，便可能與一件觸動心弦的作品不期而遇。
-
+                            <div class="col-lg-6">{%trans "BookHub"%} - {%trans "A gentle corner hidden amidst the city's hustle and bustle. We don't just sell books, we create a space where people meet inspiration. This is a haven for independent thoughts and a birthplace for warm artistry."%}<br><br>{%trans "Step into the reading room, and the essence of art naturally weaves itself into your literary experience. This is not just a temple of knowledge; it is also an exhibition space for local artists—paintings adorning the walls, sculptures scattered among the bookshelves, and unexpected art installations around the corners,all silently speaking the language of beauty. In the pauses between turning pages, a simple glance upward may lead you to an artwork that touches your heart."%}
  </div>
 
-                            <div class="col-lg-6">在這裡，閱讀的儀式感被細心呵護。我們特別準備了手工打造的藏書票、古法裝幀的特別版書籍，以及充滿設計感的文具小物，每一件都承載著匠人的溫度與心意。當你選好心愛的書籍，不妨在吧台點一杯公平貿易咖啡或有機茶，在氤氳香氣中，讓文字與思緒慢慢交融。</div>
+                            <div class="col-lg-6"> {%trans "Here, the ritual of reading is carefully nurtured. We have specially prepared handcrafted bookplates, beautifully bound special edition books, and thoughtfully designed stationery, each item carrying the warmth and intention of its maker. Once you've chosen your beloved book, consider ordering a cup of fair trade coffee or organic tea at the bar. In the midst of the fragrant atmosphere, let the words and your thoughts gradually intertwine."%} </div>
 
                         </div>
                     </div>

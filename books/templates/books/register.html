@@ -1,109 +1,109 @@
 
 {% extends 'new_base.html' %}
-
-{% block title %}Register - BookStore{% endblock %}
+{% load i18n %}
+{% block title %}{%trans "Register"%} - {%trans "BookHub"%} {% endblock %}
 
 {% block content %}
 <section class="pt-5 pb-5">
     <div class="container-fluid d-flex flex-column">
         <div class="row align-items-center min-vh-100">
             <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <h3>Register New Account</h3>
-                <p>Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                <h3>{%trans "Register New Account"%}</h3>
+                <p>{%trans "Create an account by entering the information below. If you are a returning customer please login at the top of the page."%}</p>
                 
                 <form method="post" class="form-validate mt-5">
                     {% csrf_token %}
                     
-                    <div class="h5 mb-4">Account details</div>
+                    <div class="h5 mb-4">{%trans "Account details"%}</div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" name="username" placeholder="Enter username" required
+                            <label for="username">{%trans "Username"%}</label>
+                            <input type="text" class="form-control" name="username" placeholder="{%trans 'Enter username' %}" required
                                    maxlength="150" pattern="[a-zA-Z0-9_]+" 
                                    title="150 characters or fewer. Letters, digits and @/./+/-/_ only.">
-                            <div class="form-text">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</div>
+                            <div class="form-text">{%trans "Mandatory Required. 150 characters or fewer. Letters, digits and"%} @/./+/-/_ </div>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                            <label for="email">{%trans "Email address"%}</label>
+                            <input type="email" class="form-control" name="email" placeholder="{% trans 'Enter your email' %}" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="password1">Password</label>
+                            <label for="password1">{%trans "Password"%}</label>
                             <div class="input-group show-hide-password">
-                                <input class="form-control" name="password1" placeholder="Enter password" type="password" required>
+                                <input class="form-control" name="password1" placeholder="{%trans 'Enter password' %}" type="password" required>
                                 <span class="input-group-text"><i class="icon-eye-off" aria-hidden="true" style="cursor: pointer;"></i></span>
                             </div>
                             <div class="form-text">
                                 <ul class="mb-0 mt-1">
-                                    <li>Your password can't be too similar to your other personal information.</li>
-                                    <li>Your password must contain at least 8 characters.</li>
-                                    <li>Your password can't be a commonly used password.</li>
-                                    <li>Your password can't be entirely numeric.</li>
+                                    <li>{%trans "Your password can't be too similar to your other personal information."%}</li>
+                                    <li>{%trans "Your password must contain at least 8 characters."%}</li>
+                                    <li>{%trans "Your password can't be a commonly used password."%}</li>
+                                    <li>{%trans "Your password can't be entirely numeric."%}</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="password2">Confirm Password</label>
+                            <label for="password2">{%trans "Confirm Password"%}</label>
                             <div class="input-group show-hide-password">
-                                <input class="form-control" name="password2" placeholder="Confirm password" type="password" required>
+                                <input class="form-control" name="password2" placeholder="{%trans 'Confirm password' %}" type="password" required>
                                 <span class="input-group-text"><i class="icon-eye-off" aria-hidden="true" style="cursor: pointer;"></i></span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="h5 mb-4 mt-4">Personal Information</div>
+                    <div class="h5 mb-4 mt-4">{%trans "Personal Information"%}</div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="first_name">First Name</label>
-                            <input type="text" class="form-control" name="first_name" placeholder="Enter your First Name" required>
+                            <label for="first_name">{%trans "First Name"%}</label>
+                            <input type="text" class="form-control" name="first_name" placeholder="{%trans 'Enter your First Name' %}" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="last_name">Last Name</label>
-                            <input type="text" class="form-control" name="last_name" placeholder="Enter your Last Name" required>
+                            <label for="last_name">{%trans "Last Name"%}</label>
+                            <input type="text" class="form-control" name="last_name" placeholder="{%trans 'Enter your Last Name' %}" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="phone">Telephone</label>
-                            <input class="form-control" type="tel" name="phone" placeholder="Enter your Telephone number">
+                            <label for="phone">{%trans "Telephone"%}</label>
+                            <input class="form-control" type="tel" name="phone" placeholder="{%trans 'Enter your Telephone number' %}" >
                         </div>
                     </div>
                     
-                    <div class="h5 mb-4 mt-4">Mailing Address</div>
+                    <div class="h5 mb-4 mt-4">{%trans "Mailing Address"%}</div>
                     <div class="row">
                         <div class="form-group col-md-12">
-                            <label for="address">Address</label>
-                            <textarea class="form-control" name="address" placeholder="Enter your Street Address" rows="3" required></textarea>
+                            <label for="address">{%trans "Address"%}</label>
+                            <textarea class="form-control" name="address" placeholder="{%trans 'Enter your Street Address' %}" rows="3" required></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="city">City</label>
-                            <input type="text" class="form-control" name="city" placeholder="Enter your City" required>
+                            <label for="city">{%trans "City"%}</label>
+                            <input type="text" class="form-control" name="city" placeholder="{%trans 'Enter your City' %}" required>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="state">State</label>
-                            <input type="text" class="form-control" name="state" placeholder="Enter State" required>
+                            <label for="state">{%trans "State"%}</label>
+                            <input type="text" class="form-control" name="state" placeholder="{%trans 'Enter State' %}" required>
                         </div>
                         <div class="form-group col-md-3">
-                            <label for="zip_code">Zip Code</label>
-                            <input type="text" class="form-control" name="zip_code" placeholder="Enter Zip Code" required>
+                            <label for="zip_code">{%trans "Zip Code"%}</label>
+                            <input type="text" class="form-control" name="zip_code" placeholder="{%trans 'Enter Zip Code' %}" required>
                         </div>
                     </div>
                     
                     <div class="form-check mt-4">
                         <input type="checkbox" name="terms_conditions" id="terms_conditions" class="form-check-input" value="1" required>
-                        <label class="form-check-label" for="terms_conditions">By checking this option, you agree to accept the <a href="#">Terms and Conditions</a>.</label>
+                        <label class="form-check-label" for="terms_conditions">{%trans "By checking this option, you agree to accept the"%}&nbsp;<a href="#">{%trans "Terms and Conditions"%}</a></label>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary btn-lg mt-4 w-100">Create Account</button>
+                    <button type="submit" class="btn btn-primary btn-lg mt-4 w-100">{%trans "Create Account"%}</button>
                 </form>
                 
                 <div class="mt-4 text-center">
-                    <small>Already have an account?</small> 
-                    <a href="{% url 'login' %}" class="small fw-bold">Sign in</a>
+                    <small>{%trans "Already have an account"%}?</small> 
+                    <a href="{% url 'login' %}" class="small fw-bold">{%trans "Sign in"%}</a>
                 </div>
             </div>
         </div>

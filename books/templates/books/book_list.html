@@ -1,20 +1,20 @@
 {% extends 'new_base.html' %}
-
-{% block title %}Browse Books - BookStore{% endblock %}
+{% load static %}  {% load i18n %}
+{% block title %}{%trans "Browse Books"%} - {%trans "BookHub"%}{% endblock %}
 
 {% block content %}
         <!-- Page title -->
         <section id="page-title">
             <div class="container">
                 <div class="page-title">
-                    <h1>Browse Our Collection</h1>
-                    <span>{{ books|length }} books found</span>
+                    <h1>{%trans "Browse Our Collection"%}</h1>
+                    <span>{{ books|length }} {%trans "books found"%}</span>
                 </div>
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="{% url 'home' %}">Home</a>
+                        <li><a href="{% url 'home' %}">{%trans "Home"%}</a>
                         </li>
-                        <li class="active"><a href="#">Browse Books</a>
+                        <li class="active"><a href="#">{%trans "Browse Books"%}</a>
                         </li>
                     </ul>
                 </div>
@@ -29,20 +29,20 @@
                     <div class="content col-lg-9">
                         <div class="row m-b-20">
                             <div class="col-lg-6 p-t-10 m-b-20">
-                                <h3 class="m-b-20">Discover Amazing Books</h3>
-                                <p>Explore our curated collection of books across various genres and authors.</p>
+                                <h3 class="m-b-20">{%trans "Discover Amazing Books"%}</h3>
+                                <p>{%trans "Explore our curated collection of books across various genres and authors."%}</p>
                             </div>
                             <div class="col-lg-3">
                                 <div class="order-select">
-                                    <h6>Sort by</h6>
-                                    <p>Showing {{ books|length }} results</p>
+                                    <h6>{%trans "Sort by"%}</h6>
+                                    <p>{%trans "Showing"%} {{ books|length }} {%trans "results"%}</p>
                                     <form method="get">
                                         <select class="form-select" name="sort">
-                                            <option selected="selected" value="">Default sorting</option>
-                                            <option value="title">Sort by title</option>
-                                            <option value="price_low">Price: low to high</option>
-                                            <option value="price_high">Price: high to low</option>
-                                            <option value="newest">Newest first</option>
+                                            <option selected="selected" value="">{%trans "Default sorting"%}</option>
+                                            <option value="title">{%trans "Sort by title"%}</option>
+                                            <option value="price_low">{%trans "Price: low to high"%}</option>
+                                            <option value="price_high">{%trans "Price: high to low"%}</option>
+                                            <option value="newest">{%trans "Newest first"%}</option>
                                         </select>
                                     </form>
                                 </div>
@@ -58,13 +58,13 @@
                                             <a href="{% url 'book_detail' book.BookID %}"><img alt="{{ book.Title }}" src="{{ book.photo_url }}">
                                             </a>
                                             {% if forloop.counter <= 3 %}
-                                            <span class="product-new">POPULAR</span>
+                                            <span class="product-new">{%trans "POPULAR"%}</span>
                                             {% endif %}
                                             <span class="product-wishlist">
                                                 <a href="#"><i class="fa fa-heart"></i></a>
                                             </span>
                                             <div class="product-overlay">
-                                                <a href="{% url 'book_detail' book.BookID %}">Quick View</a>
+                                                <a href="{% url 'book_detail' book.BookID %}">{%trans "Quick View"%}</a>
                                             </div>
                                         </div>
                                         <div class="product-description">
@@ -81,18 +81,18 @@
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star-half-o"></i>
                                             </div>
-                                            <div class="product-reviews"><a href="#">128 customer reviews</a>
+                                            <div class="product-reviews"><a href="#">128 {%trans "customer reviews"%}</a>
                                             </div>
                                             {% if book.is_available %}
-                                                <span class="badge bg-success">In Stock</span>
+                                                <span class="badge bg-success">{%trans "In Stock"%}</span>
                                             {% else %}
-                                                <span class="badge bg-secondary">Out of Stock</span>
+                                                <span class="badge bg-secondary">{%trans "Out of Stock"%}</span>
                                             {% endif %}
                                             <div class="product-actions mt-2">
                                                 {% comment %} <a href="{% url 'book_detail' book.BookID %}" class="btn btn-outline-primary btn-sm">View Details</a> {% endcomment %}
                                                 {% if book.is_available and user.is_authenticated %}
                                                     <a href="{% url 'add_to_cart' book.BookID %}" class="btn btn-primary btn-sm">
-                                                        <i class="fa fa-cart-plus me-1"></i>Add to Cart
+                                                        <i class="fa fa-cart-plus me-1"></i>{%trans "Add to Cart"%}
                                                     </a>
                                                 {% endif %}
                                             </div>
@@ -102,9 +102,9 @@
                                 {% empty %}
                                 <div class="col-12 text-center py-5">
                                     <i class="fa fa-search fa-3x text-muted mb-3"></i>
-                                    <h4 class="text-muted">No books found</h4>
-                                    <p class="text-muted">Try adjusting your search filters</p>
-                                    <a href="{% url 'book_list' %}" class="btn btn-primary">Clear Filters</a>
+                                    <h4 class="text-muted">{%trans "No books found"%}</h4>
+                                    <p class="text-muted">{%trans "Try adjusting your search filters"%}</p>
+                                    <a href="{% url 'book_list' %}" class="btn btn-primary">{%trans "Clear Filters"%}</a>
                                 </div>
                                 {% endfor %}
                             </div>
@@ -153,16 +153,16 @@
                     <div class="sidebar col-lg-3">
                         <!-- Filters -->
                         <div class="widget clearfix widget-archive">
-                            <h4 class="widget-title">Filters</h4>
+                            <h4 class="widget-title">{%trans "Filters"%}</h4>
                             <form method="get">
                                 <div class="mb-3">
-                                    <label class="form-label">Search</label>
-                                    <input type="text" name="query" class="form-control" placeholder="Title, author..." value="{{ request.GET.query }}">
+                                    <label class="form-label">{%trans "Search"%}</label>
+                                    <input type="text" name="query" class="form-control" placeholder=" {%trans "Title, author..."%} " value="{{ request.GET.query }}">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Genre</label>
+                                    <label class="form-label">{%trans "Genre"%}</label>
                                     <select name="genre" class="form-select">
-                                        <option value="">All Genres</option>
+                                        <option value="">{%trans "All Genres"%}</option>
                                         {% for genre in form.genre.field.queryset %}
                                             <option value="{{ genre.GenreID }}" {% if request.GET.genre == genre.GenreID|stringformat:"s" %}selected{% endif %}>
                                                 {{ genre.GenreName }}
@@ -171,9 +171,9 @@
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Author</label>
+                                    <label class="form-label">{%trans "Author"%}</label>
                                     <select name="author" class="form-select">
-                                        <option value="">All Authors</option>
+                                        <option value="">{%trans "All Authors"%}</option>
                                         {% for author in form.author.field.queryset %}
                                             <option value="{{ author.AuthorID }}" {% if request.GET.author == author.AuthorID|stringformat:"s" %}selected{% endif %}>
                                                 {{ author.full_name }}
@@ -182,7 +182,7 @@
                                     </select>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    <i class="fa fa-search me-1"></i>Apply Filters
+                                    <i class="fa fa-search me-1"></i>{%trans "Apply Filters"%}
                                 </button>
                                 {% comment %} <a href="{% url 'book_list' %}" class="btn btn-outline-secondary btn-block mt-2">Clear All</a> {% endcomment %}
                             </form>
@@ -190,20 +190,20 @@
 
                         <!-- Collection Stats -->
                         <div class="widget clearfix widget-shop">
-                            <h4 class="widget-title">Collection Stats</h4>
+                            <h4 class="widget-title">{%trans "Collection Stats"%}</h4>
                             <div class="d-flex justify-content-between mb-2">
-                                <span class="text-muted">Total Books:</span>
+                                <span class="text-muted">{%trans "Total Books"%}:</span>
                                 <strong>{{ books.paginator.count }}</strong>
                             </div>
                             <div class="d-flex justify-content-between mb-2">
-                                <span class="text-muted">In Stock:</span>
+                                <span class="text-muted">{%trans "In Stock"%}:</span>
                                 <strong>{{ books|length }}</strong>
                             </div>
                         </div>
 
                         <!-- Latest Products -->
                         <div class="widget clearfix widget-shop">
-                            <h4 class="widget-title">Latest Books</h4>
+                            <h4 class="widget-title">{%trans "Latest Books"%}</h4>
                             <!-- You can add latest books here if needed -->
                             <div class="product">
                                 <div class="product-image">
@@ -211,9 +211,9 @@
                                     </a>
                                 </div>
                                 <div class="product-description">
-                                    <div class="product-category">Fiction</div>
+                                    <div class="product-category">{%trans "Fiction"%}</div>
                                     <div class="product-title">
-                                        <h3><a href="#">New Arrival</a></h3>
+                                        <h3><a href="#">{%trans "New Arrival"%}</a></h3>
                                     </div>
                                     <div class="product-price"><ins>$29.99</ins>
                                     </div>
@@ -223,10 +223,10 @@
 
                         <div class="widget clearfix widget-newsletter">
                             <form class="form-inline" method="get" action="#">
-                                <h4 class="widget-title">Subscribe for New Releases</h4>
-                                <small>Subscribe to get notified about new book releases and special offers.</small>
+                                <h4 class="widget-title">{%trans "Subscribe for New Releases"%}</h4>
+                                <small>{%trans "Subscribe to get notified about new book releases and special offers."%}</small>
                                 <div class="input-group">
-                                    <input type="email" placeholder="Enter your Email" class="form-control required email" name="email" aria-required="true">
+                                    <input type="email" placeholder="{%trans "Enter your Email"%}" class="form-control required email" name="email" aria-required="true">
                                     <span class="input-group-btn">
                                         <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" onclick="subscribe()"></i></button>
                                     </span>
@@ -248,8 +248,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Free shipping on orders $60+</h3>
-                            <p>Order more than 60$ and you will get free shipping Worldwide.</p>
+                            <h3>{%trans 'Free shipping over $60'%} </h3>
+                            <p>{%trans 'When your order exceeds $60, we will offer you free worldwide shipping.'%} </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -257,8 +257,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>Worldwide delivery</h3>
-                            <p>We support delivery to the following countries and regions: Mainland China, Taiwan, and Malaysia.</p>
+                            <h3>{%trans 'Global Delivery'%} </h3>
+                            <p>{%trans 'We support delivery to the following countries and regions: Mainland China, Taiwan, and Malaysia.'%} </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -266,8 +266,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-history"></i></a>
                             </div>
-                            <h3>30 days return policy</h3>
-                            <p>Not satisfied with your book? Return it within 30 days for a full refund!</p>
+                            <h3>{%trans '60-Day Money-Back'%} </h3>
+                            <p>{%trans 'If you are not satisfied, we promise a full refund, so you can enjoy your purchase with peace of mind.'%} </p>
                         </div>
                     </div>
 

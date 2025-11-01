@@ -1,4 +1,5 @@
 {% extends 'new_base.html' %}
+{% load i18n %}
 {% load static %}
 {% block content %}
       
@@ -9,11 +10,11 @@
                 <div class="container">
                     <div class="slide-captions text-center text-light">
                         <!-- Captions -->
-                        <h2 class="text-lg brand-font ">發現你的下一本最愛書籍</h2>
-                        <p class="lead mb-4">探索數千本跨越所有類別的書籍。從暢銷書到隱藏的寶石，找到您正在尋找的內容。</p>
+                        <h2 class="text-lg brand-font ">{%trans 'Discover your next favorite book'%}</h2>
+                        <p class="lead mb-4">{%trans "Explore thousands of books across all genres. From bestsellers to hidden gems, find what you're looking for."%} </p>
                         <div class="search-box mx-auto" style="max-width: 500px;">
                             <form action="{% url 'book_list' %}" method="get" class="d-flex">
-                                <input type="text" name="query" class="form-control me-2" placeholder="搜索書籍、作者、類別...">
+                                <input type="text" name="query" class="form-control me-2" placeholder="{%trans "Search by book, author, genres..."%}" >
                                 <button type="submit" class="btn btn-light">
                                     <i class="fas fa-search"></i>
                                 </button>
@@ -29,10 +30,10 @@
                 <div class="container">
                     <div class="slide-captions text-center">
                         <!-- Captions -->
-                        <h2 class="text-lg text-dark brand-font">精選圖書<br />特價優惠</h2>
-                        <p class="mb-4 text-dark ">發現我們精心挑選的書籍收藏，享受限時特價優惠。</p>
-                        <a class="btn btn-dark" href="{% url 'book_list' %}">立即選購</a>
-                        <a class="btn btn-dark btn-outline" href="{% url 'genre_list' %}">瀏覽類別</a>
+                        <h2 class="text-lg text-dark brand-font">{%trans 'Selected Books'%} <br />{%trans 'Special offer'%}</h2>
+                        <p class="mb-4 text-dark ">{%trans 'Discover our curated book collection and discounts.'%} </p>
+                        <a class="btn btn-dark" href="{% url 'book_list' %}">{%trans 'Buy Now'%} </a>
+                        <a class="btn btn-dark btn-outline" href="{% url 'genre_list' %}">{%trans 'Browse Genres'%} </a>
                         <!-- end: Captions -->
                     </div>
                 </div>
@@ -46,8 +47,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 text-start">
-                        <h2 class="text-medium fw-bold">ERB同學獨享！</h2>
-                        <p>為答謝各位ERB學員一直以來的支持，我們特別推出 「同學限時折扣」 活動！現在報讀指定課程，即可享受書籍九折優惠！</p>
+                        <h2 class="text-medium fw-bold">{%trans 'ERB students privilege'%}！</h2>
+                        <p>{%trans 'To thank all ERB students for their continued support, we are launching a special "Limited-Time Discount for Students" event! Enroll in selected courses now and enjoy a 10% discount on books!'%} </p>
                     </div>
                     <div class="col-lg-7">
                         <div class="countdown medium" data-countdown="2025/11/11 11:34:51" data-animate="fadeInUp"></div>
@@ -61,7 +62,7 @@
         <section>
             <div class="container">
                 <div class="heading m-b-40">
-                    <h4>精選圖書</h4>
+                    <h4>{%trans 'Selected Books'%}</h4>
                 </div>
 
                 <!--Product list-->
@@ -75,13 +76,13 @@
                                         <img alt="{{ book.Title }}" src="{{ book.photo_url }}" id="book">
                                     </a>
                                     {% if forloop.counter <= 2 %}
-                                    <span class="product-new">熱門</span>
+                                    <span class="product-new">{%trans 'Hot'%} </span>
                                     {% endif %}
                                     <span class="product-wishlist">
                                         <a href="#"><i class="fa fa-heart"></i></a>
                                     </span>
                                     <div class="product-overlay">
-                                        <a href="{% url 'book_detail' book.BookID %}">快速預覽</a>
+                                        <a href="{% url 'book_detail' book.BookID %}">{%trans 'Quick View'%} </a>
                                     </div>
                                 </div>
 
@@ -101,12 +102,12 @@
                                         <i class="fa fa-star-half-o"></i>
                                     </div>
                                     <div class="product-reviews">
-                                        <a href="#">作者: {{ book.AuthorID.full_name }}</a>
+                                        <a href="#">{%trans 'Author' %}: {{ book.AuthorID.full_name }}</a>
                                     </div>
                                     {% if book.is_available and user.is_authenticated %}
                                     <div class="product-actions mt-2">
                                         <a href="{% url 'add_to_cart' book.BookID %}" class="btn btn-outline btn">
-                                            <i class="fas fa-cart-plus me-1"></i>加入購物車
+                                            <i class="fas fa-cart-plus me-1"></i>{%trans 'Add Cart'%}
                                         </a>
                                     </div>
                                     {% endif %}
@@ -116,7 +117,7 @@
                         {% empty %}
                         <div class="col-12 text-center py-5">
                             <i class="fas fa-book-open fa-3x text-muted mb-3"></i>
-                            <h4 class="text-muted">暫無可用書籍。</h4>
+                            <h4 class="text-muted">{%trans 'Not Available'%}</h4>
                         </div>
                         {% endfor %}
                     </div>
@@ -134,8 +135,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>購滿$60，即享免運遞送</h3>
-                            <p>當您的訂單金額超過 $60，我們將為您獻上全球免運的禮遇。</p>
+                            <h3>{%trans 'Free shipping over $60'%} </h3>
+                            <p>{%trans 'When your order exceeds $60, we will offer you free worldwide shipping.'%} </p>
                         </div>
                     </div>
 
@@ -144,8 +145,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>全球配送服務</h3>
-                            <p>我們支持以下國家及地區的配送：中國大陸、中國台灣、馬來西亞。</p>
+                            <h3>{%trans 'Global Delivery'%} </h3>
+                            <p>{%trans 'We support delivery to the following countries and regions: Mainland China, Taiwan, and Malaysia.'%} </p>
                         </div>
                     </div>
 
@@ -154,8 +155,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-history"></i></a>
                             </div>
-                            <h3>六十日退款保障</h3>
-                            <p>若您覺得不夠稱心，我們在此承諾全額退還，願您從此安心徜徉。</p>
+                            <h3>{%trans '60-Day Money-Back'%} </h3>
+                            <p>{%trans 'If you are not satisfied, we promise a full refund, so you can enjoy your purchase with peace of mind.'%} </p>
                         </div>
                     </div>
                 </div>
@@ -167,7 +168,7 @@
         <section>
             <div class="container">
                 <div class="heading-text heading-line text-center">
-                    <h4>按類別瀏覽</h4>
+                    <h4>{%trans 'Browse by Genres'%} </h4>
                     <br/>
                 </div>
                 <div class="row">
@@ -177,7 +178,7 @@
                             <div class="shop-category-box text-center">
                                 <div class="shop-category-box-title">
                                     <h6>{{ genre.GenreName }}</h6>
-                                    <small>探索更多</small>
+                                    <small>{%trans 'Explore more'%} </small>
                                 </div>
                             </div>
                         </a>
@@ -193,11 +194,11 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
-                        <h3 class="brand-font mb-3">保持更新</h3>
-                        <p class="mb-4">訂閱我們的時事通訊，第一時間了解新書發佈和獨家優惠。</p>
+                        <h3 class="brand-font mb-3">{%trans 'Keep Update'%} </h3>
+                        <p class="mb-4">{%trans 'Subscribe to our newsletter to be the first to know about new book releases and exclusive offers.'%} </p>
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="輸入您的電子郵件">
-                            <button class="btn btn-primary" type="button" onclick="subscribe()">訂閱</button>
+                            <input type="email" class="form-control" placeholder="{%trans 'Enter your email'%}" >
+                            <button class="btn btn-primary" type="button" onclick="subscribe()">{%trans 'Subscribe'%} </button>
                         </div>
                     </div>
                 </div>

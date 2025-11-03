@@ -1,5 +1,5 @@
 {% extends 'new_base.html' %}
-
+{% load static %}  {% load i18n %}
 {% block content %}
 <div class="container mt-4">
     <!-- Page Header -->
@@ -8,10 +8,10 @@
             <nav aria-label="breadcrumb">
             </nav>
             <div class="d-flex justify-content-between align-items-center">
-                <h1 class="section-title">Book Genres</h1>
-                <span class="badge bg-primary fs-6">{{ total_genres }} genres</span>
+                <h1 class="section-title">{%trans "Book Genres"%}</h1>
+                <span class="badge bg-primary fs-6">{{ total_genres }} {%trans "genres"%}</span>
             </div>
-            <p class="text-muted">Explore books by your favorite genres and discover new ones</p>
+            <p class="text-muted">{%trans "Explore books by your favorite genres and discover new ones"%}</p>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
                     </div>
                     <h5 class="card-title">{{ genre.GenreName }}</h5>
                     <p class="text-muted small mb-3">
-                        {{ genre.book_set.count }} book{{ genre.book_set.count|pluralize }} available
+                        {{ genre.book_set.count }} {%trans "book"%}{{ genre.book_set.count|pluralize }} {%trans "available"%}
                     </p>
                     <div class="genre-stats mb-3">
                         {% comment %} <div class="row text-center">
@@ -43,7 +43,7 @@
                         </div> {% endcomment %}
                     </div>
                     <a href="{% url 'genre_books' genre.GenreID %}" class="btn btn-outline btn-sm btn-rounded mt-auto align-bottom">
-                        Explore Genre
+                        {%trans "Explore Genre"%}
                     </a>
                 </div>
             </div>
@@ -51,8 +51,8 @@
         {% empty %}
         <div class="col-12 text-center py-5">
             <i class="fas fa-tags fa-3x text-muted mb-3"></i>
-            <h4 class="text-muted">No genres available</h4>
-            <p class="text-muted">Check back later for genre categories</p>
+            <h4 class="text-muted">{%trans "No genres available"%}</h4>
+            <p class="text-muted">{%trans "Check back later for genre categories"%}</p>
         </div>
         {% endfor %}
     </div>
@@ -97,30 +97,30 @@
         <div class="col-12">
             <div class="card border-0 shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title mb-4">Genre Statistics</h5>
+                    <h5 class="card-title mb-4">{%trans "Genre Statistics"%}</h5>
                     <div class="row text-center">
                         <div class="col-md-3 mb-3">
                             <div class="stat-item">
                                 <div class="stat-number text-primary fw-bold">{{ total_genres }}</div>
-                                <div class="stat-label text-muted">Total Genres</div>
+                                <div class="stat-label text-muted">{%trans "Total Genres"%}</div>
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="stat-item">
                                 <div class="stat-number text-primary fw-bold">{{ total_books }}</div>
-                                <div class="stat-label text-muted">Total Books</div>
+                                <div class="stat-label text-muted">{%trans "Total Books"%}</div>
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="stat-item">
                                 <div class="stat-number text-primary fw-bold">$12.50</div>
-                                <div class="stat-label text-muted">Average Price</div>
+                                <div class="stat-label text-muted">{%trans "Average Price"%}</div>
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <div class="stat-item">
                                 <div class="stat-number text-primary fw-bold">4.3★</div>
-                                <div class="stat-label text-muted">Avg Rating</div>
+                                <div class="stat-label text-muted">{%trans "Avg Rating"%}</div>
                             </div>
                         </div>
                     </div>

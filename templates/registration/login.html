@@ -1,6 +1,7 @@
 {% extends 'new_base.html' %}
-{% load static %}
-{% block title %}Login - BookStore{% endblock %}
+{% load static %} 
+{% load i18n %}
+{% block title %}{%trans "Login"%} - {%trans "BookHub" %} {% endblock %}
 
 {% block content %}
 <div class="body-inner">
@@ -9,25 +10,25 @@
             <div class="col-md-8 col-lg-7 d-flex align-items-center">
                 <div class="w-100 px-3 px-sm-5 px-xl-7">
                     <div class="mb-5">
-                        <h6 class="h3 mb-1">Welcome back!</h6>
-                        <p class="text-muted mb-0">Login to manage your account.</p>
+                        <h6 class="h3 mb-1">{%trans "Welcome back"%}!</h6>
+                        <p class="text-muted mb-0">{%trans "Login to manage your account."%}</p>
                     </div>
 
                     {% if form.errors %}
                     <div class="alert alert-danger">
-                        Your username and password didn't match. Please try again.
+                        {%trans "Your username and password didn't match. Please try again."%}
                     </div>
                     {% endif %}
 
                     {% if next %}
                         {% if user.is_authenticated %}
                         <div class="alert alert-warning">
-                            Your account doesn't have access to this page. To proceed,
-                            please login with an account that has access.
+                            {%trans "Your account doesn't have access to this page. To proceed,"%}
+                            {%trans "please login with an account that has access."%}
                         </div>
                         {% else %}
                         <div class="alert alert-info">
-                            Please login to see this page.
+                            {%trans "Please login to see this page."%}
                         </div>
                         {% endif %}
                     {% endif %}
@@ -36,31 +37,31 @@
                         {% csrf_token %}
                         
                         <div class="form-group">
-                            <label for="id_username">Username</label>
+                            <label for="id_username">{%trans "Username"%}</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" name="username" id="id_username" placeholder="Enter your username" required autofocus>
+                                <input type="text" class="form-control" name="username" id="id_username" placeholder={% trans "Enter your username"%} required autofocus>
                                 <span class="input-group-text"><i class="icon-user"></i></span>
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="id_password">Password</label>
+                            <label for="id_password">{%trans "Password"%}</label>
                             <div class="input-group show-hide-password">
-                                <input class="form-control" name="password" id="id_password" placeholder="Enter password" type="password" required>
+                                <input class="form-control" name="password" id="id_password" placeholder={%trans "Enter password"%} type="password" required>
                                 <span class="input-group-text"><i class="icon-eye-off" aria-hidden="true" style="cursor: pointer;"></i></span>
                             </div>
                         </div>
                         
                         <div class="mt-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-primary">Sign in</button>
+                            <button type="submit" class="btn btn-primary btn-block btn-primary">{%trans "Sign in"%}</button>
                         </div>
                         
                         <input type="hidden" name="next" value="{{ next }}">
                     </form>
 
                     <div class="mt-4 text-center">
-                        <small>Not registered?</small> 
-                        <a href="{% url 'register' %}" class="small fw-bold">Create account</a>
+                        <small>{%trans "Not registered"%}?</small> 
+                        <a href="{% url 'register' %}" class="small fw-bold">{%trans "Create account"%}</a>
                     </div>
                 </div>
             </div>

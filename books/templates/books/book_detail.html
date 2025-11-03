@@ -1,6 +1,6 @@
 {% extends 'new_base.html' %}
-
-{% block title %}{{ book.Title }} - BookStore{% endblock %}
+{% load static %} {% load i18n %}
+{% block title %}{{ book.Title }} - {%trans "BookHub"%}{% endblock %}
 
 {% block content %}
         <!-- Page title -->
@@ -8,12 +8,12 @@
             <div class="container">
                 <div class="page-title">
                     <h1>{{ book.Title }}</h1>
-                    <span>by {{ book.AuthorID.full_name }}</span>
+                    <span>{%trans "by"%} {{ book.AuthorID.full_name }}</span>
                 </div>
                 <div class="breadcrumb">
                     <ul>
-                        <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'book_list' %}">Books</a></li>
+                        <li><a href="{% url 'home' %}">{%trans "Home"%}</a></li>
+                        <li><a href="{% url 'book_list' %}">{%trans "Books"%}</a></li>
                         <li><a href="{% url 'genre_books' book.GenreID.GenreID %}">{{ book.GenreID.GenreName }}</a></li>
                         <li class="active"><a href="#">{{ book.Title|truncatewords:4 }}</a></li>
                     </ul>
@@ -49,22 +49,22 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star-half-o"></i>
                                 </div>
-                                <div class="product-reviews"><a href="#reviews">128 customer reviews</a></div>
+                                <div class="product-reviews"><a href="#reviews">128 {%trans "customer reviews"%}</a></div>
                                 <div class="seperator m-b-10"></div>
                                 <p>{{ book.AuthorID.Bio|default:"This book offers a compelling narrative that explores deep themes and complex characters. Perfect for readers who enjoy thought-provoking literature that stays with you long after you've finished reading."|truncatewords:30 }}</p>
                                 
                                 <div class="product-meta">
-                                    <p>Author: <a href="{% url 'author_detail' book.AuthorID.AuthorID %}" rel="tag">{{ book.AuthorID.full_name }}</a></p>
+                                    <p>{%trans "Author"%}: <a href="{% url 'author_detail' book.AuthorID.AuthorID %}" rel="tag">{{ book.AuthorID.full_name }}</a></p>
                                     <p>ISBN: {{ book.ISBN }}</p>
                                 </div>
                                 
                                 {% if book.is_available %}
                                 <div class="stock-status text-success">
-                                    <i class="fa fa-check"></i> In Stock ({{ book.Stock }} available)
+                                    <i class="fa fa-check"></i> {%trans "In Stock"%} ({{ book.Stock }} {%trans "available"%})
                                 </div>
                                 {% else %}
                                 <div class="stock-status text-secondary">
-                                    <i class="fa fa-times"></i> Out of Stock
+                                    <i class="fa fa-times"></i> {%trans "Out of Stock"%}
                                 </div>
                                 {% endif %}
                                 
@@ -72,7 +72,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <h6>Quantity</h6>
+                                    <h6>{%trans "Quantity"%}</h6>
                                     <div class="cart-product-quantity">
                                         <div class="quantity m-l-5">
                                             <input type="button" class="minus" value="-">
@@ -82,14 +82,14 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <h6>Add to Cart</h6>
+                                    <h6>{%trans "Add to Cart"%}</h6>
                                     {% if book.is_available and user.is_authenticated %}
                                         <a class="btn btn-primary" href="{% url 'add_to_cart' book.BookID %}">
-                                            <i class="icon-shopping-cart"></i> Add to cart
+                                            <i class="icon-shopping-cart"></i> {%trans "Add to cart"%}
                                         </a>
                                     {% elif not user.is_authenticated %}
                                         <a class="btn btn-primary" href="{% url 'login' %}?next={% url 'book_detail' book.BookID %}">
-                                            <i class="icon-login"></i> Login to Purchase
+                                            <i class="icon-login"></i> {%trans "Login to Purchase"%}
                                         </a>
                                     {% endif %}
                                 </div>
@@ -114,23 +114,23 @@
                         <ul class="nav nav-tabs" id="myTab3" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active show" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="false">
-                                    <i class="fa fa-align-justify"></i>Description
+                                    <i class="fa fa-align-justify"></i>{%trans "Description"%}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="author-tab" data-bs-toggle="tab" href="#author" role="tab" aria-controls="author" aria-selected="true">
-                                    <i class="fa fa-user"></i>About Author
+                                    <i class="fa fa-user"></i>{%trans "About Author"%}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="reviews-tab" data-bs-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">
-                                    <i class="fa fa-star"></i>Reviews ({{ reviews|length }})
+                                    <i class="fa fa-star"></i>{%trans "Reviews"%} ({{ reviews|length }})
                                 </a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent3">
                             <div class="tab-pane fade active show" id="description" role="tabpanel" aria-labelledby="description-tab">
-                                <p class="lead">A captivating story that will keep you turning pages until the very end.</p>
+                                <p class="lead">{%trans "A captivating story that will keep you turning pages until the very end."%}</p>
                                 <p>{{ book.AuthorID.Bio|default:"This book offers a compelling narrative that explores deep themes and complex characters. Perfect for readers who enjoy thought-provoking literature that stays with you long after you've finished reading." }}</p>
                                 
                                 <table class="table table-striped table-bordered m-t-20">
@@ -140,24 +140,24 @@
                                             <td>{{ book.ISBN }}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Publication Date</strong></td>
+                                            <td><strong>{%trans "Publication Date"%}</strong></td>
                                             <td>{{ book.PublicationDate }}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Pages</strong></td>
+                                            <td><strong>{%trans "Pages"%}</strong></td>
                                             <td>320</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Publisher</strong></td>
-                                            <td>Penguin Books</td>
+                                            <td><strong>{%trans "Publisher"%}</strong></td>
+                                            <td>{%trans "Penguin Books"%}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Language</strong></td>
-                                            <td>English</td>
+                                            <td><strong>{%trans "Language"%}</strong></td>
+                                            <td>{%trans "English"%}</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Format</strong></td>
-                                            <td>Hardcover</td>
+                                            <td><strong>{%trans "Format"%}</strong></td>
+                                            <td>{%trans "Hardcover"%}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -182,11 +182,11 @@
                                 {% if user.is_authenticated %}
                                 <div class="card mb-4">
                                     <div class="card-body">
-                                        <h5>Write a Review</h5>
+                                        <h5>{%trans "Write a Review"%}</h5>
                                         <form method="post">
                                             {% csrf_token %}
                                             <div class="mb-3">
-                                                <label class="form-label">Rating</label>
+                                                <label class="form-label">{%trans "Ratings"%}</label>
                                                 <div class="rating-stars fs-4">
                                                     <i class="far fa-star" data-rating="1"></i>
                                                     <i class="far fa-star" data-rating="2"></i>
@@ -199,7 +199,7 @@
                                             <div class="mb-3">
                                                 {{ review_form.ReviewText }}
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                                            <button type="submit" class="btn btn-primary">{%trans "Submit Review"%}</button>
                                         </form>
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@
 
                                 <div class="comments" id="comments">
                                     <div class="comment_number">
-                                        Reviews <span>({{ reviews|length }})</span>
+                                        {%trans "Reviews"%} <span>({{ reviews|length }})</span>
                                     </div>
                                     <div class="comment-list">
                                         {% for review in reviews %}
@@ -229,7 +229,7 @@
                                                     {% endfor %}
                                                 </div>
                                                 <h5 class="name">{{ review.CustomerID }}</h5>
-                                                <span class="comment_date">Posted on {{ review.ReviewDate|date:"M d, Y" }}</span>
+                                                <span class="comment_date">{%trans "Posted on"%} {{ review.ReviewDate|date:"M d, Y" }}</span>
                                                 <div class="text_holder">
                                                     <p>{{ review.ReviewText }}</p>
                                                 </div>
@@ -239,7 +239,7 @@
                                         {% empty %}
                                         <div class="text-center py-4">
                                             <i class="fa fa-comments fa-2x text-muted mb-3"></i>
-                                            <p class="text-muted">No reviews yet. Be the first to review this book!</p>
+                                            <p class="text-muted">{%trans "No reviews yet. Be the first to review this book"%}!</p>
                                         </div>
                                         {% endfor %}
                                     </div>
@@ -256,7 +256,7 @@
         <section class="p-t-0">
             <div class="container">
                 <div class="heading-text heading-line text-center">
-                    <h4>Related Books You May Like</h4>
+                    <h4>{%trans "Related Books You May Like"%}</h4>
                 </div>
                 <div class="row">
                     {% for related_book in book.GenreID.book_set.all|slice:":6" %}
@@ -284,7 +284,7 @@
                                         </div>
                                         <br>
                                         {% if related_book.is_available %}
-                                            <a href="{% url 'book_detail' related_book.BookID %}" class="btn btn btn-outline btn-rounded btn-sm mt-2">View Details</a>
+                                            <a href="{% url 'book_detail' related_book.BookID %}" class="btn btn btn-outline btn-rounded btn-sm mt-2">{%trans "View Details"%}</a>
                                         {% endif %}
                                     </div>
                                 </div>
@@ -305,8 +305,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Free shipping on orders $60+</h3>
-                            <p>Order more than 60$ and you will get free shipping Worldwide.</p>
+                            <h3>{%trans 'Free shipping over $60'%} </h3>
+                            <p>{%trans 'When your order exceeds $60, we will offer you free worldwide shipping.'%} </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -314,8 +314,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>Worldwide delivery</h3>
-                            <p>We support delivery to the following countries and regions: Mainland China, Taiwan, and Malaysia.</p>
+                            <h3>{%trans 'Global Delivery'%} </h3>
+                            <p>{%trans 'We support delivery to the following countries and regions: Mainland China, Taiwan, and Malaysia.'%} </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -323,8 +323,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-history"></i></a>
                             </div>
-                            <h3>30 days return policy</h3>
-                            <p>Not satisfied with your book? Return it within 30 days for a full refund!</p>
+                            <h3>{%trans '60-Day Money-Back'%} </h3>
+                            <p>{%trans 'If you are not satisfied, we promise a full refund, so you can enjoy your purchase with peace of mind.'%} </p>
                         </div>
                     </div>
                 </div>

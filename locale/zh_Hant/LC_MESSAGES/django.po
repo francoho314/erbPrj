@@ -1,0 +1,1274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-01 06:38+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: books/templates/books/author_detail.html:3
+#: books/templates/books/book_detail.html:3
+#: books/templates/books/book_list.html:3
+#: books/templates/books/genre_books.html:3
+#: books/templates/books/order_detail.html:3
+#: books/templates/books/order_history.html:3
+#: books/templates/books/profile_edit.html:3
+#: books/templates/books/profile_view.html:3
+#: books/templates/books/register.html:4 templates/new_base.html:174
+#: templates/new_base.html:229 templates/pages/about.html:15
+#: templates/pages/about.html:32 templates/pages/about.html:38
+#: templates/registration/logged_out.html:3 templates/registration/login.html:4
+msgid "BookHub"
+msgstr "一木書屋"
+
+#: books/templates/books/author_detail.html:11
+msgid "books available"
+msgstr "本書籍"
+
+#: books/templates/books/author_detail.html:15
+#: books/templates/books/book_detail.html:15
+#: books/templates/books/book_list.html:15 books/templates/books/cart.html:13
+#: books/templates/books/genre_books.html:15
+#: books/templates/books/order_detail.html:11
+#: books/templates/books/order_history.html:15
+#: books/templates/books/profile_edit.html:10
+#: books/templates/books/profile_view.html:10 templates/new_base.html:148
+#: templates/new_base.html:185
+msgid "Home"
+msgstr "首頁"
+
+#: books/templates/books/author_detail.html:17
+#: books/templates/books/book_detail.html:16
+#: books/templates/books/genre_books.html:3
+#: books/templates/books/genre_books.html:10
+#: books/templates/books/genre_books.html:17 templates/new_base.html:150
+#: templates/new_base.html:195
+msgid "Books"
+msgstr "書本"
+
+#: books/templates/books/author_detail.html:34
+msgid "Books by"
+msgstr "書本由"
+
+#: books/templates/books/author_detail.html:35
+msgid "Discover the complete collection of works by this talented author."
+msgstr "探索這位才華橫溢的作家的全部作品。"
+
+#: books/templates/books/author_detail.html:39
+#: books/templates/books/book_list.html:37
+#: books/templates/books/genre_books.html:36
+msgid "Sort by"
+msgstr "排序方式"
+
+#: books/templates/books/author_detail.html:40
+#: books/templates/books/book_list.html:38
+#: books/templates/books/genre_books.html:37
+#: books/templates/books/order_history.html:83
+msgid "Showing"
+msgstr "顯示"
+
+#: books/templates/books/author_detail.html:40
+#: books/templates/books/book_list.html:38
+#: books/templates/books/genre_books.html:37
+msgid "results"
+msgstr "結果"
+
+#: books/templates/books/author_detail.html:43
+#: books/templates/books/book_list.html:41
+#: books/templates/books/genre_books.html:40
+msgid "Default sorting"
+msgstr "預設排序"
+
+#: books/templates/books/author_detail.html:44
+#: books/templates/books/genre_books.html:41
+msgid "Sort by popularity"
+msgstr "按受歡迎程度排序"
+
+#: books/templates/books/author_detail.html:45
+#: books/templates/books/genre_books.html:42
+msgid "Sort by average rating"
+msgstr "按平均分數排序"
+
+#: books/templates/books/author_detail.html:46
+#: books/templates/books/genre_books.html:43
+msgid "Sort by newness"
+msgstr "按最新排序"
+
+#: books/templates/books/author_detail.html:47
+#: books/templates/books/genre_books.html:44
+msgid "Sort by price: low to high"
+msgstr "按價格排序：從低到高"
+
+#: books/templates/books/author_detail.html:48
+#: books/templates/books/genre_books.html:45
+msgid "Sort by price: high to low"
+msgstr "按價格排序：從高到低"
+
+#: books/templates/books/author_detail.html:55
+#: books/templates/books/genre_books.html:52
+msgid "Filter by Price"
+msgstr "按價格篩選"
+
+#: books/templates/books/author_detail.html:56
+#: books/templates/books/genre_books.html:53
+msgid "All price ranges"
+msgstr "所有價格範圍"
+
+#: books/templates/books/author_detail.html:59
+#: books/templates/books/genre_books.html:56
+msgid "All Prices"
+msgstr "所有價格"
+
+#: books/templates/books/author_detail.html:80
+#: books/templates/books/genre_books.html:77
+msgid "NEW"
+msgstr "最新"
+
+#: books/templates/books/author_detail.html:86
+#: books/templates/books/book_list.html:67
+#: books/templates/books/genre_books.html:83 books/templates/books/home.html:85
+msgid "Quick View"
+msgstr "熱門"
+
+#: books/templates/books/author_detail.html:102
+#: books/templates/books/book_detail.html:52
+#: books/templates/books/book_list.html:84
+#: books/templates/books/genre_books.html:99
+msgid "customer reviews"
+msgstr "用戶評價"
+
+#: books/templates/books/author_detail.html:105
+#: books/templates/books/book_detail.html:63
+#: books/templates/books/book_list.html:87
+#: books/templates/books/book_list.html:201
+#: books/templates/books/genre_books.html:102
+msgid "In Stock"
+msgstr "有存貨"
+
+#: books/templates/books/author_detail.html:107
+#: books/templates/books/book_detail.html:67
+#: books/templates/books/book_list.html:89
+#: books/templates/books/genre_books.html:104
+msgid "Out of Stock"
+msgstr "缺貨"
+
+#: books/templates/books/author_detail.html:110
+#: books/templates/books/book_detail.html:287
+#: books/templates/books/order_history.html:70
+msgid "View Details"
+msgstr "看詳情"
+
+#: books/templates/books/author_detail.html:113
+#: books/templates/books/book_detail.html:85
+#: books/templates/books/book_list.html:96
+#: books/templates/books/genre_books.html:109
+msgid "Add to Cart"
+msgstr "加入購物車"
+
+#: books/templates/books/author_detail.html:124
+msgid "No Books Available"
+msgstr "暫無書籍可供購買"
+
+#: books/templates/books/author_detail.html:125
+msgid "No books found by"
+msgstr "未找到書籍關於"
+
+#: books/templates/books/author_detail.html:126
+#: books/templates/books/genre_books.html:122
+msgid "Browse All Books"
+msgstr "瀏覽所有書籍"
+
+#: books/templates/books/author_detail.html:166
+msgid "About the Author"
+msgstr "作者簡介"
+
+#: books/templates/books/author_detail.html:177
+#: books/templates/books/author_list.html:79
+msgid "Born"
+msgstr "出生"
+
+#: books/templates/books/author_detail.html:184
+msgid "Died"
+msgstr "去世"
+
+#: books/templates/books/author_detail.html:191
+msgid "Biography"
+msgstr "生平"
+
+#: books/templates/books/author_detail.html:197
+#: books/templates/books/book_list.html:197
+#: books/templates/books/genre_list.html:112
+msgid "Total Books"
+msgstr "總計書本"
+
+#: books/templates/books/author_list.html:10 templates/new_base.html:205
+msgid "Our Authors"
+msgstr "我們的作者"
+
+#: books/templates/books/author_list.html:11
+msgid "authors"
+msgstr "作者們"
+
+#: books/templates/books/author_list.html:13
+msgid "Discover the brilliant minds behind your favorite books"
+msgstr "探索你最喜歡的書背後的傑出作家"
+
+#: books/templates/books/author_list.html:26
+msgid "Browse Authors Alphabetically"
+msgstr "依字母順序瀏覽作者"
+
+#: books/templates/books/author_list.html:28
+msgid "Filtered"
+msgstr "已過濾"
+
+#: books/templates/books/author_list.html:35
+msgid "All"
+msgstr "全部"
+
+#: books/templates/books/author_list.html:92
+#: books/templates/books/genre_list.html:31
+msgid "book"
+msgstr "書本"
+
+#: books/templates/books/author_list.html:98
+msgid "View Profile"
+msgstr "詳細資料"
+
+#: books/templates/books/author_list.html:106
+msgid "No authors found"
+msgstr "未找到作者"
+
+#: books/templates/books/author_list.html:107
+msgid "Check back later for our author profiles"
+msgstr "請稍後再查看我們的作者簡介"
+
+#: books/templates/books/book_detail.html:11
+msgid "by"
+msgstr "由"
+
+#: books/templates/books/book_detail.html:57
+#: books/templates/books/book_list.html:175 books/templates/books/cart.html:61
+#: books/templates/books/home.html:105
+msgid "Author"
+msgstr "作者"
+
+#: books/templates/books/book_detail.html:63
+#: books/templates/books/genre_list.html:31
+msgid "available"
+msgstr "存貨"
+
+#: books/templates/books/book_detail.html:75 books/templates/books/cart.html:37
+#: books/templates/books/order_detail.html:42
+msgid "Quantity"
+msgstr "數量"
+
+#: books/templates/books/book_detail.html:88
+msgid "Add to cart"
+msgstr "加入購物車"
+
+#: books/templates/books/book_detail.html:92
+msgid "Login to Purchase"
+msgstr "登入購買"
+
+#: books/templates/books/book_detail.html:117
+#: books/templates/books/cart.html:35
+msgid "Description"
+msgstr "商品說明"
+
+#: books/templates/books/book_detail.html:122
+msgid "About Author"
+msgstr "作者簡介"
+
+#: books/templates/books/book_detail.html:127
+#: books/templates/books/book_detail.html:210
+msgid "Reviews"
+msgstr "評價"
+
+#: books/templates/books/book_detail.html:133
+msgid ""
+"A captivating story that will keep you turning pages until the very end."
+msgstr "引人入勝的故事，讓你忍不住一頁接一頁地讀到最後。"
+
+#: books/templates/books/book_detail.html:143
+msgid "Publication Date"
+msgstr "發佈日期"
+
+#: books/templates/books/book_detail.html:147 templates/new_base.html:203
+msgid "Pages"
+msgstr "頁次"
+
+#: books/templates/books/book_detail.html:151
+msgid "Publisher"
+msgstr "出版商"
+
+#: books/templates/books/book_detail.html:152
+msgid "Penguin Books"
+msgstr "企鵝出版社"
+
+#: books/templates/books/book_detail.html:155
+msgid "Language"
+msgstr "語言"
+
+#: books/templates/books/book_detail.html:156
+msgid "English"
+msgstr "英語"
+
+#: books/templates/books/book_detail.html:159
+msgid "Format"
+msgstr "格式"
+
+#: books/templates/books/book_detail.html:160
+msgid "Hardcover"
+msgstr "精裝"
+
+#: books/templates/books/book_detail.html:185
+msgid "Write a Review"
+msgstr "撰寫評論"
+
+#: books/templates/books/book_detail.html:189
+msgid "Ratings"
+msgstr "評分"
+
+#: books/templates/books/book_detail.html:202
+msgid "Submit Review"
+msgstr "提交評論"
+
+#: books/templates/books/book_detail.html:232
+msgid "Posted on"
+msgstr "發佈於"
+
+#: books/templates/books/book_detail.html:242
+msgid "No reviews yet. Be the first to review this book"
+msgstr "暫無評論。成為第一個評論這本書的人吧"
+
+#: books/templates/books/book_detail.html:259
+msgid "Related Books You May Like"
+msgstr "您可能喜歡的相關書籍"
+
+#: books/templates/books/book_detail.html:308
+#: books/templates/books/book_list.html:253 books/templates/books/cart.html:194
+#: books/templates/books/home.html:138
+#: books/templates/books/order_history.html:112
+msgid "Free shipping over $60"
+msgstr "購滿$60，即享免運遞送"
+
+#: books/templates/books/book_detail.html:309
+#: books/templates/books/book_list.html:254 books/templates/books/cart.html:195
+#: books/templates/books/home.html:139
+#: books/templates/books/order_history.html:113
+msgid "When your order exceeds $60, we will offer you free worldwide shipping."
+msgstr "當您的訂單金額超過 $60，我們將為您獻上全球免運的禮遇。"
+
+#: books/templates/books/book_detail.html:317
+#: books/templates/books/book_list.html:262 books/templates/books/cart.html:203
+#: books/templates/books/home.html:148
+#: books/templates/books/order_history.html:121
+msgid "Global Delivery"
+msgstr "全球配送服務"
+
+#: books/templates/books/book_detail.html:318
+#: books/templates/books/book_list.html:263 books/templates/books/cart.html:204
+#: books/templates/books/home.html:149
+#: books/templates/books/order_history.html:122
+msgid ""
+"We support delivery to the following countries and regions: Mainland China, "
+"Taiwan, and Malaysia."
+msgstr "我們支持以下國家及地區的配送：中國大陸、中國台灣、馬來西亞。"
+
+#: books/templates/books/book_detail.html:326
+#: books/templates/books/book_list.html:271 books/templates/books/cart.html:212
+#: books/templates/books/home.html:158
+#: books/templates/books/order_history.html:130
+msgid "60-Day Money-Back"
+msgstr "六十日退款保障"
+
+#: books/templates/books/book_detail.html:327
+#: books/templates/books/book_list.html:272 books/templates/books/cart.html:213
+#: books/templates/books/home.html:159
+#: books/templates/books/order_history.html:131
+msgid ""
+"If you are not satisfied, we promise a full refund, so you can enjoy your "
+"purchase with peace of mind."
+msgstr "若您覺得不夠稱心，我們在此承諾全額退還，願您從此安心徜徉。"
+
+#: books/templates/books/book_list.html:3
+#: books/templates/books/book_list.html:17
+msgid "Browse Books"
+msgstr "瀏覽所有書籍"
+
+#: books/templates/books/book_list.html:10
+msgid "Browse Our Collection"
+msgstr "瀏覽我們的書籍系列"
+
+#: books/templates/books/book_list.html:11
+#: books/templates/books/genre_books.html:11
+msgid "books found"
+msgstr "本找到書籍"
+
+#: books/templates/books/book_list.html:32
+msgid "Discover Amazing Books"
+msgstr "發現精彩書籍"
+
+#: books/templates/books/book_list.html:33
+msgid ""
+"Explore our curated collection of books across various genres and authors."
+msgstr "探索我們精心挑選的各種類型和作者的書籍。"
+
+#: books/templates/books/book_list.html:42
+msgid "Sort by title"
+msgstr "按標題排序"
+
+#: books/templates/books/book_list.html:43
+msgid "Price: low to high"
+msgstr "按價格排序：從低到高"
+
+#: books/templates/books/book_list.html:44
+msgid "Price: high to low"
+msgstr "按價格排序：從高到低"
+
+#: books/templates/books/book_list.html:45
+msgid "Newest first"
+msgstr "最新優先"
+
+#: books/templates/books/book_list.html:61
+msgid "POPULAR"
+msgstr "受歡迎的"
+
+#: books/templates/books/book_list.html:106
+msgid "No books found"
+msgstr "未找到書籍"
+
+#: books/templates/books/book_list.html:107
+msgid "Try adjusting your search filters"
+msgstr "嘗試調整搜尋篩選條件"
+
+#: books/templates/books/book_list.html:108
+msgid "Clear Filters"
+msgstr "清除篩選條件"
+
+#: books/templates/books/book_list.html:157
+msgid "Filters"
+msgstr "已過濾"
+
+#: books/templates/books/book_list.html:160
+msgid "Search"
+msgstr "搜尋"
+
+#: books/templates/books/book_list.html:161
+msgid "Title, author..."
+msgstr "標題、作者..."
+
+#: books/templates/books/book_list.html:164
+msgid "Genre"
+msgstr "類型"
+
+#: books/templates/books/book_list.html:166
+msgid "All Genres"
+msgstr "全部類型"
+
+#: books/templates/books/book_list.html:177
+msgid "All Authors"
+msgstr "全部作者"
+
+#: books/templates/books/book_list.html:186
+msgid "Apply Filters"
+msgstr "應用篩選條件"
+
+#: books/templates/books/book_list.html:195
+msgid "Collection Stats"
+msgstr "收藏統計"
+
+#: books/templates/books/book_list.html:208
+msgid "Latest Books"
+msgstr "最新書籍"
+
+#: books/templates/books/book_list.html:216
+msgid "Fiction"
+msgstr "小說"
+
+#: books/templates/books/book_list.html:218
+msgid "New Arrival"
+msgstr "新品上市"
+
+#: books/templates/books/book_list.html:228
+msgid "Subscribe for New Releases"
+msgstr "訂閱即可取得最新發布資訊。"
+
+#: books/templates/books/book_list.html:229
+msgid "Subscribe to get notified about new book releases and special offers."
+msgstr "訂閱我們的通訊，第一時間了解新書發佈和獨家優惠。"
+
+#: books/templates/books/book_list.html:231
+msgid "Enter your Email"
+msgstr "輸入電子郵件地址"
+
+#: books/templates/books/cart.html:8 books/templates/books/cart.html:17
+msgid "Shopping Cart"
+msgstr "購物車"
+
+#: books/templates/books/cart.html:9
+msgid "Shopping Details"
+msgstr "購物詳情"
+
+#: books/templates/books/cart.html:15
+msgid "Shop"
+msgstr "商店"
+
+#: books/templates/books/cart.html:34
+msgid "Product"
+msgstr "產品"
+
+#: books/templates/books/cart.html:36
+msgid "Unit Price"
+msgstr "單價"
+
+#: books/templates/books/cart.html:38 books/templates/books/cart.html:155
+#: books/templates/books/order_detail.html:43
+#: books/templates/books/profile_view.html:119
+msgid "Total"
+msgstr "總計"
+
+#: books/templates/books/cart.html:76
+msgid "Update"
+msgstr "更新"
+
+#: books/templates/books/cart.html:93
+msgid "Apply"
+msgstr "應用"
+
+#: books/templates/books/cart.html:95
+msgid "Enter any valid coupon or promo code here to redeem your discount."
+msgstr "在此輸入任何有效的優惠券或促銷代碼以兌換折扣。"
+
+#: books/templates/books/cart.html:99
+msgid "Continue Shopping"
+msgstr "開始購物"
+
+#: books/templates/books/cart.html:100 books/templates/books/cart.html:164
+msgid "Proceed to Checkout"
+msgstr "進行結算"
+
+#: books/templates/books/cart.html:106
+msgid "Calculate Shipping"
+msgstr "計算運費"
+
+#: books/templates/books/cart.html:126 books/templates/books/cart.html:131
+msgid "Cart Subtotal"
+msgstr "購物車小計"
+
+#: books/templates/books/cart.html:139
+msgid "Shipping"
+msgstr "運費"
+
+#: books/templates/books/cart.html:142
+msgid "Free Shipping"
+msgstr "免運費"
+
+#: books/templates/books/cart.html:147
+msgid "Coupon"
+msgstr "優惠券"
+
+#: books/templates/books/cart.html:173
+msgid "Your cart is currently empty."
+msgstr "您的購物車目前為空。"
+
+#: books/templates/books/cart.html:175
+msgid "Return To Shop"
+msgstr "返回購物"
+
+#: books/templates/books/genre_books.html:31
+msgid "Collection"
+msgstr "收藏統計"
+
+#: books/templates/books/genre_books.html:32
+msgid "Discover our curated selection of"
+msgstr "探索我們精心挑選的"
+
+#: books/templates/books/genre_books.html:32
+msgid "books from talented authors."
+msgstr "本來自才華橫溢的作者的書籍。"
+
+#: books/templates/books/genre_books.html:120
+msgid "No books found in"
+msgstr "未找到書籍於"
+
+#: books/templates/books/genre_books.html:121
+msgid "Try browsing other genres or check back later for new arrivals."
+msgstr "您可以嘗試瀏覽其他類型，或稍後再來查看新品。"
+
+#: books/templates/books/genre_list.html:11
+msgid "Book Genres"
+msgstr "書籍類型"
+
+#: books/templates/books/genre_list.html:12
+msgid "genres"
+msgstr "類型"
+
+#: books/templates/books/genre_list.html:14
+msgid "Explore books by your favorite genres and discover new ones"
+msgstr "依照你喜歡的類型瀏覽書籍，並發現新的書籍。"
+
+#: books/templates/books/genre_list.html:47
+msgid "Explore Genre"
+msgstr "探索類型"
+
+#: books/templates/books/genre_list.html:55
+msgid "No genres available"
+msgstr "暫無類型可供選擇"
+
+#: books/templates/books/genre_list.html:56
+msgid "Check back later for genre categories"
+msgstr "稍後請查看類型分類"
+
+#: books/templates/books/genre_list.html:101
+msgid "Genre Statistics"
+msgstr "類型統計"
+
+#: books/templates/books/genre_list.html:106
+msgid "Total Genres"
+msgstr "全部類型"
+
+#: books/templates/books/genre_list.html:118
+msgid "Average Price"
+msgstr "平均價格"
+
+#: books/templates/books/genre_list.html:124
+msgid "Avg Rating"
+msgstr "平均評分"
+
+#: books/templates/books/home.html:13
+msgid "Discover your next favorite book"
+msgstr "發現你的下一本最愛書籍"
+
+#: books/templates/books/home.html:14
+msgid ""
+"Explore thousands of books across all genres. From bestsellers to hidden "
+"gems, find what you're looking for."
+msgstr ""
+"探索數千本跨越所有類型的書籍。從暢銷書到隱藏的寶石，找到您正在尋找的內容。"
+
+#: books/templates/books/home.html:17
+msgid "Search by book, author, genres..."
+msgstr "搜索書籍、作者、類型..."
+
+#: books/templates/books/home.html:33 books/templates/books/home.html:65
+msgid "Selected Books"
+msgstr "精選圖書"
+
+#: books/templates/books/home.html:33
+msgid "Special offer"
+msgstr "特價優惠"
+
+#: books/templates/books/home.html:34
+msgid "Discover our curated book collection and discounts."
+msgstr "發現我們精心挑選的書籍收藏，享受限時特價優惠。"
+
+#: books/templates/books/home.html:35
+msgid "Buy Now"
+msgstr "立即選購"
+
+#: books/templates/books/home.html:36
+msgid "Browse Genres"
+msgstr "瀏覽類型"
+
+#: books/templates/books/home.html:50
+msgid "ERB students privilege"
+msgstr "ERB同學獨享"
+
+#: books/templates/books/home.html:51
+#, python-format
+msgid ""
+"To thank all ERB students for their continued support, we are launching a "
+"special \"Limited-Time Discount for Students\" event! Enroll in selected "
+"courses now and enjoy a 10%% discount on books!"
+msgstr ""
+"為答謝各位ERB學員一直以來的支持，我們特別推出 「同學限時折扣」 活動！現在報讀"
+"指定課程，即可享受書籍九折優惠！"
+
+#: books/templates/books/home.html:79
+msgid "Hot"
+msgstr "熱門"
+
+#: books/templates/books/home.html:110
+msgid "Add Cart"
+msgstr "加入購物車"
+
+#: books/templates/books/home.html:120
+msgid "Not Available"
+msgstr "暫無可用書籍"
+
+#: books/templates/books/home.html:171
+msgid "Browse by Genres"
+msgstr "按類型瀏覽"
+
+#: books/templates/books/home.html:181
+msgid "Explore more"
+msgstr "探索更多"
+
+#: books/templates/books/home.html:197
+msgid "Keep Update"
+msgstr "保持更新"
+
+#: books/templates/books/home.html:198
+msgid ""
+"Subscribe to our newsletter to be the first to know about new book releases "
+"and exclusive offers."
+msgstr "訂閱我們的通訊，第一時間了解新書發佈和獨家優惠。"
+
+#: books/templates/books/home.html:200 books/templates/books/register.html:28
+msgid "Enter your email"
+msgstr "輸入電子郵件地址"
+
+#: books/templates/books/home.html:201
+msgid "Subscribe"
+msgstr "訂閱"
+
+#: books/templates/books/order_detail.html:3
+#: books/templates/books/order_detail.html:13
+#: books/templates/books/order_history.html:34
+#: books/templates/books/profile_view.html:117
+msgid "Order"
+msgstr "訂單"
+
+#: books/templates/books/order_detail.html:12
+#: books/templates/books/order_history.html:3
+#: books/templates/books/order_history.html:10
+#: books/templates/books/order_history.html:17
+#: books/templates/books/profile_view.html:46 templates/new_base.html:114
+msgid "Order History"
+msgstr "訂購歴史"
+
+#: books/templates/books/order_detail.html:33
+msgid "Order Items"
+msgstr "訂購商品"
+
+#: books/templates/books/order_detail.html:40
+msgid "Book"
+msgstr "書本"
+
+#: books/templates/books/order_detail.html:41
+msgid "Price"
+msgstr "價格"
+
+#: books/templates/books/order_detail.html:67
+msgid "No items in this order."
+msgstr "此訂單中沒有商品。"
+
+#: books/templates/books/order_detail.html:73
+#: books/templates/books/order_history.html:37
+msgid "Total Amount"
+msgstr "總計金額"
+
+#: books/templates/books/order_detail.html:86
+msgid "Order Information"
+msgstr "訂單資訊"
+
+#: books/templates/books/order_detail.html:89
+msgid "Order Date"
+msgstr "訂單日期"
+
+#: books/templates/books/order_detail.html:92
+msgid "Customer"
+msgstr "客戶"
+
+#: books/templates/books/order_detail.html:95
+#: books/templates/books/profile_edit.html:93
+msgid "Email"
+msgstr "電郵地址"
+
+#: books/templates/books/order_detail.html:98
+msgid "Shipping Address"
+msgstr "收件地址"
+
+#: books/templates/books/order_detail.html:102
+msgid "Order Status"
+msgstr "訂單狀況"
+
+#: books/templates/books/order_detail.html:118
+msgid "Back to Order History"
+msgstr "返回訂購歴史"
+
+#: books/templates/books/order_history.html:11
+msgid "View your past orders and their details"
+msgstr "查看您過往的訂單及其詳情"
+
+#: books/templates/books/order_history.html:35
+#: books/templates/books/profile_view.html:118
+msgid "Date"
+msgstr "日期"
+
+#: books/templates/books/order_history.html:36
+msgid "Items"
+msgstr "項目"
+
+#: books/templates/books/order_history.html:38
+#: books/templates/books/profile_view.html:120
+msgid "Status"
+msgstr "狀況"
+
+#: books/templates/books/order_history.html:39
+msgid "Actions"
+msgstr "操作"
+
+#: books/templates/books/order_history.html:52
+msgid "item"
+msgstr "項目"
+
+#: books/templates/books/order_history.html:83
+msgid "order"
+msgstr "訂單"
+
+#: books/templates/books/order_history.html:92
+msgid "No Orders Yet"
+msgstr "目前還沒有訂單"
+
+#: books/templates/books/order_history.html:94
+msgid ""
+"You haven't placed any orders yet. Start shopping to see your order history "
+"here!"
+msgstr "您尚未下單。立即開始購物，點擊此處查看您的訂單歷史記錄！"
+
+#: books/templates/books/order_history.html:95
+#: books/templates/books/profile_view.html:154
+msgid "Start Shopping"
+msgstr "開始購物"
+
+#: books/templates/books/profile_edit.html:3
+#: books/templates/books/profile_edit.html:12
+#: books/templates/books/profile_edit.html:22
+#: books/templates/books/profile_view.html:43
+msgid "Edit Profile"
+msgstr "詳細資料"
+
+#: books/templates/books/profile_edit.html:11
+#: books/templates/books/profile_view.html:3
+#: books/templates/books/profile_view.html:11
+msgid "My Profile"
+msgstr "用戶資料"
+
+#: books/templates/books/profile_edit.html:30
+msgid "Account Information"
+msgstr "個人資訊"
+
+#: books/templates/books/profile_edit.html:36
+#: books/templates/books/profile_view.html:72
+#: books/templates/books/register.html:20
+#: books/templates/registration/login.html:14
+#: templates/registration/login.html:40
+msgid "Username"
+msgstr "用戶名稱"
+
+#: books/templates/books/profile_edit.html:45
+#: books/templates/books/profile_view.html:81
+msgid "Email Address"
+msgstr "電郵地址"
+
+#: books/templates/books/profile_edit.html:57
+#: books/templates/books/register.html:56
+msgid "Personal Information"
+msgstr "個人資訊"
+
+#: books/templates/books/profile_edit.html:63
+#: books/templates/books/register.html:59
+msgid "First Name"
+msgstr "名字"
+
+#: books/templates/books/profile_edit.html:72
+#: books/templates/books/register.html:63
+msgid "Last Name"
+msgstr "姓氏"
+
+#: books/templates/books/profile_edit.html:84
+#: books/templates/books/profile_view.html:87
+msgid "Phone Number"
+msgstr "電話號碼"
+
+#: books/templates/books/profile_edit.html:103
+#: books/templates/books/profile_view.html:94
+#: books/templates/books/register.html:77
+msgid "Address"
+msgstr "地址"
+
+#: books/templates/books/profile_edit.html:113
+#: books/templates/books/register.html:83
+msgid "City"
+msgstr "城市"
+
+#: books/templates/books/profile_edit.html:122
+#: books/templates/books/register.html:87
+msgid "State"
+msgstr "州"
+
+#: books/templates/books/profile_edit.html:131
+#: books/templates/books/register.html:91
+msgid "Zip Code"
+msgstr "郵遞區號"
+
+#: books/templates/books/profile_edit.html:142
+msgid "Save Changes"
+msgstr "儲存變更"
+
+#: books/templates/books/profile_edit.html:145
+msgid "Cancel"
+msgstr "取消"
+
+#: books/templates/books/profile_view.html:26
+msgid "Member since"
+msgstr "會員自"
+
+#: books/templates/books/profile_view.html:32
+msgid "Orders"
+msgstr "訂購"
+
+#: books/templates/books/profile_view.html:36
+msgid "Recent"
+msgstr "最近的"
+
+#: books/templates/books/profile_view.html:59
+msgid "Profile Information"
+msgstr "個人資訊"
+
+#: books/templates/books/profile_view.html:66
+msgid "Full Name"
+msgstr "全名"
+
+#: books/templates/books/profile_view.html:108
+msgid "Recent Orders"
+msgstr "近期訂單"
+
+#: books/templates/books/profile_view.html:121
+msgid "Action"
+msgstr "操作"
+
+#: books/templates/books/profile_view.html:153
+msgid "No orders yet"
+msgstr "目前還沒有訂單"
+
+#: books/templates/books/register.html:4
+msgid "Register"
+msgstr "並未註冊"
+
+#: books/templates/books/register.html:11
+msgid "Register New Account"
+msgstr "註冊新帳戶"
+
+#: books/templates/books/register.html:12
+msgid ""
+"Create an account by entering the information below. If you are a returning "
+"customer please login at the top of the page."
+msgstr "請在下方輸入資訊以建立帳戶。如果您是舊客戶，請在頁面頂部登入。"
+
+#: books/templates/books/register.html:17
+msgid "Account details"
+msgstr "帳戶詳情"
+
+#: books/templates/books/register.html:21
+msgid "Enter username"
+msgstr "用戶名稱"
+
+#: books/templates/books/register.html:24
+msgid "Mandatory Required. 150 characters or fewer. Letters, digits and"
+msgstr "必填項。 150 個字元以內。字母、數字和"
+
+#: books/templates/books/register.html:27
+msgid "Email address"
+msgstr "電郵地址"
+
+#: books/templates/books/register.html:33
+#: books/templates/registration/login.html:18
+#: templates/registration/login.html:48
+msgid "Password"
+msgstr "密碼"
+
+#: books/templates/books/register.html:35 templates/registration/login.html:50
+msgid "Enter password"
+msgstr "輸入密碼"
+
+#: books/templates/books/register.html:40
+msgid "Your password can't be too similar to your other personal information."
+msgstr "您的密碼不能與您的其他個人資訊過於相似。"
+
+#: books/templates/books/register.html:41
+msgid "Your password must contain at least 8 characters."
+msgstr "您的密碼必須至少包含 8 個字元。"
+
+#: books/templates/books/register.html:42
+msgid "Your password can't be a commonly used password."
+msgstr "您的密碼不能是常用密碼。"
+
+#: books/templates/books/register.html:43
+msgid "Your password can't be entirely numeric."
+msgstr "您的密碼不能全部由數字組成。"
+
+#: books/templates/books/register.html:48
+msgid "Confirm Password"
+msgstr "確認密碼"
+
+#: books/templates/books/register.html:50
+msgid "Confirm password"
+msgstr "確認密碼"
+
+#: books/templates/books/register.html:60
+msgid "Enter your First Name"
+msgstr "輸入名字"
+
+#: books/templates/books/register.html:64
+msgid "Enter your Last Name"
+msgstr "輸入姓氏"
+
+#: books/templates/books/register.html:69
+msgid "Telephone"
+msgstr "電話"
+
+#: books/templates/books/register.html:70
+msgid "Enter your Telephone number"
+msgstr "輸入電話"
+
+#: books/templates/books/register.html:74
+msgid "Mailing Address"
+msgstr "郵寄地址"
+
+#: books/templates/books/register.html:78
+msgid "Enter your Street Address"
+msgstr "輸入您的街道地址"
+
+#: books/templates/books/register.html:84
+msgid "Enter your City"
+msgstr "輸入電子郵件地址"
+
+#: books/templates/books/register.html:88
+msgid "Enter State"
+msgstr "輸入州"
+
+#: books/templates/books/register.html:92
+msgid "Enter Zip Code"
+msgstr "輸入郵遞區號"
+
+#: books/templates/books/register.html:98
+msgid "By checking this option, you agree to accept the"
+msgstr "選取此選項，即表示您同意接受"
+
+#: books/templates/books/register.html:98
+msgid "Terms and Conditions"
+msgstr "條款與條件"
+
+#: books/templates/books/register.html:101
+msgid "Create Account"
+msgstr "建立帳戶"
+
+#: books/templates/books/register.html:105
+msgid "Already have an account"
+msgstr "已有帳號"
+
+#: books/templates/books/register.html:106 templates/registration/login.html:56
+msgid "Sign in"
+msgstr "登入"
+
+#: books/templates/registration/login.html:8
+#: books/templates/registration/login.html:21 templates/new_base.html:127
+#: templates/registration/login.html:4
+msgid "Login"
+msgstr "登入"
+
+#: books/templates/registration/login.html:23
+msgid "Don't have an account"
+msgstr "登入管理帳戶"
+
+#: books/templates/registration/login.html:23
+msgid "Register here"
+msgstr "在此註冊"
+
+#: templates/new_base.html:16
+msgid "BookHub | Bookhouse of Metropolitan"
+msgstr "一木書屋 | 城巿中的獨立書室"
+
+#: templates/new_base.html:35 templates/new_base.html:183
+#: templates/new_base.html:186
+msgid "About"
+msgstr "關於"
+
+#: templates/new_base.html:36 templates/new_base.html:215
+msgid "Privacy"
+msgstr "私隱"
+
+#: templates/new_base.html:37
+msgid "Terms"
+msgstr "條款"
+
+#: templates/new_base.html:92
+msgid "Start typing & press \"Enter\" or \"ESC\" to close"
+msgstr ""
+
+#: templates/new_base.html:115
+msgid "Profile"
+msgstr "用戶資料"
+
+#: templates/new_base.html:120
+msgid "Logout"
+msgstr "登出"
+
+#: templates/new_base.html:130
+msgid "Sign Up"
+msgstr "註冊"
+
+#: templates/new_base.html:149 templates/new_base.html:176
+#: templates/pages/about.html:14
+msgid "About Us"
+msgstr "關於我們"
+
+#: templates/new_base.html:151 templates/new_base.html:196
+msgid "Authors"
+msgstr "作者"
+
+#: templates/new_base.html:152 templates/new_base.html:197
+#: templates/new_base.html:206
+msgid "Genres"
+msgstr "類型"
+
+#: templates/new_base.html:175
+msgid ""
+"We don't just sell books, we cultivate a space where people encounter "
+"inspiration. This is a sanctuary for independent thoughts and a nurturing "
+"ground for warm artistry."
+msgstr ""
+"我們不只賣書，更經營一方讓人與靈感相遇的空間——這裡是獨立思想的棲息地，也是溫"
+"馨藝術的發生場。"
+
+#: templates/new_base.html:193
+msgid "Features"
+msgstr "種類"
+
+#: templates/new_base.html:212
+msgid "Support"
+msgstr "支援"
+
+#: templates/new_base.html:214
+msgid "Terms of Use"
+msgstr "使用條款"
+
+#: templates/new_base.html:216
+msgid "Contact Us"
+msgstr "聯絡我們"
+
+#: templates/new_base.html:229
+msgid "Enjoy Reading Atmosphere"
+msgstr "有温度的書店"
+
+#: templates/new_base.html:229
+msgid "All Rights Reserved"
+msgstr "版權所有"
+
+#: templates/new_base.html:229
+msgid "MORE"
+msgstr "更多"
+
+#: templates/pages/about.html:38
+msgid ""
+"A gentle corner hidden amidst the city's hustle and bustle. We don't just "
+"sell books, we create a space where people meet inspiration. This is a haven "
+"for independent thoughts and a birthplace for warm artistry."
+msgstr ""
+"我們不只賣書，更經營一方讓人與靈感相遇的空間——這裡是獨立思想的棲息地，也是溫"
+"馨藝術的發生場。"
+
+#: templates/pages/about.html:38
+msgid ""
+"Step into the reading room, and the essence of art naturally weaves itself "
+"into your literary experience. This is not just a temple of knowledge; it is "
+"also an exhibition space for local artists—paintings adorning the walls, "
+"sculptures scattered among the bookshelves, and unexpected art installations "
+"around the corners,all silently speaking the language of beauty. In the "
+"pauses between turning pages, a simple glance upward may lead you to an "
+"artwork that touches your heart."
+msgstr ""
+"走進書室，藝術的氣息便自然而然地融入你的閱讀體驗。這裡不僅是知識的殿堂，更是"
+"本地藝術家的創作展場──牆上懸掛的畫作、書架間點綴的雕塑、轉角處不經意的藝術裝"
+"置，都在無聲地訴說著美的語言。翻動書頁的間隙，一次抬眼，便可能與一件觸動心弦"
+"的作品不期而遇。"
+
+#: templates/pages/about.html:41
+msgid ""
+"Here, the ritual of reading is carefully nurtured. We have specially "
+"prepared handcrafted bookplates, beautifully bound special edition books, "
+"and thoughtfully designed stationery, each item carrying the warmth and "
+"intention of its maker. Once you've chosen your beloved book, consider "
+"ordering a cup of fair trade coffee or organic tea at the bar. In the midst "
+"of the fragrant atmosphere, let the words and your thoughts gradually "
+"intertwine."
+msgstr ""
+"在這裡，閱讀的儀式感被細心呵護。我們特別準備了手工打造的藏書票、古法裝幀的特"
+"別版書籍，以及充滿設計感的文具小物，每一件都承載著匠人的溫度與心意。當你選好"
+"心愛的書籍，不妨在吧台點一杯公平貿易咖啡或有機茶，在氤氳香氣中，讓文字與思緒"
+"慢慢交融。"
+
+#: templates/pages/privacy.html:17 templates/pages/terms_of_use.html:17
+msgid "Provide English Version Only"
+msgstr "僅提供英文版本"
+
+#: templates/registration/logged_out.html:3
+msgid "Logged Out"
+msgstr "登出"
+
+#: templates/registration/logged_out.html:10
+msgid "Logged Out Successfully"
+msgstr "成功登出"
+
+#: templates/registration/logged_out.html:11
+msgid "You have been successfully logged out."
+msgstr "成功登出"
+
+#: templates/registration/logged_out.html:13
+msgid "Login Again"
+msgstr "登入"
+
+#: templates/registration/logged_out.html:14
+msgid "Return to Home"
+msgstr "返回主頁"
+
+#: templates/registration/login.html:13
+msgid "Welcome back"
+msgstr "歡迎回來"
+
+#: templates/registration/login.html:14
+msgid "Login to manage your account."
+msgstr "登入管理帳戶"
+
+#: templates/registration/login.html:19
+msgid "Your username and password didn't match. Please try again."
+msgstr "用戶名稱或密碼不正確，請再試。"
+
+#: templates/registration/login.html:26
+msgid "Your account doesn't have access to this page. To proceed,"
+msgstr "帳戶未能使用本頁"
+
+#: templates/registration/login.html:27
+msgid "please login with an account that has access."
+msgstr "請登入後開始使用"
+
+#: templates/registration/login.html:31
+msgid "Please login to see this page."
+msgstr "請登入瀏覽"
+
+#: templates/registration/login.html:42
+msgid "Enter your username"
+msgstr "用戶名稱"
+
+#: templates/registration/login.html:63
+msgid "Not registered"
+msgstr "並未註冊"
+
+#: templates/registration/login.html:64
+msgid "Create account"
+msgstr "建立帳戶"

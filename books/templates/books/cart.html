@@ -1,14 +1,23 @@
 {% extends 'new_base.html' %}
-
+{% load static %}  {% load i18n %}
 {% block content %}
         <!-- Page title -->
         <section id="page-title">
             <div class="container">
                 <div class="page-title">
-                    <h1>Shopping Cart</h1>
-                    <span>Shopping details</span>
+                    <h1>{%trans "Shopping Cart"%}</h1>
+                    <span>{%trans "Shopping Details"%}</span>
                 </div>
-
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">{%trans "Home"%}</a>
+                        </li>
+                        <li><a href="#">{%trans "Shop"%}</a>
+                        </li>
+                        <li class="active"><a href="#">{%trans "Shopping Cart"%}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <!-- end: Page title -->
@@ -22,11 +31,11 @@
                             <thead>
                                 <tr>
                                     <th class="cart-product-remove"></th>
-                                    <th class="cart-product-thumbnail">Product</th>
-                                    <th class="cart-product-name">Description</th>
-                                    <th class="cart-product-price">Unit Price</th>
-                                    <th class="cart-product-quantity">Quantity</th>
-                                    <th class="cart-product-subtotal">Total</th>
+                                    <th class="cart-product-thumbnail">{%trans "Product"%}</th>
+                                    <th class="cart-product-name">{%trans "Description"%}</th>
+                                    <th class="cart-product-price">{%trans "Unit Price"%}</th>
+                                    <th class="cart-product-quantity">{%trans "Quantity"%}</th>
+                                    <th class="cart-product-subtotal">{%trans "Total"%}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,7 +58,7 @@
                                     <td class="cart-product-description">
                                         {% comment %} <p><span>{{ item.BookID.Title }}</span> {% endcomment %}
                                             <!-- 假设有更多商品描述字段 -->
-                                            <span>Author: {{ item.BookID.Author|default:'Unknown' }}</span>
+                                            <span>{%trans "Author"%}: {{ item.BookID.Author|default:'Unknown' }}</span>
                                             <span>ISBN: {{ item.BookID.ISBN|default:'N/A' }}</span>
                                         </p>
                                     </td>
@@ -64,10 +73,7 @@
                                                 <input type="number" name="quantity" value="{{ item.Quantity }}" min="1" max="{{ item.BookID.Stock }}" class="form-control text-center" style="max-width: 60px;">
                                                 <button class="btn btn-sm" type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
                                             </div>
-                                            <p><br></p>
-                                            <button type="submit" class="btn btn-link text-primary btn-sm ms-2" title="Update">
-                                                <i class="fas fa-sync-alt"></i>
-                                            </button>
+                                            <button type="submit" class="btn btn-sm btn-outline-primary mt-1">{%trans "Update"%}</button>
                                         </form>
                                     </td>
                                     <td class="cart-product-subtotal">
@@ -84,20 +90,20 @@
                                 <div class="input-group">
                                     <input type="text" placeholder="Coupon Code" id="CouponCode" class="form-control">
                                     <button type="submit" id="widget-subscribe-submit-button"
-                                        class="btn btn-primary">Apply</button>
+                                        class="btn btn-primary">{%trans "Apply"%}</button>
                                 </div>
-                                <p class="small">Enter any valid coupon or promo code here to redeem your discount.</p>
+                                <p class="small">{%trans "Enter any valid coupon or promo code here to redeem your discount."%}</p>
                             </form>
                         </div>
                         <div class="col-lg-8 text-end">
-                            <a href="{% url 'book_list' %}" class="btn btn-secondary">Continue Shopping</a>
-                            <a href="{% url 'checkout' %}" class="btn btn-success">Proceed to Checkout</a>
+                            <a href="{% url 'book_list' %}" class="btn btn-secondary">{%trans "Continue Shopping"%}</a>
+                            <a href="{% url 'checkout' %}" class="btn btn-success">{%trans "Proceed to Checkout"%}</a>
                         </div>
                     </div>
                     <div class="row">
                         <hr class="space">
                         <div class="col-lg-6">
-                            <h4>Calculate Shipping</h4>
+                            <h4>{%trans "Calculate Shipping"%}</h4>
                             <form class="row">
                                 <div class="col-lg-12 m-b-20">
                                     <select class="form-select">
@@ -117,12 +123,12 @@
                         </div>
                         <div class="col-lg-6 p-r-10 ">
                             <div class="table-responsive">
-                                <h4>Cart Subtotal</h4>
+                                <h4>{%trans "Cart Subtotal"%}</h4>
                                 <table class="table">
                                     <tbody>
                                         <tr>
                                             <td class="cart-product-name">
-                                                <strong>Cart Subtotal</strong>
+                                                <strong>{%trans "Cart Subtotal"%}</strong>
                                             </td>
                                             <td class="cart-product-name text-end">
                                                 <span class="amount">${{ order.TotalAmount }}</span>
@@ -130,15 +136,15 @@
                                         </tr>
                                         <tr>
                                             <td class="cart-product-name">
-                                                <strong>Shipping</strong>
+                                                <strong>{%trans "Shipping"%}</strong>
                                             </td>
                                             <td class="cart-product-name  text-end">
-                                                <span class="amount">Free Shipping</span>
+                                                <span class="amount">{%trans "Free Shipping"%}</span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="cart-product-name">
-                                                <strong>Coupon</strong>
+                                                <strong>{%trans "Coupon"%}</strong>
                                             </td>
                                             <td class="cart-product-name  text-end">
                                                 <span class="amount">-0%</span>
@@ -146,7 +152,7 @@
                                         </tr>
                                         <tr>
                                             <td class="cart-product-name">
-                                                <strong>Total</strong>
+                                                <strong>{%trans "Total"%}</strong>
                                             </td>
                                             <td class="cart-product-name text-end">
                                                 <span class="amount color lead"><strong>${{ order.TotalAmount }}</strong></span>
@@ -155,7 +161,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <a href="{% url 'checkout' %}" class="btn icon-left float-right"><span>Proceed to Checkout</span></a>
+                            <a href="{% url 'checkout' %}" class="btn icon-left float-right"><span>{%trans "Proceed to Checkout"%}</span></a>
                         </div>
                     </div>
                     {% else %}
@@ -164,9 +170,9 @@
     <div class="container">
         <div class="p-t-10 m-b-20 text-center">
             <div class="heading-text heading-line text-center">
-                <h4>Your cart is currently empty.</h4>
+                <h4>{%trans "Your cart is currently empty."%}</h4>
             </div>
-            <a class="btn icon-left" href="{% url 'book_list' %}"><span>Return To Shop</span></a>
+            <a class="btn icon-left" href="{% url 'book_list' %}"><span>{%trans "Return To Shop"%}</span></a>
         </div>
     </div>
 </section>
@@ -185,8 +191,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-gift"></i></a>
                             </div>
-                            <h3>Free shipping on orders $60+</h3>
-                            <p>Order more than 60$ and you will get free shippining Worldwide. More info.</p>
+                            <h3>{%trans 'Free shipping over $60'%} </h3>
+                            <p>{%trans 'When your order exceeds $60, we will offer you free worldwide shipping.'%} </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -194,8 +200,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-plane"></i></a>
                             </div>
-                            <h3>Worldwide delivery</h3>
-                            <p>We deliver to the following countries: USA, Canada, Europe, Australia</p>
+                            <h3>{%trans 'Global Delivery'%} </h3>
+                            <p>{%trans 'We support delivery to the following countries and regions: Mainland China, Taiwan, and Malaysia.'%} </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -203,8 +209,8 @@
                             <div class="icon">
                                 <a href="#"><i class="fa fa-history"></i></a>
                             </div>
-                            <h3>60 days money back guranty!</h3>
-                            <p>Not happy with our product, feel free to return it, we will refund 100% your money!</p>
+                            <h3>{%trans '60-Day Money-Back'%} </h3>
+                            <p>{%trans 'If you are not satisfied, we promise a full refund, so you can enjoy your purchase with peace of mind.'%} </p>
                         </div>
                     </div>
                 </div>

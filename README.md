@@ -24,7 +24,8 @@ $${\color{green}      By Python, Django, PostgreSQL}$$
 3. :green_book:&nbsp;System Diagram (UML diagram)  
 4. :blue_book:&nbsp;Major Screen Capture  
 5. :ledger:&nbsp;URLs Endpoint List  
-6. :clapper:&nbsp;PPT and YouTube Link
+6. :clapper:&nbsp;PPT and YouTube Link  
+7. :wrench:&nbsp;Technical Information  
 ---
 
 ## 1. :books: Project Objective
@@ -136,3 +137,153 @@ That is so funny! :joy:
 
 
 -----
+## 7. :wrench:&nbsp;Technical Information
+
+
+```markdown
+# Bookstore Management System (Website)
+
+## Overview
+This project is an online bookstore management system developed using Python, Django, and PostgreSQL. It enables users to browse, search, and purchase various books and related products. The website includes features for user authentication, shopping cart management, and order history.
+
+## Project Objective
+The aim of this project is to establish a secure and maintainable online bookstore. By leveraging Django's MVT architecture, the system enhances database handling and integrates the front-end and back-end effectively.
+
+## Features
+- User browsing and searching for books
+- Adding books to the shopping cart
+- User registration and authentication
+- Order history and management
+- Admin panel for managing books and users
+
+## Technology Stack
+- **Backend:** Django
+- **Database:** PostgreSQL
+- **Frontend:** HTML, CSS, JavaScript
+
+## Setting Up the Development Environment
+
+### Prerequisites
+- Python 3.8 or higher
+- PostgreSQL
+- pip (Python package installer)
+
+### Installation Steps
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/francoho314/erbPrj.git
+   cd erbPrj
+   ```
+
+2. **Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set up the database:**
+   - Create a PostgreSQL database for the project.
+   - Update the `settings.py` file to include your database credentials.
+
+5. **Run database migrations:**
+   ```bash
+   python manage.py migrate
+   ```
+
+6. **Create a superuser (optional, for admin access):**
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+7. **Create multi-languages support:**
+   ```bash
+   python manage.py compilemessages
+   ```
+
+## Running the Project Locally
+To run the development server, use the following command:
+
+```bash
+python manage.py runserver
+```
+
+You can access the application at `http://127.0.0.1:8000/`.
+
+## Database Schema
+The database schema consists of several key tables:
+
+- **Users Table**
+  - `id`: Primary Key
+  - `username`: Unique username for the user
+  - `password`: Hashed password
+  - `email`: User's email address
+  - `created_at`: Timestamp of user creation
+
+- **Books Table**
+  - `id`: Primary Key
+  - `title`: Title of the book
+  - `author_id`: Foreign Key referencing Authors Table
+  - `genre_id`: Foreign Key referencing Genres Table
+  - `price`: Price of the book
+  - `stock`: Number of copies available
+  - `created_at`: Timestamp of book addition
+
+- **Authors Table**
+  - `id`: Primary Key
+  - `name`: Name of the author
+  - `bio`: Short biography of the author
+
+- **Genres Table**
+  - `id`: Primary Key
+  - `name`: Genre of the book
+
+- **Orders Table**
+  - `id`: Primary Key
+  - `user_id`: Foreign Key referencing Users Table
+  - `total_price`: Total cost of the order
+  - `created_at`: Timestamp of the order creation
+
+- **Order_Items Table**
+  - `id`: Primary Key
+  - `order_id`: Foreign Key referencing Orders Table
+  - `book_id`: Foreign Key referencing Books Table
+  - `quantity`: Quantity of the book ordered
+
+## URLs Endpoint List
+- **Home Page:** `/`
+- **Admin Panel:** `/admin/`
+- **Login:** `/accounts/login/`
+- **Logout:** `/accounts/logout/`
+- **Books List:** `/books/`
+- **Authors List:** `/authors/`
+- **Cart Management:** `/cart/`
+
+## Screenshots
+- [Home Page (English)](https://drive.google.com/file/d/12eravjErc9ZoJdoK6ACdPkVTCOaeZ7R-/view?usp=sharing)  
+- [Home Page  (Chinese)](https://drive.google.com/file/d/1figuoMC1NCHzOYXU9Zegz6jWGImCJwQM/view?usp=sharing)  
+- [About Us](https://drive.google.com/file/d/1480Phr9p8m702SJY7NlywFh9Ibje8eTO/view?usp=sharing)  
+- [Books List](https://drive.google.com/file/d/1ZYcD0kfLffgTQ0Tb_G75f9Au_0Lf28BC/view?usp=sharing)  
+- [Authors List](https://drive.google.com/file/d/1cxBNGKNsN3JT0i3slfeIpoNFP1L9i8R1/view?usp=sharing)  
+
+## Contributors
+- Alice Hui
+- Franco Ho
+- Felix Ng
+- Antoninus Yeung
+
+## Presentation
+For further details, refer to the PowerPoint presentation: [ERB Python GroupProject.pptx](ERB%20Python%20GroupProject.pptx)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+Thanks to the Course of Employees Retraining Board (ERB), HKSAR, China for the opportunity to work on this project.
+```
+
+Feel free to adjust any sections as necessary to better reflect your project's details!

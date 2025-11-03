@@ -20,6 +20,7 @@ $${\color{green}      By Python, Django, PostgreSQL}$$
 3. :green_book:&nbsp;System Diagram (UML diagram)  
 4. :blue_book:&nbsp;Major Screen Capture  
 5. :ledger:&nbsp;URLs Endpoint List  
+X. :clapper:&nbsp;PPT and YouTube Link
 ---
 
 ## 1. :books: Project Objective
@@ -79,7 +80,11 @@ Database Diagram [DB Diagram](https://drive.google.com/file/d/1uPw54sOVtur-MB6pN
 
 ## 4. :blue_book:&nbsp;Major Screen Capture   
 
+
+
+
 -----
+
 
   
 ## 5. :ledger:&nbsp;URLs Endpoint List  
@@ -110,8 +115,12 @@ Authenticated endpoint: URL: /accounts
 > + Orders (Details) endpoint: URL: /orders/<int:order_id>/
 > + Orders (Cancel) endpoint: URL: /orders/<int:order_id>/cancel/
 
+-----
+## X. :clapper:&nbsp;PPT and YouTube Link
 
+PPT - ERB Python GroupProject.pptx
 
+YouTube - [Illustration for the Project](https://youtu.be/dbc5OPGXQRs?si=IGRXkfQ3GR78mQIe)
 
 -----
 That is so funny! :joy:

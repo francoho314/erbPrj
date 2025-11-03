@@ -20,7 +20,7 @@ $${\color{green}      By Python, Django, PostgreSQL}$$
 3. :green_book:&nbsp;System Diagram (UML diagram)  
 4. :blue_book:&nbsp;Major Screen Capture  
 5. :ledger:&nbsp;URLs Endpoint List  
-X. :clapper:&nbsp;PPT and YouTube Link
+6. :clapper:&nbsp;PPT and YouTube Link
 ---
 
 ## 1. :books: Project Objective
@@ -80,8 +80,13 @@ Database Diagram [DB Diagram](https://drive.google.com/file/d/1uPw54sOVtur-MB6pN
 
 ## 4. :blue_book:&nbsp;Major Screen Capture   
 
-
-
+[Home Page Screen (English)](https://drive.google.com/file/d/12eravjErc9ZoJdoK6ACdPkVTCOaeZ7R-/view?usp=sharing)![Home Page Screen (English)](https://drive.google.com/file/d/12eravjErc9ZoJdoK6ACdPkVTCOaeZ7R-/view?usp=sharing)  
+[Home Page Screen (Chinese)](https://drive.google.com/file/d/1figuoMC1NCHzOYXU9Zegz6jWGImCJwQM/view?usp=sharing)  
+[About Us](https://drive.google.com/file/d/1480Phr9p8m702SJY7NlywFh9Ibje8eTO/view?usp=sharing)  
+[Books List](https://drive.google.com/file/d/1ZYcD0kfLffgTQ0Tb_G75f9Au_0Lf28BC/view?usp=sharing)  
+[Authors List](https://drive.google.com/file/d/1cxBNGKNsN3JT0i3slfeIpoNFP1L9i8R1/view?usp=sharing)  
+[Login](https://drive.google.com/file/d/1JBUuUae788j_lV-aYUAZ9XWnOYZusCXo/view?usp=sharing)  
+[Order History](https://drive.google.com/file/d/1Xte18c9xtdp5aaRYZAKlJqkqDhN2XQgm/view?  usp=sharing)
 
 -----
 
@@ -116,7 +121,7 @@ Authenticated endpoint: URL: /accounts
 > + Orders (Cancel) endpoint: URL: /orders/<int:order_id>/cancel/
 
 -----
-## X. :clapper:&nbsp;PPT and YouTube Link
+## 6. :clapper:&nbsp;PPT and YouTube Link
 
 PPT - ERB Python GroupProject.pptx
 
